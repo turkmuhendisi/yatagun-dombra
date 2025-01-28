@@ -6,7 +6,7 @@ const AboutDombra = () => {
                     {/* Görsel */}
                     <div className="lg:w-1/2 flex justify-center">
                         <img
-                            src="src/assets/dombra-stock.jpg"
+                            src="https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/dombra-stock-6zk4MdVk5OIMtNhou8AQJIhrJcazvy.jpg"
                             alt="Dombra Hakkında"
                             className="rounded-lg max-w-full lg:max-w-lg"
                         />
