@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import {SpeedInsights} from "@vercel/speed-insights/react";
 import Navbar from "./components/Navbar";
 import Home from "./pages/home-page/Home.tsx";
 import About from "./pages/About";
@@ -18,7 +18,7 @@ function App() {
                 <Route path="/faq" element={<FAQ />} />
             </Routes>
             <Analytics /> {/* Vercel Analytics in here */}
-            <SpeedInsights /> {/* Vercel speed Insights in here */}
+            <SpeedInsights /> {/* Vercel Speed Insights in here */}
         </Router>
     );
 }
