@@ -10,13 +10,18 @@ const ProductSection = () => {
 
     const mockProducts: Record<string, Product[]> = {
         dombras: [
-            { id: 1, name: "Altay", image: "src/assets/products/dombras/dombra-temp.png", price: "5.000₺" },
-            { id: 2, name: "Bozkır Nefesi", image: "src/assets/products/dombras/dombra-temp.png", price: "15.000₺" },
-            { id: 3, name: "Turan", image: "src/assets/products/dombras/dombra-temp.png", price: "7.500₺" },
+            { id: 1, name: "Altay", image: "src/assets/products/dombras/dombra1.jpg", price: "5.000₺" },
+            { id: 2, name: "Bozkır Nefesi", image: "src/assets/products/dombras/dombra2.jpg", price: "15.000₺" },
+            { id: 3, name: "Turan", image: "src/assets/products/dombras/dombra3.jpg", price: "7.500₺" },
+            { id: 4, name: "Turan", image: "src/assets/products/dombras/dombra4.jpg", price: "7.500₺" },
+            { id: 5, name: "Altay", image: "src/assets/products/dombras/dombra1.jpg", price: "5.000₺" },
+            { id: 6, name: "Bozkır Nefesi", image: "src/assets/products/dombras/dombra2.jpg", price: "15.000₺" },
+            { id: 7, name: "Turan", image: "src/assets/products/dombras/dombra3.jpg", price: "7.500₺" },
+            { id: 8, name: "Turan", image: "src/assets/products/dombras/dombra4.jpg", price: "7.500₺" },
         ],
         dekorasyon: [
-            { id: 4, name: "Duvar Saati Bozkurt", image: "src/assets/products/decorations/clock-temp.png", price: "1.500₺" },
-            { id: 5, name: "Duvar Saati", image: "src/assets/products/decorations/clock-temp.png", price: "3.000₺" },
+            { id: 4, name: "Duvar Saati Bozkurt", image: "src/assets/products/decorations/clock1.jpg", price: "1.500₺" },
+            { id: 5, name: "Duvar Saati", image: "src/assets/products/decorations/clock1.jpg", price: "3.000₺" },
         ],
     };
 
@@ -27,7 +32,7 @@ const ProductSection = () => {
     const products = mockProducts[selectedCategory];
 
     return (
-        <section className="bg-gray-100 py-16">
+        <section className="bg-gray-100 py-16 min-h-screen">
             <div className="container mx-auto px-4">
                 <h2 className="text-3xl lg:text-4xl font-bold text-black mb-10 text-left">Ürünler</h2>
             </div>

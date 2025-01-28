@@ -2,10 +2,10 @@ import MusicPlayer from "../../../components/MusicPlayer";
 
 export default function HeroSection() {
     return (
-        <section className="bg-gray-50 min-h-screen flex flex-col items-center justify-center text-center px-4">
+        <section className="bg-gray-100 min-h-screen flex flex-col items-center justify-center text-center px-4">
             <div className="max-w-4xl">
-                <h1 className="text-5xl font-bold text-gray-900 mb-4 text-left">
-                    Bozkır ruhunu özgürce hissedin diye...
+                <h1 className="text-5xl lg:text-7xl font-bold text-gray-900 mb-4 text-left">
+                    <h1 className="text-stone-500">Bozkır ruhunu</h1> özgürce hissedin diye...
                 </h1>
                 <p className="text-lg text-gray-600 mb-6">
                     Dombra ile dile gelen her nota, geçmişin izini sürer; atalarımızın

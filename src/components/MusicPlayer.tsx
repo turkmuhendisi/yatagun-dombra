@@ -35,7 +35,7 @@ const songs: Song[] = [
         singer: "Yatagun Küğ",
         platform: "apple",
         previewUrl: bozkir,
-        platformUrl: "music.apple.com/tr/artist/yatagun-küğ/1772460693",
+        platformUrl: "https://music.apple.com/tr/artist/yatagun-küğ/1772460693",
     },
     {
         id: 3,

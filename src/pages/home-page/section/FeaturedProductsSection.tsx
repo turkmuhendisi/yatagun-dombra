@@ -3,14 +3,14 @@ import React, { useEffect, useRef, useState } from "react";
 const FeaturedProducts = () => {
     // Öne çıkan ürünler
     const featuredProducts = [
-        {id: 1, name: "Altay", image: "src/assets/products/dombras/dombra-temp.png", price: "5.000₺"},
-        {id: 2, name: "Bozkır Nefesi", image: "src/assets/products/dombras/dombra-temp.png", price: "15.000₺"},
-        {id: 3, name: "Turan", image: "src/assets/products/dombras/dombra-temp.png", price: "7.500₺"},
-        {id: 4, name: "Ahşap Vazo", image: "src/assets/products/decorations/clock-temp.png", price: "1.500₺"},
-        {id: 5, name: "Duvar Tablosu", image: "src/assets/products/decorations/clock-temp.png", price: "3.000₺"},
-        {id: 6, name: "Kilim", image: "src/assets/products/decorations/clock-temp.png", price: "2.500₺"},
-        {id: 7, name: "Dekoratif Ayna", image: "src/assets/products/decorations/clock-temp.png", price: "4.000₺"},
-        /*{id: 8, name: "Duvar Tablosu", image: "src/assets/products/decorations/clock-temp.png", price: "3.000₺"},
+        {id: 1, name: "Altay", image: "src/assets/products/dombras/dombra4.jpg", price: "5.000₺"},
+        {id: 2, name: "Bozkır Nefesi", image: "src/assets/products/dombras/dombra4.jpg", price: "15.000₺"},
+        {id: 3, name: "Turan", image: "src/assets/products/dombras/dombra4.jpg", price: "7.500₺"},
+        {id: 4, name: "Ahşap Vazo", image: "src/assets/products/dombras/dombra4.jpg", price: "1.500₺"},
+        {id: 5, name: "Duvar Tablosu", image: "src/assets/products/dombras/dombra4.jpg", price: "3.000₺"},
+        /*{id: 6, name: "Kilim", image: "src/assets/products/dombras/dombra4.jpg", price: "2.500₺"},
+        {id: 7, name: "Dekoratif Ayna", image: "src/assets/products/dombras/dombra4.jpg", price: "4.000₺"},
+        {id: 8, name: "Duvar Tablosu", image: "src/assets/products/decorations/clock-temp.png", price: "3.000₺"},
         {id: 9, name: "Kilim", image: "src/assets/products/decorations/clock-temp.png", price: "2.500₺"},
         {id: 10, name: "Dekoratif Ayna", image: "src/assets/products/decorations/clock-temp.png", price: "4.000₺"},
         {id: 11, name: "Altay", image: "src/assets/products/dombras/dombra-temp.png", price: "5.000₺"},
@@ -57,9 +57,9 @@ const FeaturedProducts = () => {
     };
 
     return (
-        <section className="bg-white py-16">
+        <section className="bg-white py-16 h-screen">
             <div className="container mx-auto px-4">
-                <h2 className="text-3xl lg:text-4xl font-bold text-black mb-10 text-left">Öne Çıkan Ürünler</h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-black mb-10 text-center">Öne Çıkan Ürünler</h2>
             </div>
 
             <div
@@ -78,12 +78,12 @@ const FeaturedProducts = () => {
                 {featuredProducts.map((product) => (
                     <div
                         key={product.id}
-                        className="bg-white shadow-md rounded-lg overflow-hidden min-w-[200px] max-w-[200px]"
+                        className="bg-white shadow-md rounded-lg overflow-hidden min-w-[300px] max-w-[300px]"
                     >
                         <img
                             src={product.image}
                             alt={product.name}
-                            className="w-full h-48 object-cover"
+                            className="w-full h-150 object-cover"
                             draggable={false} // Görsel sürüklenemez
                         />
                         <div className="p-4 text-center">

@@ -1,10 +1,7 @@
 const AboutDombra = () => {
     return (
-        <section className="bg-black py-16 text-white">
+        <section className="bg-gray-100 py-16 text-black">
             <div className="container mx-auto px-4">
-                {/* Başlık */}
-                <h2 className="text-3xl lg:text-4xl font-bold mb-10 text-center">Dombra</h2>
-
                 <div className="flex flex-col lg:flex-row items-center lg:items-stretch lg:gap-8">
                     {/* Görsel */}
                     <div className="lg:w-1/2 flex justify-center">
@@ -15,10 +12,11 @@ const AboutDombra = () => {
                         />
                     </div>
 
-                    {/* Açıklama */}
+                    {/* Description */}
                     <div className="lg:w-1/2 flex items-center text-lg lg:text-2xl leading-relaxed text-justify">
                         <div>
                             <p className="mb-8">
+                                <h2 className="text-3xl lg:text-4xl font-bold my-10 text-center">Dombra</h2>
                                 Dombra, Orta Asya bozkırlarının ruhunu yansıtan bir enstrümandır.
                                 Binlerce yıllık bir geçmişe sahip olan bu çalgı, Türk kültürünün en önemli
                                 sembollerinden biridir.
