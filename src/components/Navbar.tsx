@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiShoppingBag, FiUser } from "react-icons/fi";
+// import { FiShoppingBag, FiUser } from "react-icons/fi";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
@@ -29,10 +29,11 @@ export default function Navbar() {
                 </div>
 
                 {/* Sağdaki İkonlar */}
-                <div className="flex space-x-6">
+
+                {/*<div className="flex space-x-6">
                     <FiShoppingBag className="w-6 h-6 hover:text-gray-500 cursor-pointer" />
                     <FiUser className="w-6 h-6 hover:text-gray-500 cursor-pointer" />
-                </div>
+                </div>*/}
             </div>
 
             {/* Açılır Menü (Mobil) */}
