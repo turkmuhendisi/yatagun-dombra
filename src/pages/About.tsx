@@ -35,7 +35,7 @@ function About() {
                     {/* Sağ Taraf: Görsel */}
                     <div className="lg:w-1/2 flex justify-center">
                         <img
-                            src="src/assets/horses-wp.jpg"
+                            src="https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/horses-wp-XNEPVDuAJ5GNHYWy8C7a1PEovJF0ki.jpg"
                             alt="Türk Kültürü ve Dombra"
                             className="rounded-lg shadow-lg max-w-full lg:max-w-xl"
                         />

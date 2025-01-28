@@ -3,11 +3,11 @@ import React, { useEffect, useRef, useState } from "react";
 const FeaturedProducts = () => {
     // Öne çıkan ürünler
     const featuredProducts = [
-        {id: 1, name: "Altay", image: "src/assets/products/dombras/dombra4.jpg", price: "5.000₺"},
-        {id: 2, name: "Bozkır Nefesi", image: "src/assets/products/dombras/dombra4.jpg", price: "15.000₺"},
-        {id: 3, name: "Turan", image: "src/assets/products/dombras/dombra4.jpg", price: "7.500₺"},
-        {id: 4, name: "Ahşap Vazo", image: "src/assets/products/dombras/dombra4.jpg", price: "1.500₺"},
-        {id: 5, name: "Duvar Tablosu", image: "src/assets/products/dombras/dombra4.jpg", price: "3.000₺"},
+        {id: 1, name: "Altay", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4-llULPhBUIl7ubmzBZ3kydiSTo1Xctp.jpg", price: "5.000₺"},
+        {id: 2, name: "Bozkır Nefesi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4-llULPhBUIl7ubmzBZ3kydiSTo1Xctp.jpg", price: "15.000₺"},
+        {id: 3, name: "Turan", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4-llULPhBUIl7ubmzBZ3kydiSTo1Xctp.jpg", price: "7.500₺"},
+        {id: 4, name: "Ahşap Vazo", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4-llULPhBUIl7ubmzBZ3kydiSTo1Xctp.jpg", price: "1.500₺"},
+        {id: 5, name: "Duvar Tablosu", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4-llULPhBUIl7ubmzBZ3kydiSTo1Xctp.jpg", price: "3.000₺"},
         /*{id: 6, name: "Kilim", image: "src/assets/products/dombras/dombra4.jpg", price: "2.500₺"},
         {id: 7, name: "Dekoratif Ayna", image: "src/assets/products/dombras/dombra4.jpg", price: "4.000₺"},
         {id: 8, name: "Duvar Tablosu", image: "src/assets/products/decorations/clock-temp.png", price: "3.000₺"},
