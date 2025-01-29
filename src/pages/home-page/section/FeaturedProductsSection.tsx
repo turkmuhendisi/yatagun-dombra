@@ -8,16 +8,6 @@ const FeaturedProducts = () => {
         {id: 3, name: "Turan", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-1-okwONo9n0LGskYO9RV3QeIeoxuyykd.jpg", price: "6.500₺"},
         {id: 4, name: "Gök", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-1-N4G0FXpZTTuBw6fOHhO70itWBS1ykt.jpg", price: "10.500₺"},
         {id: 5, name: "Altay", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-1-jn7lpvi1FL7Uf6Cf5KqxLk9c47TcTm.jpg", price: "6.500₺"},
-        /*{id: 6, name: "Kilim", image: "src/assets/products/dombras/dombra4.jpg", price: "2.500₺"},
-        {id: 7, name: "Dekoratif Ayna", image: "src/assets/products/dombras/dombra4.jpg", price: "4.000₺"},
-        {id: 8, name: "Duvar Tablosu", image: "src/assets/products/decorations/clock-temp.png", price: "3.000₺"},
-        {id: 9, name: "Kilim", image: "src/assets/products/decorations/clock-temp.png", price: "2.500₺"},
-        {id: 10, name: "Dekoratif Ayna", image: "src/assets/products/decorations/clock-temp.png", price: "4.000₺"},
-        {id: 11, name: "Altay", image: "src/assets/products/dombras/dombra-temp.png", price: "5.000₺"},
-        {id: 12, name: "Bozkır Nefesi", image: "src/assets/products/dombras/dombra-temp.png", price: "15.000₺"},
-        {id: 13, name: "Turan", image: "src/assets/products/dombras/dombra-temp.png", price: "7.500₺"},
-        {id: 14, name: "Ahşap Vazo", image: "src/assets/products/decorations/clock-temp.png", price: "1.500₺"},
-        {id: 15, name: "Duvar Tablosu", image: "src/assets/products/decorations/clock-temp.png", price: "3.000₺"}*/
     ];
 
     const containerRef = useRef<HTMLDivElement | null>(null);
@@ -83,8 +73,9 @@ const FeaturedProducts = () => {
                         <img
                             src={product.image}
                             alt={product.name}
-                            className="w-full h-150 object-cover"
+                            className="w-full aspect-[4/3] object-cover"
                             draggable={false} // Görsel sürüklenemez
+                            loading="lazy"
                         />
                         <div className="p-4 text-center">
                             <h3 className="text-lg font-semibold">{product.name}</h3>
