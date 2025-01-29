@@ -1,15 +1,20 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-// import { FiShoppingBag, FiUser } from "react-icons/fi";
+import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation(); // It does set current page path
+
+    const getLinkClass = (path: string) =>
+        location.pathname === path
+            ? "font-bold text-black" // Active section
+            : "hover:underline text-gray-700"; // Other sections
 
     return (
         <nav className="bg-gray-50 text-black py-4 shadow-md">
             <div className="container mx-auto flex items-center justify-between px-4">
-                {/* Hamburger Menü Butonu (Mobil) */}
+                {/* Hamburger Menu Button (Mobil) */}
                 <button
                     className="md:hidden text-2xl focus:outline-none"
                     onClick={() => setIsOpen(!isOpen)}
@@ -20,20 +25,13 @@ export default function Navbar() {
                 {/* Logo */}
                 <h1 className="text-2xl font-bold">Yatagun Dombra</h1>
 
-                {/* Orta Menü Linkleri (Masaüstü Görünüm) */}
+                {/* Middle Menu Links (Desktop View) */}
                 <div className="hidden md:flex space-x-8">
-                    <Link to="/" className="hover:underline">Anasayfa</Link>
-                    <Link to="/about" className="hover:underline">Biz kimiz?</Link>
-                    <Link to="/products" className="hover:underline">Ürünler</Link>
-                    <Link to="/faq" className="hover:underline">S.S.S.</Link>
+                    <Link to="/" className={getLinkClass("/")}>Anasayfa</Link>
+                    <Link to="/about" className={getLinkClass("/about")}>Biz kimiz?</Link>
+                    <Link to="/products" className={getLinkClass("/products")}>Ürünler</Link>
+                    <Link to="/faq" className={getLinkClass("/faq")}>S.S.S.</Link>
                 </div>
-
-                {/* Sağdaki İkonlar */}
-
-                {/*<div className="flex space-x-6">
-                    <FiShoppingBag className="w-6 h-6 hover:text-gray-500 cursor-pointer" />
-                    <FiUser className="w-6 h-6 hover:text-gray-500 cursor-pointer" />
-                </div>*/}
             </div>
 
             {/* Açılır Menü (Mobil) */}
@@ -47,16 +45,16 @@ export default function Navbar() {
 
                 <ul className="mt-20 space-y-6 px-6 text-lg font-semibold text-black">
                     <li>
-                        <Link to="/" className="block hover:text-gray-700" onClick={() => setIsOpen(false)}>Anasayfa</Link>
+                        <Link to="/" className={getLinkClass("/")} onClick={() => setIsOpen(false)}>Anasayfa</Link>
                     </li>
                     <li>
-                        <Link to="/about" className="block hover:text-gray-700" onClick={() => setIsOpen(false)}>Biz Kimiz?</Link>
+                        <Link to="/about" className={getLinkClass("/about")} onClick={() => setIsOpen(false)}>Biz Kimiz?</Link>
                     </li>
                     <li>
-                        <Link to="/products" className="block hover:text-gray-700" onClick={() => setIsOpen(false)}>Ürünler</Link>
+                        <Link to="/products" className={getLinkClass("/products")} onClick={() => setIsOpen(false)}>Ürünler</Link>
                     </li>
                     <li>
-                        <Link to="/faq" className="block hover:text-gray-700" onClick={() => setIsOpen(false)}>S.S.S.</Link>
+                        <Link to="/faq" className={getLinkClass("/faq")} onClick={() => setIsOpen(false)}>S.S.S.</Link>
                     </li>
                 </ul>
             </div>
