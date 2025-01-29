@@ -10,18 +10,15 @@ const ProductSection = () => {
 
     const mockProducts: Record<string, Product[]> = {
         dombras: [
-            { id: 1, name: "Altay", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "5.000₺" },
-            { id: 2, name: "Bozkır Nefesi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "15.000₺" },
-            { id: 3, name: "Turan", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "7.500₺" },
-            { id: 4, name: "Turan", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "7.500₺" },
-            { id: 5, name: "Altay", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "5.000₺" },
-            { id: 6, name: "Bozkır Nefesi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "15.000₺" },
-            { id: 7, name: "Turan", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "7.500₺" },
-            { id: 8, name: "Turan", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1-aaxUuB9CrZO2YtmUbvS2X3htr8ZFO5.jpg", price: "7.500₺" },
+            {id: 1, name: "Bozkır", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg", price: "9.000₺"},
+            {id: 2, name: "Bozkır Nefesi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra2/d2-1-zW42CGebmBqfrOiLQj9K40ypvWdMiG.jpg", price: "13.500₺"},
+            {id: 3, name: "Turan", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-1-okwONo9n0LGskYO9RV3QeIeoxuyykd.jpg", price: "6.500₺"},
+            {id: 4, name: "Gök", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-1-N4G0FXpZTTuBw6fOHhO70itWBS1ykt.jpg", price: "10.500₺"},
+            {id: 5, name: "Altay", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-1-jn7lpvi1FL7Uf6Cf5KqxLk9c47TcTm.jpg", price: "6.500₺"},
         ],
         dekorasyon: [
-            { id: 4, name: "Duvar Saati Bozkurt", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1-GRhSfXtwIuZHIOvZQXy6p2DA50G299.jpg", price: "1.500₺" },
-            { id: 5, name: "Duvar Saati", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1-GRhSfXtwIuZHIOvZQXy6p2DA50G299.jpg", price: "3.000₺" },
+            { id: 1, name: "Bozkurt Duvar Saati Siyah", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg", price: "1.500₺" },
+            { id: 2, name: "Bozkurt Duvar Saati Kahverengi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg", price: "3.000₺" },
         ],
     };
 
