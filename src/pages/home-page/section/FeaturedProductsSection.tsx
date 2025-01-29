@@ -73,9 +73,8 @@ const FeaturedProducts = () => {
                         <img
                             src={product.image}
                             alt={product.name}
-                            className="w-full aspect-[4/3] object-cover"
-                            draggable={false} // Görsel sürüklenemez
-                            loading="lazy"
+                            className="w-full aspect-[3/4] object-cover"
+                            draggable={false} // Image's not draggable
                         />
                         <div className="p-4 text-center">
                             <h3 className="text-lg font-semibold">{product.name}</h3>

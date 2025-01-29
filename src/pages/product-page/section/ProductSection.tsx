@@ -68,8 +68,7 @@ const ProductSection = () => {
                                 <img
                                     src={product.image}
                                     alt={product.name}
-                                    className="w-full aspect-[4/3] object-cover"
-                                    loading="lazy"
+                                    className="w-full aspect-[3/4] object-cover"
                                 />
                             </div>
                             <div className="p-4 text-center flex-grow">
