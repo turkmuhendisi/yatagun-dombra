@@ -1,12 +1,8 @@
 import { useState } from "react";
+import ProductCard from "../../../components/ProductCard.tsx";
+import { Product } from "../../../components/types.ts";
 
 const ProductSection = () => {
-    type Product = {
-        id: number;
-        name: string;
-        image: string;
-        price: string;
-    };
 
     const mockProducts: Record<string, Product[]> = {
         dombras: [
@@ -57,28 +53,9 @@ const ProductSection = () => {
             {/* Ürünler */}
             <div className="container mx-auto">
                 <div
-                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4 px-2"
-                >
+                    className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4 px-2">
                     {products.map((product) => (
-                        <div
-                            key={product.id}
-                            className="bg-white shadow-md rounded-lg overflow-hidden w-auto flex flex-col justify-between h-full"
-                        >
-                            <div className="w-full aspect-ratio">
-                                <img
-                                    src={product.image}
-                                    alt={product.name}
-                                    className="w-full aspect-[3/4] object-cover"
-                                />
-                            </div>
-                            <div className="p-4 text-center flex-grow">
-                                <h3 className="text-lg font-semibold">{product.name}</h3>
-                                <p className="text-gray-500 my-2">{product.price}</p>
-                            </div>
-                            <div className="p-4">
-                                <button className="text-lg bg-gray-100 w-full rounded-lg py-2">Ürüne Git</button>
-                            </div>
-                        </div>
+                        <ProductCard key={product.id} product={product} />
                     ))}
                 </div>
             </div>
