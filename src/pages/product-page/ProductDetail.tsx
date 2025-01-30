@@ -55,7 +55,7 @@ const ProductDetail = () => {
                 )}
 
                 {/* Küçük Görseller ve Video */}
-                <div className="flex space-x-4 mt-4 overflow-x-auto scrollbar-hide w-full">
+                <div className="flex space-x-4 mt-4 overflow-x-auto scrollbar-hide max-w-2xl">
                     {/* Video Thumbnail */}
                     {product.video && product.videoThumbnail && (
                         <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-20 lg:h-20 flex-shrink-0">
