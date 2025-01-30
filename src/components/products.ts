@@ -2,15 +2,19 @@ export const products = [
     {
         id: 1,
         name: "Bozkır",
-        price: "9.000₺",
-        description: "Üst Kalite Orta Seviye Dombra",
+        price: "8.250₺",
+        description: "Orta Seviye Profesyonel Kaplama Dombra",
         features: [
-            "19 perde ile geniş ses aralığına sahip, hem geleneksel hem modern çalgılara uygun.",
-            "Ön kapağı kemik işlemeli, özel detaylarla süslenmiş zarif ve estetik bir tasarım.",
-            "Dayanıklı ve hafif, uzun süreli kullanım için ideal.",
-            "Özgün Kazak ve Türk motifleri, kültürel mirası yansıtan şık bir görünüm sunar."
+            "Ölçüsü: 48 cm, kompakt yapısıyla rahat taşınabilir ve kolay çalınabilir.",
+            "19 perdeli geniş ses aralığı sunarak geleneksel dombra küylerine uyum sağlar.",
+            "Özel kaplama tasarım, estetik görünümüyle dikkat çeker ve dombra çalma deneyimini daha keyifli hale getirir.",
+            "Derin rezonans ve zengin akustik, net ve berrak ses çıkışı sunar.",
+            "Hafif ama dayanıklı yapı, uzun süreli kullanımda konfor sağlar.",
+            "Bas ve tiz dengesi optimize edilmiştir, güçlü bas frekansları ve parlak tizlerle dengeli bir ton sunar.",
+            "Ahşap burgular, doğal akort stabilitesi sağlayarak uzun vadede sorunsuz bir çalma deneyimi sunar.",
+            "Bu dombra, estetik tasarımı ve akustik performansıyla orta seviye dombra severler için mükemmel bir seçenektir."
         ],
-        metarial: "Kayın ve çam ağacından ustalıkla üretilmiş, doğal rezonansıyla güçlü ve berrak bir ses sunar.",
+        metarial: "Kayın ağacından yapılmış gövde, sağlam yapısı ve doğal rezonansıyla güçlü ve dengeli bir ton üretir.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-2-FJDarGV90Tr42JGk8Btxvti2fUbM1b.jpg",
@@ -25,16 +29,16 @@ export const products = [
     {
         id: 2,
         name: "Bozkır Nefesi",
-        price: "13.500₺",
+        price: "12.750₺",
         description: "Üst Kalite Profesyonel Dombra",
         features: [
-            "19 perde ile geniş ses aralığına sahip, hem geleneksel hem modern icralara uygun.",
+            "19 perde ile geniş ses aralığına sahip, hem geleneksel hem modern küylerine uygun.",
             "Ön kapak kemik işlemeli, hem estetik hem de akustik performansa katkı sağlayan zarif ve özel bir tasarıma sahiptir.",
             "Derin ve güçlü rezonans, her notanın berrak ve dengeli duyulmasını sağlar.",
             "Özel tasarlanmış ses deliği, titreşimi optimize ederek dombra sesinin doğal tınısını en iyi şekilde yansıtır.",
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha zengin ve dolgun bir akustik sunar.",
             "Hafif ama dayanıklı yapı, uzun süreli çalma deneyiminde konfor sağlar.",
-            "Güçlü baslar ve parlak tizler, geleneksel ve modern dombra icralarına uyumlu, dengeli bir ton üretir.",
+            "Güçlü baslar ve parlak tizler, geleneksel ve modern dombra küylerine uyumlu, dengeli bir ton üretir.",
             "Özgün Kazak ve Türk motifleri, kültürel mirası yansıtan şık bir görünüm sunar.",
             "Bu dombra, doğal ahşap rezonansı ve kaliteli işçiliğiyle en saf ve güçlü dombra sesini sunmak için özenle tasarlandı."
         ],
@@ -50,16 +54,19 @@ export const products = [
     },
     {
         id: 3,
-        name: "Turan",
-        price: "6.500₺",
-        description: "Giriş seviyesi Ahşap Dombra",
+        name: "Tuna",
+        price: "5.750₺",
+        description: "Desenli Amatör Dombra",
         features: [
-            "El yapımı, özel işçilik.",
-            "Doğal ağaçtan üretilmiş, otantik tasarım.",
-            "Yüksek akustik performans sağlar.",
-            "Kazak motifleriyle süslenmiş geleneksel bir dokunuş."
+            "7 telli ve 19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
+            "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
+            "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
+            "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
+            "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor."
         ],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        metarial: "Dut ağacından üretilmiş gövde, sıcak ve doğal bir ton karakteri sunarak dengeli bir ses üretir.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-1-okwONo9n0LGskYO9RV3QeIeoxuyykd.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-2-zNpeMGuEbz933TLa1pMCcfGhDhxSZT.jpg",
@@ -72,7 +79,7 @@ export const products = [
     {
         id: 4,
         name: "Gök",
-        price: "10.500₺",
+        price: "9.750₺",
         description: "Kartal Motifli Orta Seviye Dombra",
         features: [
             "19 perde yapısıyla geniş bir tonal aralık sunar, dengeli ve net ses üretimi sağlar.",
@@ -81,7 +88,7 @@ export const products = [
             "Özel tasarlanmış ses deliği, titreşimi optimize ederek dombra sesinin doğal tınısını en iyi şekilde yansıtır.",
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha zengin ve dolgun bir akustik sunar.",
             "Hafif ama dayanıklı yapı, uzun süreli çalma deneyiminde konfor sağlar.",
-            "Dengeli baslar ve parlak tizler, geleneksel ve modern dombra icralarına uyumlu, temiz ve güçlü bir ton üretir.",
+            "Dengeli baslar ve parlak tizler, geleneksel ve modern dombra küylerine uyumlu, temiz ve güçlü bir ton üretir.",
             "Bu dombra, doğal ahşap rezonansı, estetik tasarımı ve kaliteli işçiliğiyle hem görselliği hem de müzikal performansı bir arada sunuyor."
         ],
         metarial: "Kayın ağacından üretilmiş gövde, güçlü rezonansıyla doğal ve zengin bir ton sunar.",
@@ -97,13 +104,16 @@ export const products = [
     {
         id: 5,
         name: "Altay",
-        price: "6.500₺",
-        description: "Giriş seviyesi Ahşap Dombra",
+        price: "5.750₺",
+        description: "Desenli Amatör Dombra",
         features: [
-            "El yapımı, özel işçilik.",
-            "Doğal ağaçtan üretilmiş, otantik tasarım.",
-            "Yüksek akustik performans sağlar.",
-            "Kazak motifleriyle süslenmiş geleneksel bir dokunuş."
+            "7 telli ve 19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
+            "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
+            "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
+            "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
+            "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor."
         ],
         metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
         images: [
@@ -118,7 +128,7 @@ export const products = [
     {
         id: 6,
         name: "Bozkurt Duvar Saati Siyah",
-        price: "950₺",
+        price: "750₺",
         description: "Duvar Saati",
         features: [
             "El yapımı, özel işçilik.",
@@ -137,7 +147,7 @@ export const products = [
     {
         id: 7,
         name: "Bozkurt Duvar Saati Kahverengi",
-        price: "950₺",
+        price: "750₺",
         description: "Duvar Saati",
         features: [
             "El yapımı, özel işçilik.",
