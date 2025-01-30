@@ -1,7 +1,8 @@
 import React from "react";
-import { Product } from "./types";
+import {Product} from "./types";
+import {Link} from "react-router-dom";
 
-const ProductCard = React.memo(({ product }: { product: Product }) => (
+const ProductCard = React.memo(({product}: { product: Product }) => (
     <div className="bg-white shadow-md rounded-lg overflow-hidden w-auto flex flex-col justify-between h-full">
         <div className="w-full">
             <img
@@ -16,7 +17,9 @@ const ProductCard = React.memo(({ product }: { product: Product }) => (
             <p className="text-gray-500 my-2">{product.price}</p>
         </div>
         <div className="p-4">
-            <button className="text-lg bg-gray-100 w-full rounded-lg py-2">Ürüne Git</button>
+            <Link to={`/product/${product.id}`} className="block">
+                <button className="text-lg bg-gray-100 w-full rounded-lg py-2">Ürüne Git</button>
+            </Link>
         </div>
     </div>
 ));
