@@ -138,7 +138,7 @@ export const products = [
             "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
             "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
             "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
-            "Saatin tasarımında Türklerin kadim sembolleri, Göktürk alfabesi, ay-yıldız, ok ve yay, " +
+            "Saatin tasarımında Türklerin kadim sembolleri, ay-yıldız, ok ve yay, " +
             "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
             "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
             "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
@@ -168,7 +168,7 @@ export const products = [
             "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
             "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
             "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
-            "Saatin tasarımında Türklerin kadim sembolleri, Göktürk alfabesi, ay-yıldız, ok ve yay, " +
+            "Saatin tasarımında Türklerin kadim sembolleri, ay-yıldız, ok ve yay, " +
             "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
             "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
             "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
