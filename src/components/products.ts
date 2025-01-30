@@ -58,7 +58,7 @@ export const products = [
         price: "5.750₺",
         description: "Desenli Amatör Dombra",
         features: [
-            "7 telli ve 19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
             "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
             "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
@@ -107,7 +107,7 @@ export const products = [
         price: "5.750₺",
         description: "Desenli Amatör Dombra",
         features: [
-            "7 telli ve 19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
             "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
             "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
