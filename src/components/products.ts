@@ -127,16 +127,27 @@ export const products = [
     },
     {
         id: 6,
-        name: "Bozkurt Duvar Saati Siyah",
+        name: "Bozkurt Vakti Siyah",
         price: "750₺",
-        description: "Duvar Saati",
+        description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         features: [
-            "El yapımı, özel işçilik.",
-            "Doğal ağaçtan üretilmiş, otantik tasarım.",
-            "Yüksek akustik performans sağlar.",
-            "Türk motifleriyle süslenmiş geleneksel bir dokunuş."
+            "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +
+            "geçmişin izlerini ve Bozkır ruhunu günümüze taşıyor. Göktürk motifleri, " +
+            "Türk tamgaları ve geleneksel sembollerle bezeli bu eşsiz saat, sadece zamanı değil, " +
+            "aynı zamanda bir kültürü temsil ediyor." +
+            "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
+            "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
+            "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
+            "Saatin tasarımında Türklerin kadim sembolleri, Göktürk alfabesi, ay-yıldız, ok ve yay, " +
+            "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
+            "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
+            "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
+            "🛠 El işçiliği lazer kesim.",
+            "🌿 Doğal ahşap ve zarif tasarım.",
+            "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
+            "📌 Özel üretim – Sınırlı stok"
         ],
-        metarial: "MDF ile üretilmiştir.",
+        metarial: "6mm MDF",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-2-in7i6xqxe1FPBkbOI7OhkeJzly5lhx.jpg",
@@ -146,16 +157,27 @@ export const products = [
     },
     {
         id: 7,
-        name: "Bozkurt Duvar Saati Kahverengi",
+        name: "Bozkurt Vakti Kırmızı",
         price: "750₺",
-        description: "Duvar Saati",
+        description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         features: [
-            "El yapımı, özel işçilik.",
-            "Doğal ağaçtan üretilmiş, otantik tasarım.",
-            "Yüksek akustik performans sağlar.",
-            "Türk motifleriyle süslenmiş geleneksel bir dokunuş."
+            "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +
+            "geçmişin izlerini ve Bozkır ruhunu günümüze taşıyor. Göktürk motifleri, " +
+            "Türk tamgaları ve geleneksel sembollerle bezeli bu eşsiz saat, sadece zamanı değil, " +
+            "aynı zamanda bir kültürü temsil ediyor." +
+            "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
+            "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
+            "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
+            "Saatin tasarımında Türklerin kadim sembolleri, Göktürk alfabesi, ay-yıldız, ok ve yay, " +
+            "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
+            "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
+            "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
+            "🛠 El işçiliği lazer kesim.",
+            "🌿 Doğal ahşap ve zarif tasarım.",
+            "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
+            "📌 Özel üretim – Sınırlı stok"
         ],
-        metarial: "MDF ile üretilmiştir.",
+        metarial: "6mm MDF",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-2-qw9DMVw1jo8YkVDXs9zPmZZCtTcoEc.jpg",
