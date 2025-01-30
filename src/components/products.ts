@@ -1,5 +1,3 @@
-// src/data/products.ts
-
 export const products = [
     {
         id: 1,
@@ -20,7 +18,9 @@ export const products = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-4-ZE1kq3P42aaapS8e3YS6LjbGAbe8S4.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-5-qYNK6lqS9U6GT6UtAL7QMd0zIMWFnd.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-6-XciRqbHTcDFEEewz5rqbCQuc1aqcMR.jpg"
-        ]
+        ],
+        video: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/bozk%C4%B1r-teaser-qge9na7GoBz9eHeJfaT8daVOec5MIY.mp4",
+        videoThumbnail: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg"
     },
     {
         id: 2,
