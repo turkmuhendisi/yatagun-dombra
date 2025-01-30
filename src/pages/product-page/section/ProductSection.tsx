@@ -13,8 +13,8 @@ const ProductSection = () => {
             {id: 5, name: "Altay", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-1-jn7lpvi1FL7Uf6Cf5KqxLk9c47TcTm.jpg", price: "6.500₺"},
         ],
         dekorasyon: [
-            { id: 1, name: "Bozkurt Duvar Saati Siyah", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg", price: "1.500₺" },
-            { id: 2, name: "Bozkurt Duvar Saati Kahverengi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg", price: "3.000₺" },
+            { id: 6, name: "Bozkurt Duvar Saati Siyah", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg", price: "950₺" },
+            { id: 7, name: "Bozkurt Duvar Saati Kahverengi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg", price: "950₺" },
         ],
     };
 
