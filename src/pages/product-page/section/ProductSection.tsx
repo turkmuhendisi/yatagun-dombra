@@ -15,6 +15,8 @@ const ProductSection = () => {
         dekorasyon: [
             { id: 6, name: "Bozkurt Duvar Saati Siyah", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg", price: "750₺" },
             { id: 7, name: "Bozkurt Duvar Saati Kahverengi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg", price: "750₺" },
+            { id: 8, name: "Şahlanış Siyah", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-1-05FVkMhLHRhVcCwCogLCdfjKn9MyP1.jpg", price: "750₺" },
+            { id: 9, name: "Şahin Kırmızı", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-1-jqHWVO0eUAkC6ZoQNdkw4c4XfsWj42.jpg", price: "750₺" },
         ],
     };
 

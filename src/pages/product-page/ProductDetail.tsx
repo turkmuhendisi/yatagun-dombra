@@ -41,6 +41,7 @@ const ProductDetail = () => {
                 {isVideo ? (
                     <video
                         controls
+                        controlsList="nofullscreen nodownload noremoteplayback"
                         className="w-fit h-[450px] lg:w-fit lg:h-3/5 object-cover rounded-lg shadow-md"
                     >
                         <source src={selectedMedia!} type="video/mp4"/>
