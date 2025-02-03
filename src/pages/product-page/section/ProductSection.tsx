@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ProductCard from "../../../components/ProductCard.tsx";
-import { Product } from "../../../components/types.ts";
+import ProductCard from "../../../components/ProductCard";
+import { Product } from "../../../components/types";
 
 const ProductSection = () => {
 

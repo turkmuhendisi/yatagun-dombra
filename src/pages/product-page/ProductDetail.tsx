@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../components/products";
-import VideoThumbnail from "../../components/VideoThumbnail.tsx";
+import VideoThumbnail from "../../components/VideoThumbnail";
 
 const ProductDetail = () => {
     const { id } = useParams<{ id: string }>();

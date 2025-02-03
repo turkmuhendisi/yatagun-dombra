@@ -2,11 +2,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"
 import {SpeedInsights} from "@vercel/speed-insights/react";
 import Navbar from "./components/Navbar";
-import Home from "./pages/home-page/Home.tsx";
+import Home from "./pages/home-page/Home";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
-import Product from "./pages/product-page/Products.tsx";
-import ProductDetail from "./pages/product-page/ProductDetail.tsx";
+import Product from "./pages/product-page/Products";
+import ProductDetail from "./pages/product-page/ProductDetail";
 
 function App() {
     return (
@@ -14,10 +14,10 @@ function App() {
             <Navbar />
             <Routes>
                 <Route path="/" element={<Home />} />
-                <Route path="/products" element={<Product />} />
-                <Route path="/about" element={<About />} />
-                <Route path="/faq" element={<FAQ />} />
-                <Route path="/product/:id" element={<ProductDetail />} />
+                <Route path="/dombra-satin-al" element={<Product />} />
+                <Route path="/hakkimizda" element={<About />} />
+                <Route path="/sss" element={<FAQ />} />
+                <Route path="/urun/:id/:name" element={<ProductDetail />} />
             </Routes>
             <Analytics /> {/* Vercel Analytics in here */}
             <SpeedInsights /> {/* Vercel Speed Insights in here */}
