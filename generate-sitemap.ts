@@ -12,14 +12,15 @@ const pages = [
 
 async function generateSitemap() {
     const sitemap = new SitemapStream({ hostname: 'https://www.yatagundombra.com' });
-    const writeStream = createWriteStream(path.resolve('dist/sitemap.xml'));
+    const writeStream = createWriteStream(path.resolve('dist/sitemap.xml'), { encoding: 'utf-8' }); // Encoding ekledik
 
     sitemap.pipe(writeStream);
+
     pages.forEach((page) => sitemap.write(page));
     sitemap.end();
 
     await streamToPromise(sitemap);
-    console.log('✅ Sitemap başarıyla oluşturuldu!');
+    console.log('✅ Sitemap başarıyla XML formatında oluşturuldu!');
 }
 
 generateSitemap().catch(console.error);
