@@ -23,7 +23,6 @@ const ProductSection = () => {
 
     const [selectedCategory, setSelectedCategory] = useState<"dombras" | "dekorasyon">("dombras");
 
-    // Seçilen kategorinin ürünlerini filtreleme
     const products = mockProducts[selectedCategory];
 
     return (
@@ -32,7 +31,7 @@ const ProductSection = () => {
                 <h2 className="text-3xl lg:text-4xl font-bold text-black mb-10 text-left">Ürünler</h2>
             </div>
 
-            {/* Kategoriler */}
+            {/* Categories */}
             <div className="flex space-x-4 container mx-auto px-4 my-8">
                 <button
                     onClick={() => setSelectedCategory("dombras")}
@@ -52,7 +51,7 @@ const ProductSection = () => {
                 </button>
             </div>
 
-            {/* Ürünler */}
+            {/* Products */}
             <div className="container mx-auto">
                 <div
                     className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4 px-2">

@@ -28,9 +28,9 @@ export default function Navbar() {
                 {/* Middle Menu Links (Desktop View) */}
                 <div className="hidden md:flex space-x-8">
                     <Link to="/" className={getLinkClass("/")}>Anasayfa</Link>
-                    <Link to="/about" className={getLinkClass("/about")}>Biz kimiz?</Link>
-                    <Link to="/products" className={getLinkClass("/products")}>Ürünler</Link>
-                    <Link to="/faq" className={getLinkClass("/faq")}>S.S.S.</Link>
+                    <Link to="/hakkimizda" className={getLinkClass("/hakkimizda")}>Biz kimiz?</Link>
+                    <Link to="/dombra-satin-al" className={getLinkClass("/dombra-satin-al")}>Ürünler</Link>
+                    <Link to="/sss" className={getLinkClass("/sss")}>S.S.S.</Link>
                 </div>
             </div>
 
