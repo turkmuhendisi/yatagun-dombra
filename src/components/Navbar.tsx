@@ -48,13 +48,13 @@ export default function Navbar() {
                         <Link to="/" className={getLinkClass("/")} onClick={() => setIsOpen(false)}>Anasayfa</Link>
                     </li>
                     <li>
-                        <Link to="/about" className={getLinkClass("/about")} onClick={() => setIsOpen(false)}>Biz Kimiz?</Link>
+                        <Link to="/hakkimizda" className={getLinkClass("/hakkimizda")} onClick={() => setIsOpen(false)}>Biz Kimiz?</Link>
                     </li>
                     <li>
-                        <Link to="/products" className={getLinkClass("/products")} onClick={() => setIsOpen(false)}>Ürünler</Link>
+                        <Link to="/dombra-satin-al" className={getLinkClass("/dombra-satin-al")} onClick={() => setIsOpen(false)}>Ürünler</Link>
                     </li>
                     <li>
-                        <Link to="/faq" className={getLinkClass("/faq")} onClick={() => setIsOpen(false)}>S.S.S.</Link>
+                        <Link to="/sss" className={getLinkClass("/sss")} onClick={() => setIsOpen(false)}>S.S.S.</Link>
                     </li>
                 </ul>
             </div>
