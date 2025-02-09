@@ -1,0 +1,12 @@
+import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+    const location = useLocation(); // It does set current page path
+    const getLinkClass = (path) => location.pathname === path
+        ? "font-bold text-black" // Active section
+        : "hover:underline text-gray-700"; // Other sections
+    return (_jsxs("nav", { className: "bg-gray-50 text-black py-4 shadow-md", children: [_jsxs("div", { className: "container mx-auto flex items-center justify-between px-4", children: [_jsx("button", { className: "md:hidden text-2xl focus:outline-none", onClick: () => setIsOpen(!isOpen), children: isOpen ? _jsx(FaTimes, {}) : _jsx(FaBars, {}) }), _jsx("h1", { className: "text-2xl font-bold", children: "Yatagun Dombra" }), _jsxs("div", { className: "hidden md:flex space-x-8", children: [_jsx(Link, { to: "/", className: getLinkClass("/"), children: "Anasayfa" }), _jsx(Link, { to: "/hakkimizda", className: getLinkClass("/hakkimizda"), children: "Biz kimiz?" }), _jsx(Link, { to: "/dombra-satin-al", className: getLinkClass("/dombra-satin-al"), children: "\u00DCr\u00FCnler" }), _jsx(Link, { to: "/sss", className: getLinkClass("/sss"), children: "S.S.S." })] })] }), _jsxs("div", { className: `fixed left-0 top-0 w-64 h-full bg-white shadow-lg transform transition-transform z-50 duration-300 ${isOpen ? "translate-x-0" : "-translate-x-full"}`, children: [_jsx("button", { className: "absolute top-5 right-5 text-black text-2xl focus:outline-none", onClick: () => setIsOpen(false), children: _jsx(FaTimes, {}) }), _jsxs("ul", { className: "mt-20 space-y-6 px-6 text-lg font-semibold text-black", children: [_jsx("li", { children: _jsx(Link, { to: "/", className: getLinkClass("/"), onClick: () => setIsOpen(false), children: "Anasayfa" }) }), _jsx("li", { children: _jsx(Link, { to: "/about", className: getLinkClass("/about"), onClick: () => setIsOpen(false), children: "Biz Kimiz?" }) }), _jsx("li", { children: _jsx(Link, { to: "/products", className: getLinkClass("/products"), onClick: () => setIsOpen(false), children: "\u00DCr\u00FCnler" }) }), _jsx("li", { children: _jsx(Link, { to: "/faq", className: getLinkClass("/faq"), onClick: () => setIsOpen(false), children: "S.S.S." }) })] })] })] }));
+}
