@@ -16,7 +16,7 @@ export default function HeroSection() {
                 </p>
                 <button
                     className="bg-black text-white px-8 py-3 rounded-md hover:bg-gray-800 transition"
-                    onClick={() => navigate("/products")}
+                    onClick={() => navigate("/dombra-satin-al")}
                 >
                     Ürünleri Keşfet
                 </button>

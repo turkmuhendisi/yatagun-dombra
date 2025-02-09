@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "../../components/products";
-import VideoThumbnail from "../../components/VideoThumbnail.tsx";
+import VideoThumbnail from "../../components/VideoThumbnail";
 
 const ProductDetail = () => {
     const { id } = useParams<{ id: string }>();
@@ -41,6 +41,7 @@ const ProductDetail = () => {
                 {isVideo ? (
                     <video
                         controls
+                        controlsList="nofullscreen nodownload noremoteplayback"
                         className="w-fit h-[450px] lg:w-fit lg:h-3/5 object-cover rounded-lg shadow-md"
                     >
                         <source src={selectedMedia!} type="video/mp4"/>

@@ -36,7 +36,7 @@ function FAQ() {
                 {/* Başlık */}
                 <h2 className="text-4xl font-bold text-center text-black mb-12">Sıkça Sorulan Sorular</h2>
 
-                {/* S.S.S. Akordeon Yapısı */}
+                {/* S.S.S. Accordion Yapısı */}
                 <div className="max-w-3xl mx-auto">
                     {faqs.map((faq, index) => (
                         <div key={index} className="mb-4 border border-gray-300 rounded-lg overflow-hidden">

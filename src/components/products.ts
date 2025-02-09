@@ -138,7 +138,7 @@ export const products = [
             "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
             "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
             "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
-            "Saatin tasarımında Türklerin kadim sembolleri, ay-yıldız, ok ve yay, " +
+            "Saatin tasarımında Türklerin kadim sembolleri, Göktürk alfabesi, ay-yıldız, ok ve yay, " +
             "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
             "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
             "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
@@ -157,7 +157,67 @@ export const products = [
     },
     {
         id: 7,
-        name: "Bozkurt Vakti Kırmızı",
+        name: "Bozkurt Vakti Kahverengi",
+        price: "750₺",
+        description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
+        features: [
+            "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +
+            "geçmişin izlerini ve Bozkır ruhunu günümüze taşıyor. Göktürk motifleri, " +
+            "Türk tamgaları ve geleneksel sembollerle bezeli bu eşsiz saat, sadece zamanı değil, " +
+            "aynı zamanda bir kültürü temsil ediyor." +
+            "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
+            "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
+            "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
+            "Saatin tasarımında Türklerin kadim sembolleri, Göktürk alfabesi, ay-yıldız, ok ve yay, " +
+            "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
+            "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
+            "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
+            "🛠 El işçiliği lazer kesim.",
+            "🌿 Doğal ahşap ve zarif tasarım.",
+            "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
+            "📌 Özel üretim – Sınırlı stok"
+        ],
+        metarial: "6mm MDF",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-2-qw9DMVw1jo8YkVDXs9zPmZZCtTcoEc.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-3-Ou8l3EKjKfwd7Vr5wMaXGxj894QZLR.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-4-N5qZlY1DkPfA9j3JABQsvFfUGCion6.jpg"
+        ]
+    },
+    {
+        id: 8,
+        name: "Şahlanış Siyah",
+        price: "750₺",
+        description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
+        features: [
+            "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +
+            "geçmişin izlerini ve Bozkır ruhunu günümüze taşıyor. Göktürk motifleri, " +
+            "Türk tamgaları ve geleneksel sembollerle bezeli bu eşsiz saat, sadece zamanı değil, " +
+            "aynı zamanda bir kültürü temsil ediyor." +
+            "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
+            "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
+            "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
+            "Saatin tasarımında Türklerin kadim sembolleri, Göktürk alfabesi, ay-yıldız, ok ve yay, " +
+            "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
+            "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
+            "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
+            "🛠 El işçiliği lazer kesim.",
+            "🌿 Doğal ahşap ve zarif tasarım.",
+            "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
+            "📌 Özel üretim – Sınırlı stok"
+        ],
+        metarial: "6mm MDF",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-1-05FVkMhLHRhVcCwCogLCdfjKn9MyP1.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-2-740RtEBwJrilpmjlC3UvzRyleknki9.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-3-mkHvPclxk7eGi0kqbqTNzXVDwMuteQ.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-4-ii34mlMTMY1cubPSVLyb55Vf4XImAr.jpg"
+        ]
+    },
+    {
+        id: 9,
+        name: "Şahin Kırmızı",
         price: "750₺",
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         features: [
@@ -179,10 +239,10 @@ export const products = [
         ],
         metarial: "6mm MDF",
         images: [
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-2-qw9DMVw1jo8YkVDXs9zPmZZCtTcoEc.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-3-Ou8l3EKjKfwd7Vr5wMaXGxj894QZLR.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-4-N5qZlY1DkPfA9j3JABQsvFfUGCion6.jpg"
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-1-jqHWVO0eUAkC6ZoQNdkw4c4XfsWj42.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-2-3S7rtQU5b2kM9VpeDJKzP4bzvZc8sE.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-3-KlImvkaCeB3Zgp1jlvzCEA2X8eId9t.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-4-ZUpRQP4ldBAZNvmtGZgjA5srQC76dn.jpg"
         ]
     }
 ];

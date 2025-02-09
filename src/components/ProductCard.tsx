@@ -17,7 +17,7 @@ const ProductCard = React.memo(({product}: { product: Product }) => (
             <p className="text-gray-500 my-2">{product.price}</p>
         </div>
         <div className="p-4">
-            <Link to={`/product/${product.id}`} className="block">
+            <Link to={`/urun/${product.id}/${product.name}`} className="block">
                 <button className="text-lg bg-gray-100 w-full rounded-lg py-2">Ürüne Git</button>
             </Link>
         </div>

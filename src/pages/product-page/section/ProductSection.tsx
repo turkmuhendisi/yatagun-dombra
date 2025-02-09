@@ -1,6 +1,6 @@
 import { useState } from "react";
-import ProductCard from "../../../components/ProductCard.tsx";
-import { Product } from "../../../components/types.ts";
+import ProductCard from "../../../components/ProductCard";
+import { Product } from "../../../components/types";
 
 const ProductSection = () => {
 
@@ -15,13 +15,14 @@ const ProductSection = () => {
         dekorasyon: [
             { id: 6, name: "Bozkurt Duvar Saati Siyah", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg", price: "750₺" },
             { id: 7, name: "Bozkurt Duvar Saati Kahverengi", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg", price: "750₺" },
+            { id: 8, name: "Şahlanış Siyah", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-1-05FVkMhLHRhVcCwCogLCdfjKn9MyP1.jpg", price: "750₺" },
+            { id: 9, name: "Şahin Kırmızı", image: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-1-jqHWVO0eUAkC6ZoQNdkw4c4XfsWj42.jpg", price: "750₺" },
         ],
     };
 
 
     const [selectedCategory, setSelectedCategory] = useState<"dombras" | "dekorasyon">("dombras");
 
-    // Seçilen kategorinin ürünlerini filtreleme
     const products = mockProducts[selectedCategory];
 
     return (
@@ -30,7 +31,7 @@ const ProductSection = () => {
                 <h2 className="text-3xl lg:text-4xl font-bold text-black mb-10 text-left">Ürünler</h2>
             </div>
 
-            {/* Kategoriler */}
+            {/* Categories */}
             <div className="flex space-x-4 container mx-auto px-4 my-8">
                 <button
                     onClick={() => setSelectedCategory("dombras")}
@@ -50,7 +51,7 @@ const ProductSection = () => {
                 </button>
             </div>
 
-            {/* Ürünler */}
+            {/* Products */}
             <div className="container mx-auto">
                 <div
                     className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 lg:gap-4 px-2">
