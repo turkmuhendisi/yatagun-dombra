@@ -1,4 +1,4 @@
-import ProductSection from "./section/ProductSection.tsx";
+import ProductSection from "./section/ProductSection";
 
 export default function Products() {
     return (

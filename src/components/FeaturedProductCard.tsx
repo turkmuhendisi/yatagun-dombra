@@ -18,7 +18,7 @@ const FeaturedProductCard = React.memo(({ product }: { product: Product }) => (
         </div>
         <div className="p-4">
             {/* Ürüne Git Butonu */}
-            <Link to={`/product/${product.id}`} className="block">
+            <Link to={`/urun/${product.id}/${product.name}`} className="block">
                 <button className="text-lg bg-gray-100 w-full rounded-lg py-2 hover:bg-gray-200 transition">
                     Ürüne Git
                 </button>

@@ -1,6 +1,6 @@
-import HeroSection from "./section/HeroSection.tsx";
-import FeaturedProductsSection from "./section/FeaturedProductsSection.tsx";
-import AboutDombraSection from "./section/AboutDombraSection.tsx";
+import HeroSection from "./section/HeroSection";
+import FeaturedProductsSection from "./section/FeaturedProductsSection";
+import AboutDombraSection from "./section/AboutDombraSection";
 
 export default function Home() {
     return (
