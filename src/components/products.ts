@@ -15,7 +15,8 @@ export const products: Product[] = [
             "Hafif ama dayanıklı yapı, uzun süreli kullanımda konfor sağlar.",
             "Bas ve tiz dengesi optimize edilmiştir, güçlü bas frekansları ve parlak tizlerle dengeli bir ton sunar.",
             "Ahşap burgular, doğal akort stabilitesi sağlayarak uzun vadede sorunsuz bir çalma deneyimi sunar.",
-            "Bu dombra, estetik tasarımı ve akustik performansıyla orta seviye dombra severler için mükemmel bir seçenektir."
+            "Bu dombra, estetik tasarımı ve akustik performansıyla orta seviye dombra severler için mükemmel bir seçenektir.",
+            "Peşin fiyatına taksit imkânı."
         ],
         metarial: "Kayın ağacından yapılmış gövde, sağlam yapısı ve doğal rezonansıyla güçlü ve dengeli bir ton üretir.",
         images: [
@@ -45,7 +46,8 @@ export const products: Product[] = [
             "Hafif ama dayanıklı yapı, uzun süreli çalma deneyiminde konfor sağlar.",
             "Güçlü baslar ve parlak tizler, geleneksel ve modern dombra küylerine uyumlu, dengeli bir ton üretir.",
             "Özgün Kazak ve Türk motifleri, kültürel mirası yansıtan şık bir görünüm sunar.",
-            "Bu dombra, doğal ahşap rezonansı ve kaliteli işçiliğiyle en saf ve güçlü dombra sesini sunmak için özenle tasarlandı."
+            "Bu dombra, doğal ahşap rezonansı ve kaliteli işçiliğiyle en saf ve güçlü dombra sesini sunmak için özenle tasarlandı.",
+            "Peşin fiyatına taksit imkânı."
         ],
         metarial: "Kayın ve çam ağacından ustalıkla üretilmiş, doğal rezonansıyla güçlü ve berrak bir ses sunar.",
         images: [
@@ -71,7 +73,8 @@ export const products: Product[] = [
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
             "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
             "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
-            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor."
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
+            "Peşin fiyatına taksit imkânı."
         ],
         metarial: "Dut ağacından üretilmiş gövde, sıcak ve doğal bir ton karakteri sunarak dengeli bir ses üretir.",
         images: [
@@ -98,7 +101,8 @@ export const products: Product[] = [
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha zengin ve dolgun bir akustik sunar.",
             "Hafif ama dayanıklı yapı, uzun süreli çalma deneyiminde konfor sağlar.",
             "Dengeli baslar ve parlak tizler, geleneksel ve modern dombra küylerine uyumlu, temiz ve güçlü bir ton üretir.",
-            "Bu dombra, doğal ahşap rezonansı, estetik tasarımı ve kaliteli işçiliğiyle hem görselliği hem de müzikal performansı bir arada sunuyor."
+            "Bu dombra, doğal ahşap rezonansı, estetik tasarımı ve kaliteli işçiliğiyle hem görselliği hem de müzikal performansı bir arada sunuyor.",
+            "Peşin fiyatına taksit imkânı."
         ],
         metarial: "Kayın ağacından üretilmiş gövde, güçlü rezonansıyla doğal ve zengin bir ton sunar.",
         images: [
@@ -124,7 +128,8 @@ export const products: Product[] = [
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
             "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
             "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
-            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor."
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
+            "Peşin fiyatına taksit imkânı."
         ],
         metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
         images: [
@@ -150,7 +155,8 @@ export const products: Product[] = [
             "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
             "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
             "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
-            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor."
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
+            "Peşin fiyatına taksit imkânı."
         ],
         metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
         images: [
