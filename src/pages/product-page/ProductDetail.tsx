@@ -10,6 +10,7 @@ const ProductDetail = () => {
         name: "Bilinmeyen Ürün",
         price: "Bilinmiyor",
         description: "Ürün bilgileri bulunamadı.",
+        url: "",
         features: [],
         metarial: "Bilinmiyor",
         images: [""],
@@ -24,7 +25,7 @@ const ProductDetail = () => {
         window.scrollTo({ top: 0, behavior: "instant" });
     }, []);
 
-    const handleWhatsAppRedirect = () => {
+    /*const handleWhatsAppRedirect = () => {
         if (!product) return;
 
         const message = encodeURIComponent(
@@ -32,7 +33,7 @@ const ProductDetail = () => {
         );
 
         window.open(`https://wa.me/${905355267480}?text=${message}`, "_blank");
-    };
+    };*/
 
     return (
         <section className="bg-gray-100 w-full min-h-screen px-3 py-16 flex flex-col lg:flex-row gap-12">
@@ -110,7 +111,7 @@ const ProductDetail = () => {
                 {/* WhatsApp Sipariş Butonu - Normal Görünüm */}
                 <button
                     className="mt-6 bg-[#FF6000] text-white py-3 px-6 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center lg:block hidden"
-                    onClick={handleWhatsAppRedirect}
+                    onClick={() => window.open(product.url)}
                 >
                     {/*
                     <img
@@ -127,7 +128,7 @@ const ProductDetail = () => {
                 <p className="text-2xl font-semibold mr-6">{product.price}</p>
                 <button
                     className="w-full bg-[#FF6000] text-white py-3 px-3 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center"
-                    onClick={handleWhatsAppRedirect}
+                    onClick={() => window.open(product.url)}
                 >
                     {/*
                     <img
