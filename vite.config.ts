@@ -14,5 +14,10 @@ export default defineConfig({
                 entryFileNames: 'assets/[name]-[hash].js',
             },
         },
+    },
+    server: {
+        host: '0.0.0.0',
+        port: 5173,
+        strictPort: true
     }
 });
