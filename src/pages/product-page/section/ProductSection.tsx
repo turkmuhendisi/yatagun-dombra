@@ -18,7 +18,7 @@ const ProductSection = () => {
     const mockProducts = groupProductsByCategory(products);
 
     // Selected category (dynamic)
-    const [selectedCategory, setSelectedCategory] = useState<Product["category"]>("dombras");
+    const [selectedCategory, setSelectedCategory] = useState<Product["category"]>("dombra");
 
     // Filtered products as selected category
     const filteredProducts = mockProducts[selectedCategory] || [];

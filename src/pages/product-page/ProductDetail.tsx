@@ -64,7 +64,7 @@ const ProductDetail = () => {
                             <VideoThumbnail
                                 poster={product.videoThumbnail}
                                 onClick={() => {
-                                    setSelectedMedia(product.video);
+                                    setSelectedMedia(product.video || null);
                                     setIsVideo(true);
                                 }}
                             />
