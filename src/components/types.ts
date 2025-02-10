@@ -5,9 +5,10 @@ export type Product = {
     description: string,
     url: string,
     features: string[],
-    metarial: string,
+    metarial?: string,
     images: string[],
     video?: string,
     videoThumbnail?: string,
-    category: string
+    category: string,
+    isFeatured?: boolean,
 };

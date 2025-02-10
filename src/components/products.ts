@@ -29,7 +29,8 @@ export const products: Product[] = [
         ],
         video: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/bozk%C4%B1r-teaser-qge9na7GoBz9eHeJfaT8daVOec5MIY.mp4",
         videoThumbnail: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg",
-        category: "dombra"
+        category: "dombra",
+        isFeatured: true
     },
     {
         id: 2,
@@ -58,7 +59,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra2/d2-5-Ui51PtfLV5jDQUG4BDs56IIMbXgsPR.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra2/d2-6-ELML3zTer7nIJ69HX1BfXb9rXyCOuD.jpg"
         ],
-        category: "dombra"
+        category: "dombra",
+        isFeatured: true
     },
     {
         id: 3,
@@ -85,7 +87,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-5-8725xaW417I7znHAXkg3yuWIk6LuU8.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-6-2eZYTKD2hom9mD3Ph8Noa52QWs6Hac.jpg"
         ],
-        category: "dombra"
+        category: "dombra",
+        isFeatured: true
     },
     {
         id: 4,
@@ -113,7 +116,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-5-plQsdrIzCmi4wRXBDPkEtBOqLbyzit.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-6-mMcxhuSC91ioJLGF646ivadiR86FA1.jpg"
         ],
-        category: "dombra"
+        category: "dombra",
+        isFeatured: true
     },
     {
         id: 5,
@@ -140,7 +144,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-5-YFtqRH2PWRJeGkIE9MzWBc7p7Ag2rt.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-6-INmwrpjUXUd8vWxwjKNB6fWAnD7Hdu.jpg"
         ],
-        category: "dombra"
+        category: "dombra",
+        isFeatured: true
     },
     {
         id: 6,
@@ -168,7 +173,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-6-x0yUzcwVt5vPcMjlljmvivKkm0gG4Z.webp",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-7-ymqDiURIYDK26kHLJUUg4eqSDggz4U.webp"
         ],
-        category: "dombra"
+        category: "dombra",
+        isFeatured: true
     },
     {
         id: 7,
