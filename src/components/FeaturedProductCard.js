@@ -1,5 +1,0 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
-import React from "react";
-import { Link } from "react-router-dom";
-const FeaturedProductCard = React.memo(({ product }) => (_jsxs("div", { className: "bg-white shadow-md rounded-lg overflow-hidden min-w-[300px] max-w-[300px]", children: [_jsx("div", { className: "w-full", children: _jsx("img", { src: product.image, alt: product.name, className: "w-full max-h-150 aspect-[1/1] object-cover", loading: "lazy" }) }), _jsxs("div", { className: "p-4 text-center flex-grow", children: [_jsx("h3", { className: "text-lg font-semibold", children: product.name }), _jsx("p", { className: "text-gray-500 my-2", children: product.price })] }), _jsx("div", { className: "p-4", children: _jsx(Link, { to: `/urun/${product.id}/${product.name}`, className: "block", children: _jsx("button", { className: "text-lg bg-gray-100 w-full rounded-lg py-2 hover:bg-gray-200 transition", children: "\u00DCr\u00FCne Git" }) }) })] })));
-export default FeaturedProductCard;

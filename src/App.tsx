@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Routes, Route, Navigate} from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import { Analytics } from "@vercel/analytics/react"
 import {SpeedInsights} from "@vercel/speed-insights/react";
 import Navbar from "./components/Navbar";
@@ -13,8 +13,7 @@ function App() {
         <Router>
             <Navbar />
             <Routes>
-                <Route path="/anasayfa" element={<Home />} />
-                <Route path="/" element={<Navigate to="/anasayfa" replace />} />
+                <Route path="" element={<Home />} />
                 <Route path="/dombra-satin-al" element={<Product />} />
                 <Route path="/hakkimizda" element={<About />} />
                 <Route path="/sss" element={<FAQ />} />
