@@ -42,7 +42,7 @@ const ProductDetail = () => {
                     <video
                         controls
                         controlsList="nofullscreen nodownload noremoteplayback"
-                        className="w-fit h-[450px] lg:w-fit lg:h-3/5 object-cover rounded-lg shadow-md"
+                        className="w-full sm:w-40 md:w-96 lg:w-[600px] aspect-square object-cover rounded-lg shadow-md"
                     >
                         <source src={selectedMedia!} type="video/mp4"/>
                         Tarayıcınız video formatını desteklemiyor.
@@ -101,25 +101,44 @@ const ProductDetail = () => {
                         ))}
                     </ul>
                 </h3>
-                <h3 className="text-lg lg:text-xl mt-5">
+                <h3 className="text-lg lg:text-xl mt-5 mb-10">
                     <h2 className="font-bold">Malzeme</h2>
                     {product.metarial}
                 </h3>
-                <p className="text-2xl font-semibold mt-10">{product.price}</p>
+                <p className="text-2xl font-semibold mt-10 lg:block hidden">{product.price}</p>
 
-                {/* WhatsApp Sipariş Butonu */}
+                {/* WhatsApp Sipariş Butonu - Normal Görünüm */}
                 <button
-                    className="mt-6 bg-black text-white py-3 px-6 rounded-md text-lg hover:bg-gray-800 transition flex items-center justify-center"
+                    className="mt-6 bg-[#FF6000] text-white py-3 px-6 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center lg:block hidden"
                     onClick={handleWhatsAppRedirect}
                 >
+                    {/*
                     <img
                         src="https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/whatsapp-icon-WXnSNnyqvMpt86VVj6P4BYBpwyEAAv.svg"
                         alt="WhatsApp"
                         className="w-6 h-6 mr-2"
-                    />
-                    WhatsApp ile Sipariş Ver
+                    />*/}
+                    <span className="font-semibold mr-1">Hepsiburada</span> ile Sipariş Ver
                 </button>
             </div>
+
+            {/* Mobil ve Tablet İçin Sabit Buton ve Fiyat */}
+            <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 pb-6 flex items-center justify-between lg:hidden">
+                <p className="text-2xl font-semibold mr-6">{product.price}</p>
+                <button
+                    className="w-full bg-[#FF6000] text-white py-3 px-3 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center"
+                    onClick={handleWhatsAppRedirect}
+                >
+                    {/*
+                    <img
+                        src="https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/whatsapp-icon-WXnSNnyqvMpt86VVj6P4BYBpwyEAAv.svg"
+                        alt="WhatsApp"
+                        className="w-6 h-6 mr-2"
+                    />*/}
+                    <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
+                </button>
+            </div>
+
         </section>
     );
 };
