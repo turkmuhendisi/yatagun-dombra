@@ -206,7 +206,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-3-ygWtKcoMKbOKMnoOFI6PTdnxTRnDJA.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-4-kWWiMcX7D0nFVv3M3kVjAv9kJ66GJo.jpg"
         ],
-        category: "decoration"
+        category: "dekorasyon"
     },
     {
         id: 8,
@@ -238,7 +238,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-3-Ou8l3EKjKfwd7Vr5wMaXGxj894QZLR.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-4-N5qZlY1DkPfA9j3JABQsvFfUGCion6.jpg"
         ],
-        category: "decoration"
+        category: "dekorasyon"
     },
     {
         id: 9,
@@ -270,7 +270,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-3-mkHvPclxk7eGi0kqbqTNzXVDwMuteQ.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-4-ii34mlMTMY1cubPSVLyb55Vf4XImAr.jpg"
         ],
-        category: "decoration"
+        category: "dekorasyon"
     },
     {
         id: 10,
@@ -302,7 +302,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-3-KlImvkaCeB3Zgp1jlvzCEA2X8eId9t.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-4-ZUpRQP4ldBAZNvmtGZgjA5srQC76dn.jpg"
         ],
-        category: "decoration"
+        category: "dekorasyon"
     }
 ];
 
