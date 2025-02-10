@@ -126,39 +126,58 @@ export const products = [
         ]
     },
     {
-        id: 6,
-        name: "Bozkurt Vakti Siyah",
-        price: "750₺",
-        description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
+        id: 5,
+        name: "Altay",
+        price: "5.750₺",
+        description: "Desenli Amatör Dombra",
         features: [
-            "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +
-            "geçmişin izlerini ve Bozkır ruhunu günümüze taşıyor. Göktürk motifleri, " +
-            "Türk tamgaları ve geleneksel sembollerle bezeli bu eşsiz saat, sadece zamanı değil, " +
-            "aynı zamanda bir kültürü temsil ediyor." +
-            "Merkezde yer alan Bozkurt, Türk milletinin bağımsızlık ve özgürlük ruhunu simgelerken, " +
-            "çevresindeki semboller Oğuzlardan Göktürklere kadar uzanan derin bir mirası yansıtıyor. " +
-            "Doğal ahşap malzeme ile üretilen bu saat, estetik tasarımı ve ince işçiliğiyle bulunduğu ortama asalet ve karakter katıyor.",
-            "Saatin tasarımında Türklerin kadim sembolleri, ay-yıldız, ok ve yay, " +
-            "kurt başı ve daha birçok anlamlı detay özenle işlenmiştir. " +
-            "Her bir detayıyla ecdadımızın izini taşıyan Yatagun Özel Tasarım Saati, evinizde, ofisinizde veya özel " +
-            "koleksiyonunuzda zamana anlam katacak bir parça olacak.",
-            "🛠 El işçiliği lazer kesim.",
-            "🌿 Doğal ahşap ve zarif tasarım.",
-            "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
-            "📌 Özel üretim – Sınırlı stok"
+            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
+            "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
+            "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
+            "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
+            "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor."
         ],
-        metarial: "6mm MDF",
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
         images: [
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-2-in7i6xqxe1FPBkbOI7OhkeJzly5lhx.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-3-ygWtKcoMKbOKMnoOFI6PTdnxTRnDJA.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-4-kWWiMcX7D0nFVv3M3kVjAv9kJ66GJo.jpg"
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-1-jn7lpvi1FL7Uf6Cf5KqxLk9c47TcTm.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-2-ZTFnTsKZ0VU4oUYR5ve1VCz7nZvCW7.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-3-vt3EZRoAZpBUYl4lKJEMebtlNkIGOx.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-4-YXTMSwNCuEJW35FXxiW5qaPbQU1ysM.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-5-YFtqRH2PWRJeGkIE9MzWBc7p7Ag2rt.jpg",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-6-INmwrpjUXUd8vWxwjKNB6fWAnD7Hdu.jpg"
         ]
     },
     {
-        id: 7,
+        id: 6,
+        name: "Yılkı",
+        price: "5.750₺",
+        description: "At Desenli Dombra",
+        features: [
+            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
+            "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
+            "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
+            "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
+            "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor."
+        ],
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-1-997EjUHGMyyzdoEgAezYvzWM7dz760.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-2-3AB7hn2Ie96jUZziQYljaszyVqzkIB.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-3-k2jnr6KOApoGoW0NeG3uoesA5tLZBm.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-4-IlQeyqMoh34iO4aHG4qxy7boGM726P.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-5-CZ22ma7R1uS1foWkpSVoSWX1dEvfkb.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-6-x0yUzcwVt5vPcMjlljmvivKkm0gG4Z.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-7-ymqDiURIYDK26kHLJUUg4eqSDggz4U.webp"
+        ]
+    },
+    {
+        id: 8,
         name: "Bozkurt Vakti Kahverengi",
-        price: "750₺",
+        price: "700₺",
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         features: [
             "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +
@@ -186,9 +205,9 @@ export const products = [
         ]
     },
     {
-        id: 8,
-        name: "Şahlanış Siyah",
-        price: "750₺",
+        id: 9,
+        name: "Şahlanış",
+        price: "600₺",
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         features: [
             "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +
@@ -216,9 +235,9 @@ export const products = [
         ]
     },
     {
-        id: 9,
-        name: "Şahin Kırmızı",
-        price: "750₺",
+        id: 10,
+        name: "Kızıl Kartal",
+        price: "600₺",
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         features: [
             "Türk kültürünün özünü taşıyan bu özel tasarım ahşap saat, " +

@@ -51,7 +51,7 @@ const ProductDetail = () => {
                     <img
                         src={selectedMedia!}
                         alt={product.name}
-                        className="w-fit h-[450px] lg:w-fit lg:h-3/5 object-cover rounded-lg shadow-md"
+                        className="w-full sm:w-40 md:w-96 lg:w-[600px] aspect-square object-cover rounded-lg shadow-md"
                     />
                 )}
 
