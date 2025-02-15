@@ -13,6 +13,7 @@ const ProductDetail = () => {
         id: 0,
         name: "Bilinmeyen Ürün",
         price: 0,
+        discountAmount: 0,
         description: "Ürün bilgileri bulunamadı.",
         url: "",
         features: [],
@@ -115,7 +116,7 @@ const ProductDetail = () => {
 
                 <div className="flex flex-row items-center p-2 gap-2 mt-6 mb-20 lg:mb-3 border-l-2 border-gray-300 justify-between">
                 {/* Discounted Price */}
-                    <ProductPrice product={product} discountPercentage={20} />
+                    <ProductPrice product={product}/>
                     {/* Whatsapp Order Button */}
                     <button
                         className="border lg:border-2 border-green-500 bg-green-50 text-black w-full py-3 rounded-md text-sm transition justify-center hover:bg-green-100"

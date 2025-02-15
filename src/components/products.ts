@@ -5,6 +5,7 @@ export const products: Product[] = [
         id: 1,
         name: "Bozkır",
         price: 10000,
+        discountAmount: 1500,
         description: "Orta Seviye Profesyonel Kaplama Dombra",
         url: "https://www.hepsiburada.com/yari-profesyonel-dombra-bozkir-pm-HBC00007V73GR?magaza=Yatagun%20K%C3%BC%C4%9F&",
         features: [
@@ -36,6 +37,7 @@ export const products: Product[] = [
         id: 2,
         name: "Bozkır Nefesi",
         price: 14000,
+        discountAmount: 1000,
         description: "Üst Kalite Profesyonel Dombra",
         url: "https://www.hepsiburada.com/ust-seviye-profesyonel-dombra-bozkir-nefesi-pm-HBC00007V741R?magaza=Yatagun%20K%C3%BC%C4%9F&",
         features: [
@@ -66,6 +68,7 @@ export const products: Product[] = [
         id: 3,
         name: "Tuna",
         price: 6370,
+        discountAmount: 370,
         description: "Desenli Amatör Dombra",
         url: "https://www.hepsiburada.com/desenli-amator-dombra-tuna-pm-HBC00007V74IU?magaza=Yatagun%20K%C3%BC%C4%9F&",
         features: [
@@ -94,6 +97,7 @@ export const products: Product[] = [
         id: 4,
         name: "Gök",
         price: 10000,
+        discountAmount: 1000,
         description: "Kartal Motifli Orta Seviye Dombra",
         url: "https://www.hepsiburada.com/yari-profesyonel-dombra-gok-pm-HBC00007V74CA?magaza=Yatagun%20K%C3%BC%C4%9F&",
         features: [
@@ -123,6 +127,7 @@ export const products: Product[] = [
         id: 5,
         name: "Altay",
         price: 6500,
+        discountAmount: 500,
         description: "Desenli Amatör Dombra",
         url: "https://www.hepsiburada.com/desenli-amator-dombra-altay-pm-HBC00007V74M8?magaza=Yatagun%20K%C3%BC%C4%9F&",
         features: [
@@ -151,7 +156,8 @@ export const products: Product[] = [
         id: 6,
         name: "Yılkı",
         price: 6500,
-        description: "At Desenli Dombra",
+        discountAmount: 500,
+        description: "At Desenli Amatör Dombra",
         url: "https://www.hepsiburada.com/at-desenli-amator-dombra-yilki-pm-HBC00007Y81ZB?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
@@ -180,6 +186,7 @@ export const products: Product[] = [
         id: 7,
         name: "Bozkurt Vakti Siyah",
         price: 800,
+        discountAmount: 150,
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         url: "https://www.hepsiburada.com/bozkurt-vakti-ozel-tasarim-duvar-saati-pm-HBC00007VJG8Q?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
@@ -212,6 +219,7 @@ export const products: Product[] = [
         id: 8,
         name: "Bozkurt Vakti Kahverengi",
         price: 800,
+        discountAmount: 150,
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         url: "https://www.hepsiburada.com/bozkurt-vakti-ozel-tasarim-duvar-saati-pm-HBC00007VJIU8?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
@@ -244,6 +252,7 @@ export const products: Product[] = [
         id: 9,
         name: "Şahlanış",
         price: 750,
+        discountAmount: 150,
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         url: "https://www.hepsiburada.com/sahlanis-siyah-ozel-tasarim-duvar-saati-pm-HBC00007VJHNE?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
@@ -276,6 +285,7 @@ export const products: Product[] = [
         id: 10,
         name: "Kızıl Kartal",
         price: 800,
+        discountAmount: 150,
         description: "Yatagun Özel Tasarım Ahşap Duvar Saati",
         url: "",
         features: [
