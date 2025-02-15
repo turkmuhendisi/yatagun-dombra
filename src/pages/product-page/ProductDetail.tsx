@@ -1,44 +1,50 @@
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { products } from "../../components/products";
+import {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+import {products} from "../../components/products";
 import VideoThumbnail from "../../components/VideoThumbnail";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faWhatsapp} from "@fortawesome/free-brands-svg-icons";
+import ProductPrice from "../../components/ProductPrice";
+import {formatPrice} from "../../components/formatPrice";
 
 const ProductDetail = () => {
-    const { id } = useParams<{ id: string }>();
+    const {id} = useParams<{ id: string }>();
     const product = products.find((p) => p.id === parseInt(id!)) ?? {
         id: 0,
         name: "Bilinmeyen Ürün",
-        price: "Bilinmiyor",
+        price: 0,
         description: "Ürün bilgileri bulunamadı.",
         url: "",
         features: [],
         metarial: "Bilinmiyor",
         images: [""],
         video: "",
-        videoThumbnail: ""
+        videoThumbnail: "",
+        category: ""
     };
 
     const [selectedMedia, setSelectedMedia] = useState<string | null>(product.images[0] || null);
     const [isVideo, setIsVideo] = useState(false);
 
     useEffect(() => {
-        window.scrollTo({ top: 0, behavior: "instant" });
+        window.scrollTo({top: 0, behavior: "instant"});
     }, []);
 
-    /*const handleWhatsAppRedirect = () => {
+
+    const handleWhatsAppRedirect = () => {
         if (!product) return;
 
-        const message = encodeURIComponent(
+        /*const message = encodeURIComponent(
             `Merhaba, bu ürünü satın almak istiyorum:\n\n*${product.name}*\nFiyat: ${product.price}\nÜrün Linki: ${window.location.href}`
-        );
+        );*/
 
-        window.open(`https://wa.me/${905355267480}?text=${message}`, "_blank");
-    };*/
+        window.open(`https://wa.me/${905355267480}`, "_blank");
+    };
 
     return (
         <section className="bg-gray-100 w-full min-h-screen px-3 py-16 flex flex-col lg:flex-row gap-12">
             <div className="w-full lg:w-1/2 flex flex-col items-center">
-                {/* Büyük Görsel veya Video */}
+                {/* Big Images or Video */}
                 {isVideo ? (
                     <video
                         controls
@@ -56,7 +62,7 @@ const ProductDetail = () => {
                     />
                 )}
 
-                {/* Küçük Görseller ve Video */}
+                {/* Small Images and Video */}
                 <div className="flex space-x-4 mt-4 overflow-x-auto scrollbar-hide max-w-2xl">
                     {/* Video Thumbnail */}
                     {product.video && product.videoThumbnail && (
@@ -71,7 +77,7 @@ const ProductDetail = () => {
                         </div>
                     )}
 
-                    {/* Ürün Görselleri */}
+                    {/* Product Images */}
                     {product.images.map((image, index) => (
                         <img
                             key={index}
@@ -90,7 +96,7 @@ const ProductDetail = () => {
                 </div>
             </div>
 
-            {/* Ürün Bilgileri */}
+            {/* Product Information */}
             <div className="w-full lg:w-2/5 flex flex-col justify-start">
                 <h1 className="text-3xl font-bold">{product.name}</h1>
                 <p className="text-gray-600 mt-2">{product.description}</p>
@@ -102,40 +108,43 @@ const ProductDetail = () => {
                         ))}
                     </ul>
                 </h3>
-                <h3 className="text-lg lg:text-xl mt-5 mb-10">
+                <h3 className="text-lg lg:text-xl mt-5 mb-5">
                     <h2 className="font-bold">Malzeme</h2>
                     {product.metarial}
                 </h3>
-                <p className="text-2xl font-semibold mt-10 lg:block hidden">{product.price}</p>
 
-                {/* WhatsApp Sipariş Butonu - Normal Görünüm */}
+                <div className="flex flex-row items-center p-2 gap-2 mt-6 mb-20 lg:mb-3 border-l-2 border-gray-300 justify-between">
+                {/* Discounted Price */}
+                    <ProductPrice product={product} discountPercentage={20} />
+                    {/* Whatsapp Order Button */}
+                    <button
+                        className="border-2 border-green-500 bg-green-50 text-black w-full py-3 rounded-md text-sm transition justify-center hover:bg-green-100"
+                        onClick={handleWhatsAppRedirect}
+                    >
+                        <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-green-500 mr-2" />
+                        <span className="font-semibold">WhatsApp</span> ile indirimli al
+                    </button>
+                </div>
+
+                <p className="text-2xl font-semibold mt-10 lg:block hidden">{formatPrice(product.price)}</p>
+
+                {/* Hepsiburada order button - Normal view */}
                 <button
                     className="mt-6 bg-[#FF6000] text-white py-3 px-6 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center lg:block hidden"
                     onClick={() => window.open(product.url)}
                 >
-                    {/*
-                    <img
-                        src="https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/whatsapp-icon-WXnSNnyqvMpt86VVj6P4BYBpwyEAAv.svg"
-                        alt="WhatsApp"
-                        className="w-6 h-6 mr-2"
-                    />*/}
-                    <span className="font-semibold mr-1">Hepsiburada</span> ile Sipariş Ver
+                    <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
                 </button>
             </div>
 
             {/* Mobil ve Tablet İçin Sabit Buton ve Fiyat */}
-            <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 pb-6 flex items-center justify-between lg:hidden">
-                <p className="text-2xl font-semibold mr-6">{product.price}</p>
+            <div
+                className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 pb-6 flex items-center justify-between lg:hidden">
+                <p className="text-2xl font-semibold mr-3">{formatPrice(product.price)}</p>
                 <button
-                    className="w-full bg-[#FF6000] text-white py-3 px-3 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center"
+                    className="w-auto bg-[#FF6000] text-white py-3 px-6 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center"
                     onClick={() => window.open(product.url)}
                 >
-                    {/*
-                    <img
-                        src="https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/whatsapp-icon-WXnSNnyqvMpt86VVj6P4BYBpwyEAAv.svg"
-                        alt="WhatsApp"
-                        className="w-6 h-6 mr-2"
-                    />*/}
                     <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
                 </button>
             </div>
