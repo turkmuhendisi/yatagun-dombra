@@ -1,5 +1,7 @@
 import MusicPlayer from "../../../components/MusicPlayer";
 import {useNavigate} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faInstagram} from "@fortawesome/free-brands-svg-icons";
 
 export default function HeroSection() {
     const navigate = useNavigate();
@@ -25,6 +27,16 @@ export default function HeroSection() {
             <div className="mt-12">
                 <MusicPlayer/>
             </div>
+
+            <a
+                href="https://www.instagram.com/yatagundombra/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 mt-8 lg:mt-16 font-semibold lg:text-xl transition"
+            >
+                <FontAwesomeIcon icon={faInstagram} size="lg" className="text-black" />
+                <span>yatagundombra</span>
+            </a>
         </section>
     );
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { Product } from "./types";
 import {Link} from "react-router-dom";
+import {formatPrice} from "./formatPrice";
 
 const FeaturedProductCard = React.memo(({ product }: { product: Product }) => (
     <div className="bg-white shadow-md rounded-lg overflow-hidden min-w-[300px] max-w-[300px]">
@@ -14,7 +15,7 @@ const FeaturedProductCard = React.memo(({ product }: { product: Product }) => (
         </div>
         <div className="p-4 text-center flex-grow">
             <h3 className="text-lg font-semibold">{product.name}</h3>
-            <p className="text-gray-500 my-2">{product.price}</p>
+            <p className="text-gray-500 my-2">{formatPrice(product.price)}</p>
         </div>
         <div className="p-4">
             {/* Ürüne Git Butonu */}
