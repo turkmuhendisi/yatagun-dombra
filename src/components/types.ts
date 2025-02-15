@@ -2,6 +2,7 @@ export type Product = {
     id: number,
     name: string,
     price: number,
+    discountAmount: number
     description: string,
     url: string,
     features: string[],

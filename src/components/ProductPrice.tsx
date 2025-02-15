@@ -1,10 +1,10 @@
 import { Product } from "./types";
 import {formatPrice} from "./formatPrice";
 
-type ProductPriceProps = { product: Product; discountPercentage: number; };
+type ProductPriceProps = { product: Product;};
 
-const ProductPrice: React.FC<ProductPriceProps> = ({ product, discountPercentage }) => {
-    const discountedPrice = (product.price * (1 - discountPercentage / 100));
+const ProductPrice: React.FC<ProductPriceProps> = ({ product}) => {
+    const discountedPrice = (product.price - product.discountAmount);
 
     const formattedOldPrice = formatPrice(product.price);
     const formattedDiscountedPrice = formatPrice(discountedPrice);
