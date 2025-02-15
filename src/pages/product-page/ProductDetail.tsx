@@ -118,7 +118,7 @@ const ProductDetail = () => {
                     <ProductPrice product={product} discountPercentage={20} />
                     {/* Whatsapp Order Button */}
                     <button
-                        className="border-2 border-green-500 bg-green-50 text-black w-full py-3 rounded-md text-sm transition justify-center hover:bg-green-100"
+                        className="border lg:border-2 border-green-500 bg-green-50 text-black w-full py-3 rounded-md text-sm transition justify-center hover:bg-green-100"
                         onClick={handleWhatsAppRedirect}
                     >
                         <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-green-500 mr-2" />
