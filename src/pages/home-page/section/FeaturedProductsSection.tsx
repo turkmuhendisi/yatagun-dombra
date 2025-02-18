@@ -5,7 +5,7 @@ import {products} from "../../../components/products";
 
 const FeaturedProducts: React.FC = () => {
     const featuredProducts: Product[] = useMemo(() => {
-        return products.filter((product) => product.isFeatured);
+        return products.filter((product) => product.isFeatured && product.isStock);
     }, []);
 
 

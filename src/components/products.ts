@@ -31,7 +31,8 @@ export const products: Product[] = [
         video: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/bozk%C4%B1r-teaser-qge9na7GoBz9eHeJfaT8daVOec5MIY.mp4",
         videoThumbnail: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg",
         category: "dombra",
-        isFeatured: true
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 2,
@@ -62,7 +63,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra2/d2-6-ELML3zTer7nIJ69HX1BfXb9rXyCOuD.jpg"
         ],
         category: "dombra",
-        isFeatured: true
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 3,
@@ -91,7 +93,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-6-2eZYTKD2hom9mD3Ph8Noa52QWs6Hac.jpg"
         ],
         category: "dombra",
-        isFeatured: true
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 4,
@@ -121,7 +124,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-6-mMcxhuSC91ioJLGF646ivadiR86FA1.jpg"
         ],
         category: "dombra",
-        isFeatured: true
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 5,
@@ -150,7 +154,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-6-INmwrpjUXUd8vWxwjKNB6fWAnD7Hdu.jpg"
         ],
         category: "dombra",
-        isFeatured: true
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 6,
@@ -180,7 +185,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-7-ymqDiURIYDK26kHLJUUg4eqSDggz4U.webp"
         ],
         category: "dombra",
-        isFeatured: true
+        isFeatured: true,
+        isStock: false
     },
     {
         id: 7,
@@ -213,7 +219,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-3-ygWtKcoMKbOKMnoOFI6PTdnxTRnDJA.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-4-kWWiMcX7D0nFVv3M3kVjAv9kJ66GJo.jpg"
         ],
-        category: "dekorasyon"
+        category: "dekorasyon",
+        isStock: true
     },
     {
         id: 8,
@@ -246,7 +253,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-3-Ou8l3EKjKfwd7Vr5wMaXGxj894QZLR.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-4-N5qZlY1DkPfA9j3JABQsvFfUGCion6.jpg"
         ],
-        category: "dekorasyon"
+        category: "dekorasyon",
+        isStock: true
     },
     {
         id: 9,
@@ -279,7 +287,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-3-mkHvPclxk7eGi0kqbqTNzXVDwMuteQ.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-4-ii34mlMTMY1cubPSVLyb55Vf4XImAr.jpg"
         ],
-        category: "dekorasyon"
+        category: "dekorasyon",
+        isStock: true
     },
     {
         id: 10,
@@ -312,7 +321,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-3-KlImvkaCeB3Zgp1jlvzCEA2X8eId9t.jpg",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-4-ZUpRQP4ldBAZNvmtGZgjA5srQC76dn.jpg"
         ],
-        category: "dekorasyon"
+        category: "dekorasyon",
+        isStock: true
     }
 ];
 
