@@ -12,4 +12,5 @@ export type Product = {
     videoThumbnail?: string,
     category: string,
     isFeatured?: boolean,
+    isStock?: boolean
 };
