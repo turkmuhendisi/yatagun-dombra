@@ -7,6 +7,7 @@ import About from "./pages/About";
 import FAQ from "./pages/FAQ";
 import Product from "./pages/product-page/Products";
 import ProductDetail from "./pages/product-page/ProductDetail";
+import NotFound from "./pages/status-pages/NotFound";
 
 function App() {
     return (
@@ -18,6 +19,7 @@ function App() {
                 <Route path="/hakkimizda" element={<About />} />
                 <Route path="/sss" element={<FAQ />} />
                 <Route path="/urun/:id/:name" element={<ProductDetail />} />
+                <Route path="/404-not-found" element={<NotFound />} />
             </Routes>
             <Analytics /> {/* Vercel Analytics in here */}
             <SpeedInsights /> {/* Vercel Speed Insights in here */}
