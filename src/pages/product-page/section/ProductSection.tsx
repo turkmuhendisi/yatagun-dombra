@@ -7,7 +7,6 @@ const ProductSection = () => {
 
     const groupProductsByCategory = (products: Product[]): Record<string, Product[]> => {
         return products.reduce((acc, product) => {
-            if (!product.isStock) return acc;
             if (!acc[product.category]) {
                 acc[product.category] = [];
             }

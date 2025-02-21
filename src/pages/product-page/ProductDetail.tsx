@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {useParams} from "react-router-dom";
+import {useParams, useNavigate} from "react-router-dom";
 import {products} from "../../components/products";
 import VideoThumbnail from "../../components/VideoThumbnail";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -30,6 +30,15 @@ const ProductDetail = () => {
     useEffect(() => {
         window.scrollTo({top: 0, behavior: "instant"});
     }, []);
+
+    const navigate = useNavigate();
+    useEffect(() => {
+        if (!product || !product.isStock) {
+            navigate("/404-not-found", { replace: true });
+        }
+    }, [product, navigate]);
+
+    if (!product) return null;
 
 
     const handleWhatsAppRedirect = () => {
