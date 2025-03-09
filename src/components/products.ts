@@ -94,7 +94,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 4,
@@ -220,6 +220,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-4-kWWiMcX7D0nFVv3M3kVjAv9kJ66GJo.jpg"
         ],
         category: "dekorasyon",
+        isFeatured: true,
         isStock: true
     },
     {
@@ -254,6 +255,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-4-N5qZlY1DkPfA9j3JABQsvFfUGCion6.jpg"
         ],
         category: "dekorasyon",
+        isFeatured: true,
         isStock: true
     },
     {
@@ -288,6 +290,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-4-ii34mlMTMY1cubPSVLyb55Vf4XImAr.jpg"
         ],
         category: "dekorasyon",
+        isFeatured: true,
         isStock: true
     },
     {
@@ -322,6 +325,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-4-ZUpRQP4ldBAZNvmtGZgjA5srQC76dn.jpg"
         ],
         category: "dekorasyon",
+        isFeatured: true,
         isStock: true
     }
 ];

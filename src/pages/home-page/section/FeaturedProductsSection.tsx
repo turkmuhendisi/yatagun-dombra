@@ -8,7 +8,6 @@ const FeaturedProducts: React.FC = () => {
         return products.filter((product) => product.isFeatured && product.isStock);
     }, []);
 
-
     const containerRef = useRef<HTMLDivElement | null>(null);
     const [isScrollable, setIsScrollable] = useState(false);
 
