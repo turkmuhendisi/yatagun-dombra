@@ -1,5 +1,20 @@
 import {Product} from "./types";
 
+const formatUrl = (product: Product) => {
+    return product.url
+        ? product.url
+        : `/urun/${product.id}/${product.name
+            .toLowerCase()
+            .replace(/ğ/g, "g")
+            .replace(/ü/g, "u")
+            .replace(/ş/g, "s")
+            .replace(/ı/g, "i")
+            .replace(/ö/g, "o")
+            .replace(/ç/g, "c")
+            .replace(/[^a-z0-9\s-]/g, "") // Özel karakterleri kaldırır
+            .replace(/\s+/g, "-")}`; // Boşlukları "-" ile değiştirir
+};
+
 export const products: Product[] = [
     {
         id: 1,
@@ -31,7 +46,7 @@ export const products: Product[] = [
         video: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/bozk%C4%B1r-teaser-qge9na7GoBz9eHeJfaT8daVOec5MIY.mp4",
         videoThumbnail: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg",
         category: "dombra",
-        isFeatured: true,
+        isFeatured: false,
         isStock: true
     },
     {
@@ -63,7 +78,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra2/d2-6-ELML3zTer7nIJ69HX1BfXb9rXyCOuD.jpg"
         ],
         category: "dombra",
-        isFeatured: true,
+        isFeatured: false,
         isStock: false
     },
     {
@@ -93,7 +108,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-6-2eZYTKD2hom9mD3Ph8Noa52QWs6Hac.jpg"
         ],
         category: "dombra",
-        isFeatured: true,
+        isFeatured: false,
         isStock: false
     },
     {
@@ -124,7 +139,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-6-mMcxhuSC91ioJLGF646ivadiR86FA1.jpg"
         ],
         category: "dombra",
-        isFeatured: true,
+        isFeatured: false,
         isStock: true
     },
     {
@@ -154,7 +169,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-6-INmwrpjUXUd8vWxwjKNB6fWAnD7Hdu.jpg"
         ],
         category: "dombra",
-        isFeatured: true,
+        isFeatured: false,
         isStock: false
     },
     {
@@ -185,11 +200,196 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-7-ymqDiURIYDK26kHLJUUg4eqSDggz4U.webp"
         ],
         category: "dombra",
-        isFeatured: true,
+        isFeatured: false,
         isStock: false
     },
     {
         id: 7,
+        name: "Toybozkır",
+        price: 6500,
+        discountAmount: 500,
+        description: "Amatör Dombra",
+        url: "",
+        features: [
+            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "Doğal Dut Ağacı Gövde – Doğal dut ağacından üretilmiş gövdesi, sıcak, dengeli ve tok bir ses karakteri sunar. Ahşabın doğal yapısı, her dokunuşta eşsiz bir his verir.",
+            "Özel Oyma Desenli Kapak – Türk ve Kazak motifleri ile süslenmiş, el işçiliğiyle hazırlanmış üst kapak, bu enstrümana sadece bir müzik aleti değil, aynı zamanda sanatsal bir değer kazandırıyor.",
+            "Güçlü Rezonans ve Net Tonlar – Oval ve çok parçalı arka kapak yapısı, sesi en iyi şekilde yayarak her notanın güçlü ve berrak duyulmasını sağlar. Temiz baslar ve dengeli tizler ile net ve akıcı bir ton üretimi sunar.",
+            "Ahşap Burgular ve Uzun Süreli Akort Stabilitesi – Dayanıklı ahşap burgular sayesinde, akort kolay kolay bozulmaz ve uzun süre sabit kalabilir.",
+            "Hava Şartlarına Duyarlılık – Ahşap yapısı nedeniyle sıcaklık ve nem değişimlerinden etkilenebilir. Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir.Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
+            "Hafif ve Ergonomik Yapı – Uzun süreli kullanımlarda bile bilekleri yormaz, kolay çalım imkanı sunar. Yeni başlayanlar için de rahat bir öğrenme süreci sağlar.",
+            "Geleneksel ve Modern Kullanıma Uygun – Hem bireysel performanslarda hem de topluluk içinde çalım için idealdir. Geleneksel müziğin yanı sıra farklı türlerde icra etmek isteyenler için de uygundur.",
+            " Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
+            "Peşin fiyatına taksit imkânı."
+        ],
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-1-esQK2l8LpmDIjoNaaSZl4VjjI0Mqog.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-2-brHlKc7ZeNZx8lSF99nGEukwRkjAbt.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-3-cNpvVBb77fxY5qBhDEqUM3dGtlAhWj.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-4-TrTKr5JXFmgLUdmhxfk2pnMdVm8uPX.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-5-2VQ10v22T8hJbsIA3Ye1cVSpBFa8yJ.webp"
+        ],
+        category: "dombra",
+        isFeatured: true,
+        isStock: true
+    },
+    {
+        id: 8,
+        name: "Altay 2",
+        price: 6500,
+        discountAmount: 500,
+        description: "Desenli Amatör Dombra",
+        url: "",
+        features: [
+            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "Doğal Dut Ağacı Gövde – Doğal dut ağacından üretilmiş gövdesi, sıcak, dengeli ve tok bir ses karakteri sunar. Ahşabın doğal yapısı, her dokunuşta eşsiz bir his verir.",
+            "Özel Oyma Desenli Kapak – Türk ve Kazak motifleri ile süslenmiş, el işçiliğiyle hazırlanmış üst kapak, bu enstrümana sadece bir müzik aleti değil, aynı zamanda sanatsal bir değer kazandırıyor.",
+            "Güçlü Rezonans ve Net Tonlar – Oval ve çok parçalı arka kapak yapısı, sesi en iyi şekilde yayarak her notanın güçlü ve berrak duyulmasını sağlar. Temiz baslar ve dengeli tizler ile net ve akıcı bir ton üretimi sunar.",
+            "Ahşap Burgular ve Uzun Süreli Akort Stabilitesi – Dayanıklı ahşap burgular sayesinde, akort kolay kolay bozulmaz ve uzun süre sabit kalabilir.",
+            "Hafif ve Ergonomik Yapı – Uzun süreli kullanımlarda bile bilekleri yormaz, kolay çalım imkanı sunar. Yeni başlayanlar için de rahat bir öğrenme süreci sağlar.",
+            "Hava Şartlarına Duyarlılık – Ahşap yapısı nedeniyle sıcaklık ve nem değişimlerinden etkilenebilir. Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir. Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
+            "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
+            "Peşin fiyatına taksit imkânı."
+        ],
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-1-0x5GtpUn2anorJ8ei80kOCy2vfap2W.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-2-CjZP2qWB6n87UQSu3nda8Ml3jotr4K.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-3-4z7pMCFW7Bv36gtEsDB4SqjKL8d0AE.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-4-bVfigaU7Og9VQhEbBvZxt9XkmHXnds.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-5-DJsqZ6Qow83qZZBD1xWj0aguKnEZDS.webp"
+        ],
+        category: "dombra",
+        isFeatured: true,
+        isStock: true
+    },
+    {
+        id: 9,
+        name: "Tınlay",
+        price: 10000,
+        discountAmount: 500,
+        description: "Geleneksel Motifli Yarı Profesyonel Dombra",
+        url: "",
+        features: [
+            "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
+            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
+            "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
+            "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
+            "Hafif ama Dayanıklı Yapı – Gelişmiş malzeme kullanımıyla üretilmiş olup, ergonomik yapısıyla uzun süreli çalımda bile rahatlık sağlar. Biraz daha ağır ama daha dengeli bir yapıya sahiptir.",
+            "Kayın ağacı, güçlü rezonansıyla doğal ve zengin bir ton sunar.Kaplama: El işçiliği ile şekillendirilmiş, estetik ve dayanıklı yüzey.",
+            "Hava Şartlarına Duyarlılık: Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir.Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
+            "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
+            "Peşin fiyatına taksit imkânı."
+        ],
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-1-yrLSokjhhJrm2kyGYaXyVactRB9BN3.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-2-IZCgxJsIbsEpEalucnJVIRPd71enZA.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-3-TmXzNcG2kjtbg0AZiFKAXN88uKJ5Nj.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-4-IstUi2xdNk1RlTh8CKa34GN8JFxA8V.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-5-y84DyX1qTOjbn5YRoWcEZPNc8huLVx.webp"
+        ],
+        category: "dombra",
+        isFeatured: true,
+        isStock: true
+    },
+    {
+        id: 10,
+        name: "Köktay",
+        price: 10000,
+        discountAmount: 500,
+        description: "At Desenli Yarı Profesyonel Dombra",
+        url: "",
+        features: [
+            "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
+            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
+            "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
+            "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
+            "Hafif ama Dayanıklı Yapı – Gelişmiş malzeme kullanımıyla üretilmiş olup, ergonomik yapısıyla uzun süreli çalımda bile rahatlık sağlar. Biraz daha ağır ama daha dengeli bir yapıya sahiptir.",
+            "Kayın ağacı, güçlü rezonansıyla doğal ve zengin bir ton sunar.Kaplama: El işçiliği ile şekillendirilmiş, estetik ve dayanıklı yüzey.",
+            "Hava Şartlarına Duyarlılık: Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir.Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
+            "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
+            "Peşin fiyatına taksit imkânı."
+        ],
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra10/d10-1-PyxsRYOeUIYVIrNm9eZsW7PnJ7OVLa.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra10/d10-2-HD0hYoUoILp6kKcmYHOAq41H8c64oy.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra10/d10-3-wCUIm1zmo9E3PaqhDaZrF4JoVaO40j.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra10/d10-4-VZ9Aejvr3gH7zQgD7aSb1qFEmhKScz.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra10/d10-5-TVN2o9toJdXakvQzcLCi2mrvUkeSgv.webp"
+        ],
+        category: "dombra",
+        isFeatured: true,
+        isStock: true
+    },
+    {
+        id: 11,
+        name: "Künbatır",
+        price: 10000,
+        discountAmount: 500,
+        description: "Geleneksel Motifli Yarı Profesyonel Dombra",
+        url: "",
+        features: [
+            "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
+            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
+            "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
+            "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
+            "Hafif ama Dayanıklı Yapı – Gelişmiş malzeme kullanımıyla üretilmiş olup, ergonomik yapısıyla uzun süreli çalımda bile rahatlık sağlar. Biraz daha ağır ama daha dengeli bir yapıya sahiptir.",
+            "Kayın ağacı, güçlü rezonansıyla doğal ve zengin bir ton sunar.Kaplama: El işçiliği ile şekillendirilmiş, estetik ve dayanıklı yüzey.",
+            "Hava Şartlarına Duyarlılık: Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir.Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
+            "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
+            "Peşin fiyatına taksit imkânı."
+        ],
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra11/d11-1-PzLspvfPayK2XoLvgOdMQenDuWuoHs.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra11/d11-2-7nB6NTuNkgBpbXHX9s12fdDpN1i6WX.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra11/d11-3-caVjv9RSIoevOEDPuQBUChROLmeyix.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra11/d11-4-6tPOxDTqHEeFRLW6dc5QKliGhCh0Qf.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra11/d11-5-qN5Clnpw8BfIZBUntC7ND2mPFDmFwm.webp"
+        ],
+        category: "dombra",
+        isFeatured: true,
+        isStock: true
+    },
+    {
+        id: 12,
+        name: "Gök (Siyah)",
+        price: 10000,
+        discountAmount: 500,
+        description: "Kartal Motifli Yarı Profesyonel Dombra",
+        url: "",
+        features: [
+            "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
+            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
+            "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
+            "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
+            "Hafif ama Dayanıklı Yapı – Gelişmiş malzeme kullanımıyla üretilmiş olup, ergonomik yapısıyla uzun süreli çalımda bile rahatlık sağlar. Biraz daha ağır ama daha dengeli bir yapıya sahiptir.",
+            "Kayın ağacı, güçlü rezonansıyla doğal ve zengin bir ton sunar.Kaplama: El işçiliği ile şekillendirilmiş, estetik ve dayanıklı yüzey.",
+            "Hava Şartlarına Duyarlılık: Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir.Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
+            "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
+            "Peşin fiyatına taksit imkânı."
+        ],
+        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra12/d12-1-tbfbwQ59fFwviKTDQmMoFAuPU0Kjki.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra12/d12-2-DqKK7hsWVDasup27qi2e2qb3AXQ5Vx.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra12/d12-3-7HwsXLDyUZrGy5etqH2un02dVTI72R.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra12/d12-4-nYxvuN3O2DJaIE1rG5nEGNbS6FTKjG.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra12/d12-5-GT87siaxXeE1e6AjpAl2jlAstvl98S.webp"
+        ],
+        category: "dombra",
+        isFeatured: true,
+        isStock: true
+    },
+    {
+        id: 13,
         name: "Bozkurt Vakti Siyah",
         price: 800,
         discountAmount: 150,
@@ -220,11 +420,11 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-4-kWWiMcX7D0nFVv3M3kVjAv9kJ66GJo.jpg"
         ],
         category: "dekorasyon",
-        isFeatured: true,
+        isFeatured: false,
         isStock: true
     },
     {
-        id: 8,
+        id: 14,
         name: "Bozkurt Vakti Kahverengi",
         price: 800,
         discountAmount: 150,
@@ -255,11 +455,11 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-4-N5qZlY1DkPfA9j3JABQsvFfUGCion6.jpg"
         ],
         category: "dekorasyon",
-        isFeatured: true,
+        isFeatured: false,
         isStock: true
     },
     {
-        id: 9,
+        id: 15,
         name: "Şahlanış",
         price: 750,
         discountAmount: 150,
@@ -290,11 +490,11 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-4-ii34mlMTMY1cubPSVLyb55Vf4XImAr.jpg"
         ],
         category: "dekorasyon",
-        isFeatured: true,
+        isFeatured: false,
         isStock: true
     },
     {
-        id: 10,
+        id: 16,
         name: "Kızıl Kartal",
         price: 800,
         discountAmount: 150,
@@ -325,8 +525,13 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-4-ZUpRQP4ldBAZNvmtGZgjA5srQC76dn.jpg"
         ],
         category: "dekorasyon",
-        isFeatured: true,
+        isFeatured: false,
         isStock: true
     }
 ];
 
+products.forEach((product) => {
+    if (!product.url) {
+        product.url = formatUrl(product);
+    }
+});

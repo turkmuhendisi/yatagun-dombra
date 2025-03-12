@@ -30,7 +30,19 @@ const ProductCard = React.memo(({ product }: { product: Product }) => (
 
         {/* Ürüne Git Butonu */}
         <div className="p-4">
-            <Link to={`/urun/${product.id}/${product.name}`} className="block">
+            <Link
+                to={`/urun/${product.id}/${product.name
+                    .toLowerCase()
+                    .replace(/ğ/g, "g")
+                    .replace(/ü/g, "u")
+                    .replace(/ş/g, "s")
+                    .replace(/ı/g, "i")
+                    .replace(/ö/g, "o")
+                    .replace(/ç/g, "c")
+                    .replace(/[^a-z0-9\s-]/g, "")
+                    .replace(/\s+/g, "-")}`}
+                className="block"
+            >
                 <button
                     className={`text-lg w-full rounded-lg py-2 transition ${
                         product.isStock ? "bg-gray-100 hover:bg-gray-200" : "bg-gray-300 cursor-not-allowed"
