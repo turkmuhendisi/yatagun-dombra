@@ -142,7 +142,7 @@ export const products: Product[] = [
         isFeatured: false,
         isStock: true
     },
-    {
+    /*{
         id: 5,
         name: "Altay",
         price: 6500,
@@ -171,7 +171,7 @@ export const products: Product[] = [
         category: "dombra",
         isFeatured: false,
         isStock: false
-    },
+    },*/
     {
         id: 6,
         name: "Yılkı",
@@ -209,7 +209,7 @@ export const products: Product[] = [
         price: 6500,
         discountAmount: 500,
         description: "Amatör Dombra",
-        url: "",
+        url: "https://www.hepsiburada.com/amator-dombra-dombira-toybozkir-pm-HBC000089W5R8?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
             "Doğal Dut Ağacı Gövde – Doğal dut ağacından üretilmiş gövdesi, sıcak, dengeli ve tok bir ses karakteri sunar. Ahşabın doğal yapısı, her dokunuşta eşsiz bir his verir.",
@@ -236,7 +236,7 @@ export const products: Product[] = [
     },
     {
         id: 8,
-        name: "Altay 2",
+        name: "Altay",
         price: 6500,
         discountAmount: 500,
         description: "Desenli Amatör Dombra",
@@ -262,7 +262,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 9,
@@ -270,10 +270,10 @@ export const products: Product[] = [
         price: 10000,
         discountAmount: 500,
         description: "Geleneksel Motifli Yarı Profesyonel Dombra",
-        url: "",
+        url: "https://www.hepsiburada.com/geleneksel-motifli-yari-profesyonel-dombra-dombira-tinlay-pm-HBC000089W4B5?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
-            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Amatör Dombralar/Dombıralara Göre Daha Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
             "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
             "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
             "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
@@ -301,10 +301,10 @@ export const products: Product[] = [
         price: 10000,
         discountAmount: 500,
         description: "At Desenli Yarı Profesyonel Dombra",
-        url: "",
+        url: "https://www.hepsiburada.com/at-desenli-yari-profesyonel-dombra-dombira-koktay-pm-HBC000089W4WK?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
-            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Amatör Dombralar/Dombıralara Göre Daha Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
             "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
             "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
             "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
@@ -332,10 +332,10 @@ export const products: Product[] = [
         price: 10000,
         discountAmount: 500,
         description: "Geleneksel Motifli Yarı Profesyonel Dombra",
-        url: "",
+        url: "https://www.hepsiburada.com/geleneksel-motifli-yari-profesyonel-dombra-dombira-kunbatir-pm-HBC000089W39F?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
-            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Amatör Dombralar/Dombıralara Göre Daha Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
             "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
             "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
             "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
@@ -363,10 +363,10 @@ export const products: Product[] = [
         price: 10000,
         discountAmount: 500,
         description: "Kartal Motifli Yarı Profesyonel Dombra",
-        url: "",
+        url: "https://www.hepsiburada.com/kartal-desenli-yari-profesyonel-dombra-dombira-gok-siyah-pm-HBC000089W23E?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 Perdeli Geniş Tonal Aralık – Geleneksel ve modern dombra/dombıra müziği için mükemmel bir ses karakteri sunar. Temiz ve güçlü baslar ile parlak tizler arasında dengeli bir frekans aralığına sahiptir.",
-            "Amatör Dombralar/Dombıralara Göre Daha Kalın ve Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
+            "Amatör Dombralar/Dombıralara Göre Daha Dayanıklı Sap – Daha sağlam bir tutuş ve gelişmiş bir çalım hissi sunar. Daha kontrollü ve hassas bir icra sağlar.",
             "Özel Oyma Motifler – Türk ve Kazak kültürüne özgü geleneksel desenlerle birlikte sadece bir müzik aleti değil, aynı zamanda sanatsal bir obje sunar. Her bir motif, ustaların el işçiliğiyle özel olarak hazırlanmıştır.",
             "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
             "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",

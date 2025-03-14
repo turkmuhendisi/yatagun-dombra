@@ -19,7 +19,7 @@ function App() {
                 <Route path="/hakkimizda" element={<About />} />
                 <Route path="/sss" element={<FAQ />} />
                 <Route path="/urun/:id/:name" element={<ProductDetail />} />
-                <Route path="/404-not-found" element={<NotFound />} />
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Analytics /> {/* Vercel Analytics in here */}
             <SpeedInsights /> {/* Vercel Speed Insights in here */}

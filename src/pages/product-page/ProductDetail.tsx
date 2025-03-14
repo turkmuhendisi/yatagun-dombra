@@ -152,7 +152,7 @@ const ProductDetail = () => {
                 className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 pb-6 flex items-center justify-between lg:hidden">
                 <p className="text-2xl font-semibold mr-3">{formatPrice(product.price)}</p>
                 <button
-                    className="w-full bg-[#FF6000] text-white py-3 px-6 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center"
+                    className="w-full bg-[#FF6000] text-white py-3 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center"
                     onClick={() => window.open(product.url)}
                 >
                     <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver

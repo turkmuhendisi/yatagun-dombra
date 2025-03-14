@@ -10,7 +10,11 @@ const ProductSection = () => {
             if (!acc[product.category]) {
                 acc[product.category] = [];
             }
-            acc[product.category].push(product);
+            if (product.isStock) {
+                acc[product.category].unshift(product);
+            } else {
+                acc[product.category].push(product);
+            }
             return acc;
         }, {} as Record<string, Product[]>);
     };
