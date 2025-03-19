@@ -1,4 +1,4 @@
-import {Product} from "./types";
+import {Product} from "./Product";
 
 const formatUrl = (product: Product) => {
     return product.url
@@ -34,6 +34,7 @@ export const products: Product[] = [
             "Bu dombra, estetik tasarımı ve akustik performansıyla orta seviye dombra severler için mükemmel bir seçenektir.",
             "Peşin fiyatına taksit imkânı."
         ],
+        reviews: [],
         metarial: "Kayın ağacından yapılmış gövde, sağlam yapısı ve doğal rezonansıyla güçlü ve dengeli bir ton üretir.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg",
@@ -68,6 +69,7 @@ export const products: Product[] = [
             "Bu dombra, doğal ahşap rezonansı ve kaliteli işçiliğiyle en saf ve güçlü dombra sesini sunmak için özenle tasarlandı.",
             "Peşin fiyatına taksit imkânı."
         ],
+        reviews: [],
         metarial: "Kayın ve çam ağacından ustalıkla üretilmiş, doğal rezonansıyla güçlü ve berrak bir ses sunar.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra2/d2-1-zW42CGebmBqfrOiLQj9K40ypvWdMiG.jpg",
@@ -98,6 +100,7 @@ export const products: Product[] = [
             "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
             "Peşin fiyatına taksit imkânı."
         ],
+        reviews: [],
         metarial: "Dut ağacından üretilmiş gövde, sıcak ve doğal bir ton karakteri sunarak dengeli bir ses üretir.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-1-okwONo9n0LGskYO9RV3QeIeoxuyykd.jpg",
@@ -129,6 +132,7 @@ export const products: Product[] = [
             "Bu dombra, doğal ahşap rezonansı, estetik tasarımı ve kaliteli işçiliğiyle hem görselliği hem de müzikal performansı bir arada sunuyor.",
             "Peşin fiyatına taksit imkânı."
         ],
+        reviews: [],
         metarial: "Kayın ağacından üretilmiş gövde, güçlü rezonansıyla doğal ve zengin bir ton sunar.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-1-N4G0FXpZTTuBw6fOHhO70itWBS1ykt.jpg",
@@ -159,6 +163,7 @@ export const products: Product[] = [
             "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
             "Peşin fiyatına taksit imkânı."
         ],
+        reviews: [],
         metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-1-jn7lpvi1FL7Uf6Cf5KqxLk9c47TcTm.jpg",
@@ -189,6 +194,7 @@ export const products: Product[] = [
             "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
             "Peşin fiyatına taksit imkânı."
         ],
+        reviews: [],
         metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-3-k2jnr6KOApoGoW0NeG3uoesA5tLZBm.webp",
@@ -222,7 +228,8 @@ export const products: Product[] = [
             " Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
             "Peşin fiyatına taksit imkânı."
         ],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        reviews: [],
+        metarial: "Dut Ağacı",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-1-esQK2l8LpmDIjoNaaSZl4VjjI0Mqog.webp",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-2-brHlKc7ZeNZx8lSF99nGEukwRkjAbt.webp",
@@ -252,7 +259,8 @@ export const products: Product[] = [
             "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
             "Peşin fiyatına taksit imkânı."
         ],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        reviews: [],
+        metarial: "Dut Ağacı",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-1-0x5GtpUn2anorJ8ei80kOCy2vfap2W.webp",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-2-CjZP2qWB6n87UQSu3nda8Ml3jotr4K.webp",
@@ -278,12 +286,13 @@ export const products: Product[] = [
             "Derin ve Güçlü Rezonans – Oval ve çok parçalı arka kapak yapısı sayesinde her notanın berrak ve güçlü duyulmasını sağlar, sahnede ve bireysel icralarda üstün bir akustik sunar.",
             "Özel Tasarlanmış Ses Deliği – Titreşimi optimize eden yapısıyla dombra/dombıra sesinin doğal tınısını en iyi şekilde yansıtır ve daha geniş bir frekans aralığı oluşturur.",
             "Hafif ama Dayanıklı Yapı – Gelişmiş malzeme kullanımıyla üretilmiş olup, ergonomik yapısıyla uzun süreli çalımda bile rahatlık sağlar. Biraz daha ağır ama daha dengeli bir yapıya sahiptir.",
-            "Kayın ağacı, güçlü rezonansıyla doğal ve zengin bir ton sunar.Kaplama: El işçiliği ile şekillendirilmiş, estetik ve dayanıklı yüzey.",
+            "Kayın ağacı, güçlü rezonansıyla doğal ve zengin bir ton sunar. Kaplama: El işçiliği ile şekillendirilmiş, estetik ve dayanıklı yüzey.",
             "Hava Şartlarına Duyarlılık: Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir.Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
             "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
             "Peşin fiyatına taksit imkânı."
         ],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        reviews: [],
+        metarial: "Kayın Ağacı",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-1-yrLSokjhhJrm2kyGYaXyVactRB9BN3.webp",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-2-IZCgxJsIbsEpEalucnJVIRPd71enZA.webp",
@@ -314,7 +323,8 @@ export const products: Product[] = [
             "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
             "Peşin fiyatına taksit imkânı."
         ],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        reviews: [],
+        metarial: "Kayın Ağacı",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra10/d10-1-PyxsRYOeUIYVIrNm9eZsW7PnJ7OVLa.webp",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra10/d10-2-HD0hYoUoILp6kKcmYHOAq41H8c64oy.webp",
@@ -345,7 +355,8 @@ export const products: Product[] = [
             "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
             "Peşin fiyatına taksit imkânı."
         ],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        reviews: [],
+        metarial: "Kayın Ağacı",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra11/d11-1-PzLspvfPayK2XoLvgOdMQenDuWuoHs.webp",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra11/d11-2-7nB6NTuNkgBpbXHX9s12fdDpN1i6WX.webp",
@@ -376,7 +387,8 @@ export const products: Product[] = [
             "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
             "Peşin fiyatına taksit imkânı."
         ],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
+        reviews: [],
+        metarial: "Kayın Ağacı",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra12/d12-1-tbfbwQ59fFwviKTDQmMoFAuPU0Kjki.webp",
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra12/d12-2-DqKK7hsWVDasup27qi2e2qb3AXQ5Vx.webp",
@@ -412,6 +424,7 @@ export const products: Product[] = [
             "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
             "📌 Özel üretim – Sınırlı stok"
         ],
+        reviews: [],
         metarial: "6mm MDF",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock1/c1-1-HWnm5bZ1lwfA0uFVDETjpR5MsRIsos.jpg",
@@ -447,6 +460,7 @@ export const products: Product[] = [
             "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
             "📌 Özel üretim – Sınırlı stok"
         ],
+        reviews: [],
         metarial: "6mm MDF",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock2/c2-1-ByIRCtKzAbyMxEYKYybrcCB4O2Cav9.jpg",
@@ -482,6 +496,7 @@ export const products: Product[] = [
             "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
             "📌 Özel üretim – Sınırlı stok"
         ],
+        reviews: [],
         metarial: "6mm MDF",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock3/c3-1-05FVkMhLHRhVcCwCogLCdfjKn9MyP1.jpg",
@@ -517,6 +532,7 @@ export const products: Product[] = [
             "⏳ Tarih ve kültürle iç içe bir zaman yolculuğu.",
             "📌 Özel üretim – Sınırlı stok"
         ],
+        reviews: [],
         metarial: "6mm MDF",
         images: [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/decorations/clock4/c4-1-jqHWVO0eUAkC6ZoQNdkw4c4XfsWj42.jpg",

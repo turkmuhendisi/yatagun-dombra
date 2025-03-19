@@ -1,5 +1,5 @@
 import React from "react";
-import { Product } from "./types";
+import { Product } from "./Product";
 import {Link} from "react-router-dom";
 import {formatPrice} from "./formatPrice";
 

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ProductCard from "../../../components/ProductCard";
 import { products } from "../../../components/products";
-import { Product } from "../../../components/types";
+import { Product } from "../../../components/Product";
 
 const ProductSection = () => {
 

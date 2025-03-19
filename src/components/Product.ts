@@ -1,3 +1,5 @@
+import {Review} from "./Review";
+
 export type Product = {
     id: number,
     name: string,
@@ -6,6 +8,7 @@ export type Product = {
     description: string,
     url: string,
     features: string[],
+    reviews: Review[],
     metarial?: string,
     images: string[],
     video?: string,
