@@ -112,7 +112,7 @@ const ProductDetail = () => {
             {/* Product Information */}
             <div className="w-full lg:w-2/5 flex flex-col justify-start">
                 <h1 className="text-3xl font-bold">{product.name}</h1>
-                <p className="text-gray-600 mt-2">{product.description}</p>
+                <p className="text-gray-700 mt-2">{product.description}</p>
                 {/* Sekmeler */}
                 <div className="mt-6 flex w-full border-b">
                     <button
@@ -129,7 +129,7 @@ const ProductDetail = () => {
                         }`}
                         onClick={() => setActiveTab("reviews")}
                     >
-                        Kullanıcı Yorumları
+                        Değerlendirmeler
                     </button>
                 </div>
 
@@ -140,16 +140,16 @@ const ProductDetail = () => {
                             {/*<h2 className="font-bold text-xl mb-2">Özellikler</h2>*/}
                             <ul className="list-disc ml-5 lg:text-lg text-gray-700">
                                 {product.features.map((feature, index) => (
-                                    <li key={index}>{feature}</li>
+                                    <li className="pb-2" key={index}>{feature}</li>
                                 ))}
                             </ul>
 
                             <h2 className="font-bold text-xl mt-4 mb-2">Malzeme</h2>
-                            <p>{product.metarial}</p>
+                            <p className="text-gray-700">{product.metarial}</p>
                         </div>
                     ) : (
                         <div>
-                            {/*<h2 className="font-bold text-xl mb-2">Kullanıcı Yorumları</h2>*/}
+                            {/*<h2 className="font-bold text-xl mb-2">Değerlendirmeler</h2>*/}
                             {product.reviews.length > 0 ? (
                                 product.reviews.map((review, index) => (
                                     <div key={index} className="border-b pb-4 mb-4">
