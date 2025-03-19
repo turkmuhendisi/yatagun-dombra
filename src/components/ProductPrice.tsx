@@ -1,4 +1,4 @@
-import { Product } from "./types";
+import { Product } from "./Product";
 import {formatPrice} from "./formatPrice";
 
 type ProductPriceProps = { product: Product;};

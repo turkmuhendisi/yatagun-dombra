@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState, useMemo } from "react";
-import { Product } from "../../../components/types";
+import { Product } from "../../../components/Product";
 import FeaturedProductCard from "../../../components/FeaturedProductCard";
 import {products} from "../../../components/products";
 

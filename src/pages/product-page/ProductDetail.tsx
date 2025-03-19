@@ -4,6 +4,7 @@ import {products} from "../../components/products";
 import VideoThumbnail from "../../components/VideoThumbnail";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faWhatsapp} from "@fortawesome/free-brands-svg-icons";
+import {faStar} from "@fortawesome/free-solid-svg-icons";
 import ProductPrice from "../../components/ProductPrice";
 import {formatPrice} from "../../components/formatPrice";
 
@@ -17,6 +18,7 @@ const ProductDetail = () => {
         description: "Ürün bilgileri bulunamadı.",
         url: "",
         features: [],
+        reviews: [],
         metarial: "Bilinmiyor",
         images: [""],
         video: "",
@@ -24,6 +26,7 @@ const ProductDetail = () => {
         category: ""
     };
 
+    const [activeTab, setActiveTab] = useState("features");
     const [selectedMedia, setSelectedMedia] = useState<string | null>(product.images[0] || null);
     const [isVideo, setIsVideo] = useState(false);
 
@@ -110,18 +113,61 @@ const ProductDetail = () => {
             <div className="w-full lg:w-2/5 flex flex-col justify-start">
                 <h1 className="text-3xl font-bold">{product.name}</h1>
                 <p className="text-gray-600 mt-2">{product.description}</p>
-                <h3 className="text-lg lg:text-xl mt-10">
-                    <h2 className="font-bold">Özellikler</h2>
-                    <ul className="list-disc ml-5">
-                        {product.features.map((feature, index) => (
-                            <li key={index}>{feature}</li>
-                        ))}
-                    </ul>
-                </h3>
-                <h3 className="text-lg lg:text-xl mt-5 mb-5">
-                    <h2 className="font-bold">Malzeme</h2>
-                    {product.metarial}
-                </h3>
+                {/* Sekmeler */}
+                <div className="mt-6 flex w-full border-b">
+                    <button
+                        className={`py-3 px-4 sm:px-6 flex-1 text-base sm:text-lg font-semibold text-center transition-all duration-300 ease-in-out ${
+                            activeTab === "features" ? "border-b-2 border-black text-black" : "text-gray-500 hover:text-black"
+                        }`}
+                        onClick={() => setActiveTab("features")}
+                    >
+                        Ürün Özellikleri
+                    </button>
+                    <button
+                        className={`py-3 px-4 sm:px-6 flex-1 text-base sm:text-lg font-semibold text-center transition-all duration-300 ease-in-out ${
+                            activeTab === "reviews" ? "border-b-2 border-black text-black" : "text-gray-500 hover:text-black"
+                        }`}
+                        onClick={() => setActiveTab("reviews")}
+                    >
+                        Kullanıcı Yorumları
+                    </button>
+                </div>
+
+                {/* Sekme İçeriği */}
+                <div className="mt-4">
+                    {activeTab === "features" ? (
+                        <div>
+                            {/*<h2 className="font-bold text-xl mb-2">Özellikler</h2>*/}
+                            <ul className="list-disc ml-5 lg:text-lg text-gray-700">
+                                {product.features.map((feature, index) => (
+                                    <li key={index}>{feature}</li>
+                                ))}
+                            </ul>
+
+                            <h2 className="font-bold text-xl mt-4 mb-2">Malzeme</h2>
+                            <p>{product.metarial}</p>
+                        </div>
+                    ) : (
+                        <div>
+                            {/*<h2 className="font-bold text-xl mb-2">Kullanıcı Yorumları</h2>*/}
+                            {product.reviews.length > 0 ? (
+                                product.reviews.map((review, index) => (
+                                    <div key={index} className="border-b pb-4 mb-4">
+                                        <p className="font-semibold">{review.user}</p>
+                                        <div className="flex items-center text-yellow-500">
+                                            {[...Array(review.rating)].map((_, i) => (
+                                                <FontAwesomeIcon key={i} icon={faStar} />
+                                            ))}
+                                        </div>
+                                        <p className="text-gray-700 mt-2">{review.comment}</p>
+                                    </div>
+                                ))
+                            ) : (
+                                <p className="text-gray-500">Henüz yorum yok.</p>
+                            )}
+                        </div>
+                    )}
+                </div>
 
                 <div className="flex flex-row items-center p-2 gap-2 mt-6 mb-20 lg:mb-3 border-l-2 border-gray-300 justify-between">
                 {/* Discounted Price */}
