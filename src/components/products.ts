@@ -146,37 +146,6 @@ export const products: Product[] = [
         isFeatured: false,
         isStock: true
     },
-    /*{
-        id: 5,
-        name: "Altay",
-        price: 6500,
-        discountAmount: 500,
-        description: "Desenli Amatör Dombra",
-        url: "https://www.hepsiburada.com/desenli-amator-dombra-altay-pm-HBC00007V74M8?magaza=Yatagun%20K%C3%BC%C4%9F&",
-        features: [
-            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
-            "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
-            "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
-            "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
-            "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
-            "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
-            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
-            "Peşin fiyatına taksit imkânı."
-        ],
-        reviews: [],
-        metarial: "Gürgen ve ceviz ağacı kombinasyonu ile üretilmiştir.",
-        images: [
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-1-jn7lpvi1FL7Uf6Cf5KqxLk9c47TcTm.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-2-ZTFnTsKZ0VU4oUYR5ve1VCz7nZvCW7.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-3-vt3EZRoAZpBUYl4lKJEMebtlNkIGOx.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-4-YXTMSwNCuEJW35FXxiW5qaPbQU1ysM.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-5-YFtqRH2PWRJeGkIE9MzWBc7p7Ag2rt.jpg",
-            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra5/d5-6-INmwrpjUXUd8vWxwjKNB6fWAnD7Hdu.jpg"
-        ],
-        category: "dombra",
-        isFeatured: false,
-        isStock: false
-    },*/
     {
         id: 6,
         name: "Yılkı",
@@ -238,7 +207,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-5-2VQ10v22T8hJbsIA3Ye1cVSpBFa8yJ.webp"
         ],
         category: "dombra",
-        isFeatured: false,
+        isFeatured: true,
         isStock: false
     },
     {
@@ -269,7 +238,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-5-DJsqZ6Qow83qZZBD1xWj0aguKnEZDS.webp"
         ],
         category: "dombra",
-        isFeatured: true,
+        isFeatured: false,
         isStock: false
     },
     {
@@ -301,7 +270,7 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra9/d9-5-y84DyX1qTOjbn5YRoWcEZPNc8huLVx.webp"
         ],
         category: "dombra",
-        isFeatured: false,
+        isFeatured: true,
         isStock: false
     },
     {

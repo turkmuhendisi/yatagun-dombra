@@ -34,16 +34,6 @@ const ProductDetail = () => {
         window.scrollTo({top: 0, behavior: "instant"});
     }, []);
 
-    const navigate = useNavigate();
-    useEffect(() => {
-        if (!product || !product.isStock) {
-            navigate("/404-not-found", { replace: true });
-        }
-    }, [product, navigate]);
-
-    if (!product) return null;
-
-
     const handleWhatsAppRedirect = () => {
         if (!product) return;
 
@@ -186,22 +176,37 @@ const ProductDetail = () => {
 
                 {/* Hepsiburada order button - Normal view */}
                 <button
-                    className="mt-6 bg-[#FF6000] text-white py-3 px-6 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center lg:block hidden"
-                    onClick={() => window.open(product.url)}
+                    className={`mt-6 py-3 px-6 rounded-md text-lg flex items-center justify-center lg:block hidden transition 
+        ${product.isStock ? "bg-[#FF6000] text-white hover:bg-[#CC4D00]" : "bg-gray-300 text-gray-600 cursor-not-allowed"}`}
+                    onClick={() => product.isStock && window.open(product.url)}
+                    disabled={!product.isStock}
                 >
-                    <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
+                    {product.isStock ? (
+                        <>
+                            <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
+                        </>
+                    ) : (
+                        "Stokta Yok"
+                    )}
                 </button>
             </div>
 
             {/* Mobil ve Tablet İçin Sabit Buton ve Fiyat */}
-            <div
-                className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 pb-6 flex items-center justify-between lg:hidden">
+            <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 pb-6 flex items-center justify-between lg:hidden">
                 <p className="text-2xl font-semibold mr-3">{formatPrice(product.price)}</p>
                 <button
-                    className="w-full bg-[#FF6000] text-white py-3 rounded-md text-lg hover:bg-[#CC4D00] transition flex items-center justify-center"
-                    onClick={() => window.open(product.url)}
+                    className={`w-full py-3 rounded-md text-lg flex items-center justify-center transition 
+            ${product.isStock ? "bg-[#FF6000] text-white hover:bg-[#CC4D00]" : "bg-gray-300 text-gray-600 cursor-not-allowed"}`}
+                    onClick={() => product.isStock && window.open(product.url)}
+                    disabled={!product.isStock}
                 >
-                    <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
+                    {product.isStock ? (
+                        <>
+                            <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
+                        </>
+                    ) : (
+                        "Stokta Yok"
+                    )}
                 </button>
             </div>
 

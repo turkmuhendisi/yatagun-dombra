@@ -3,7 +3,7 @@ import {Product} from "./Product";
 import {Link} from "react-router-dom";
 import {formatPrice} from "./formatPrice";
 
-const ProductCard = React.memo(({ product }: { product: Product }) => (
+const ProductCard = React.memo(({product}: { product: Product }) => (
     <div className="bg-white shadow-md rounded-lg overflow-hidden w-auto flex flex-col justify-between h-full relative">
         {/* Stokta Yok Etiketi */}
         {!product.isStock && (
@@ -43,13 +43,8 @@ const ProductCard = React.memo(({ product }: { product: Product }) => (
                     .replace(/\s+/g, "-")}`}
                 className="block"
             >
-                <button
-                    className={`text-lg w-full rounded-lg py-2 transition ${
-                        product.isStock ? "bg-gray-100 hover:bg-gray-200" : "bg-gray-300 cursor-not-allowed"
-                    }`}
-                    disabled={!product.isStock}
-                >
-                    {product.isStock ? "Ürüne Git" : "Tükendi"}
+                <button className={"text-lg w-full rounded-lg py-2 transition bg-gray-100 hover:bg-gray-200"} >
+                    Ürüne Git
                 </button>
             </Link>
         </div>
