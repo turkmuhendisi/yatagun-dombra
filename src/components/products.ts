@@ -238,8 +238,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra7/d7-5-2VQ10v22T8hJbsIA3Ye1cVSpBFa8yJ.webp"
         ],
         category: "dombra",
-        isFeatured: true,
-        isStock: true
+        isFeatured: false,
+        isStock: false
     },
     {
         id: 8,
