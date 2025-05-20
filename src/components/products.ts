@@ -86,7 +86,7 @@ export const products: Product[] = [
     {
         id: 3,
         name: "Tuna",
-        price: 6370,
+        price: 6750,
         discountAmount: 370,
         description: "Desenli Amatör Dombra",
         url: "https://www.hepsiburada.com/desenli-amator-dombra-tuna-pm-HBC00007V74IU?magaza=Yatagun%20K%C3%BC%C4%9F&",
@@ -111,8 +111,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra3/d3-6-2eZYTKD2hom9mD3Ph8Noa52QWs6Hac.jpg"
         ],
         category: "dombra",
-        isFeatured: false,
-        isStock: false
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 4,
@@ -149,7 +149,7 @@ export const products: Product[] = [
     {
         id: 6,
         name: "Yılkı",
-        price: 6500,
+        price: 6750,
         discountAmount: 500,
         description: "At Desenli Amatör Dombra",
         url: "https://www.hepsiburada.com/at-desenli-amator-dombra-yilki-pm-HBC00007Y81ZB?magaza=Yatagun%20K%C3%BC%C4%9F",
@@ -175,13 +175,13 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra6/d6-7-ymqDiURIYDK26kHLJUUg4eqSDggz4U.webp"
         ],
         category: "dombra",
-        isFeatured: false,
-        isStock: false
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 7,
         name: "Toybozkır",
-        price: 6500,
+        price: 6750,
         discountAmount: 500,
         description: "Amatör Dombra",
         url: "https://www.hepsiburada.com/amator-dombra-dombira-toybozkir-pm-HBC000089W5R8?magaza=Yatagun%20K%C3%BC%C4%9F",
@@ -213,7 +213,7 @@ export const products: Product[] = [
     {
         id: 8,
         name: "Altay",
-        price: 6500,
+        price: 6750,
         discountAmount: 500,
         description: "Desenli Amatör Dombra",
         url: "",
