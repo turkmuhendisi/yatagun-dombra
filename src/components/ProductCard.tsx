@@ -40,7 +40,7 @@ const ProductCard = React.memo(({product}: { product: Product }) => (
                     .replace(/ö/g, "o")
                     .replace(/ç/g, "c")
                     .replace(/[^a-z0-9\s-]/g, "")
-                    .replace(/\s+/g, "-")}`}
+                    .replace(/\s+/g, "-")}-${product.category}`}
                 className="block"
             >
                 <button className={"text-lg w-full rounded-lg py-2 transition bg-gray-100 hover:bg-gray-200"} >

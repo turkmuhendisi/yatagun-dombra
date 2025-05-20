@@ -19,7 +19,19 @@ const FeaturedProductCard = React.memo(({ product }: { product: Product }) => (
         </div>
         <div className="p-4">
             {/* Ürüne Git Butonu */}
-            <Link to={`/urun/${product.id}/${product.name}`} className="block">
+            <Link
+                to={`/urun/${product.id}/${product.name
+                    .toLowerCase()
+                    .replace(/ğ/g, "g")
+                    .replace(/ü/g, "u")
+                    .replace(/ş/g, "s")
+                    .replace(/ı/g, "i")
+                    .replace(/ö/g, "o")
+                    .replace(/ç/g, "c")
+                    .replace(/[^a-z0-9\s-]/g, "")
+                    .replace(/\s+/g, "-")}-${product.category}`}
+                className="block"
+            >
                 <button className="text-lg bg-gray-100 w-full rounded-lg py-2 hover:bg-gray-200 transition">
                     Ürüne Git
                 </button>
