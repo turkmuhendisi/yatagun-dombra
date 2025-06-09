@@ -9,10 +9,10 @@ const VideoThumbnail = ({
 }) => {
     return (
         <div
-            className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded-2xl overflow-hidden transition-all duration-300 ${
+            className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded-2xl overflow-hidden border-3 transition-all duration-300 ${
                 isSelected 
-                    ? "w-20 h-20" 
-                    : "w-16 h-16"
+                    ? "border-[#2C1810] shadow-lg ring-4 ring-[#2C1810]/20" 
+                    : "border-gray-200 hover:border-[#2C1810]/50 hover:shadow-md"
             }`}
             onClick={onClick}
         >
