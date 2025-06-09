@@ -8,6 +8,42 @@ import {faStar} from "@fortawesome/free-solid-svg-icons";
 import ProductPrice from "../../components/ProductPrice";
 import {formatPrice} from "../../components/formatPrice";
 
+const styles = `
+.custom-thumbnail-scrollbar::-webkit-scrollbar {
+    height: 6px;
+}
+
+.custom-thumbnail-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.custom-thumbnail-scrollbar::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.custom-thumbnail-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+@media (max-width: 768px) {
+    .custom-thumbnail-scrollbar::-webkit-scrollbar {
+        height: 0px;
+        background: transparent;
+    }
+    
+    .custom-thumbnail-scrollbar::-webkit-scrollbar-thumb {
+        background: transparent;
+    }
+    
+    .custom-thumbnail-scrollbar {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+}
+`;
+
 const ProductDetail = () => {
     const {id} = useParams<{ id: string }>();
     const product = products.find((p) => p.id === parseInt(id!)) ?? {
@@ -40,8 +76,10 @@ const ProductDetail = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 pb-24 lg:pb-12">
+        <>
+            <style>{styles}</style>
+            <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 md:pb-32 pb-24 lg:pb-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto">
                     
                     {/* Ürün Görselleri */}
@@ -71,7 +109,7 @@ const ProductDetail = () => {
                         </div>
 
                         {/* Küçük Görseller */}
-                        <div className="w-full h-20 flex space-x-4 overflow-x-auto overflow-y-hidden scrollbar-hide">
+                        <div className="w-full h-24 flex space-x-4 overflow-x-auto overflow-y-hidden py-2 px-2 custom-thumbnail-scrollbar">
                             {product.video && product.videoThumbnail && (
                                 <div className="w-20 h-20">
                                     <VideoThumbnail
@@ -89,9 +127,9 @@ const ProductDetail = () => {
                                 <button
                                     key={index}
                                     className={`w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden border-3 transition-all duration-300 ${
-                                        selectedMedia === image 
-                                        ? "w-20 h-20" 
-                                        : "w-16 h-16"
+                                        selectedMedia === image && !isVideo
+                                        ? "border-[#2C1810] shadow-lg ring-4 ring-[#2C1810]/20" 
+                                        : "border-gray-200 hover:border-[#2C1810]/50 hover:shadow-md"
                                     }`}
                                     onClick={() => {
                                         setSelectedMedia(image);
@@ -125,8 +163,11 @@ const ProductDetail = () => {
                         </div>
 
                         {/* Fiyat */}
-                        <div className="bg-gradient-to-r from-[#2C1810]/5 to-[#2C1810]/10 rounded-2xl p-6 border border-[#2C1810]/10">
-                            <ProductPrice product={product}/>
+                        <div className="relative">
+                            <div className="absolute inset-0 bg-gradient-to-r from-[#2C1810]/5 via-[#2C1810]/10 to-[#2C1810]/5 rounded-3xl blur-sm"></div>
+                            <div className="relative bg-gradient-to-br from-amber-50/80 via-white/90 to-orange-50/80 rounded-3xl p-2 border border-[#2C1810]/20 shadow-2xl">
+                                <ProductPrice product={product}/>
+                            </div>
                         </div>
 
                         {/* Sekmeler */}
@@ -248,6 +289,7 @@ const ProductDetail = () => {
                 </div>
             </div>
         </div>
+        </>
     );
 };
 
