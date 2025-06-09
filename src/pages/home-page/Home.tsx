@@ -4,11 +4,9 @@ import AboutDombraSection from "./section/AboutDombraSection";
 
 export default function Home() {
     return (
-        <div>
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
             <HeroSection />
-
             <FeaturedProductsSection />
-
             <AboutDombraSection />
         </div>
     );
