@@ -4,32 +4,34 @@ import {Link} from "react-router-dom";
 import {formatPrice} from "./formatPrice";
 
 const ProductCard = React.memo(({product}: { product: Product }) => (
-    <div className="bg-white shadow-md rounded-lg overflow-hidden w-auto flex flex-col justify-between h-full relative">
-        {/* Stokta Yok Etiketi */}
+    <div className="bg-white border-2 border-gray-100 rounded-2xl overflow-hidden flex flex-col h-full relative">
+        {/* Stok Durumu */}
         {!product.isStock && (
-            <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
-                Stokta Yok
+            <div className="absolute top-3 right-3 z-10">
+                <div className="bg-red-50 text-red-600 px-4 py-2 rounded-xl font-medium border-2 border-red-100 shadow-sm text-base">
+                    Stokta Yok
+                </div>
             </div>
         )}
 
         {/* Ürün Görseli */}
-        <div className="w-full">
+        <div className="relative w-full aspect-square overflow-hidden bg-white">
             <img
                 src={product.images.at(0)}
                 alt={product.name}
-                className="w-full max-h-150 aspect-[1/1] object-cover"
+                className="w-full h-full object-cover"
                 loading="lazy"
             />
         </div>
 
         {/* Ürün Bilgileri */}
-        <div className="p-4 text-center flex-grow">
-            <h3 className="text-lg font-semibold">{product.name}</h3>
-            <p className="text-gray-500 my-2">{formatPrice(product.price)}</p>
+        <div className="p-5 text-center flex-grow">
+            <h3 className="text-lg font-semibold text-[#2C1810] line-clamp-2 mb-2">{product.name}</h3>
+            <p className="text-[#2C1810] font-medium text-lg">{formatPrice(product.price)}</p>
         </div>
 
         {/* Ürüne Git Butonu */}
-        <div className="p-4">
+        <div className="p-5 pt-0">
             <Link
                 to={`/urun/${product.id}/${product.name
                     .toLowerCase()
@@ -43,8 +45,9 @@ const ProductCard = React.memo(({product}: { product: Product }) => (
                     .replace(/\s+/g, "-")}-${product.category}`}
                 className="block"
             >
-                <button className={"text-lg w-full rounded-lg py-2 transition bg-gray-100 hover:bg-gray-200"} >
-                    Ürüne Git
+                <button 
+                    className={"w-full py-2.5 px-4 rounded-xl font-medium transition-colors duration-200 bg-gray-100 text-black hover:bg-gray-200"}>
+                    Ürünü İncele
                 </button>
             </Link>
         </div>

@@ -1,18 +1,35 @@
-const VideoThumbnail = ({ poster, onClick }: { poster: string; onClick: () => void }) => {
+const VideoThumbnail = ({ 
+    poster, 
+    onClick, 
+    isSelected = false 
+}: { 
+    poster: string; 
+    onClick: () => void;
+    isSelected?: boolean;
+}) => {
     return (
         <div
-            className="relative w-20 h-20 sm:w-24 sm:h-24 lg:w-20 lg:h-20 cursor-pointer rounded-md border-2 border-gray-200"
+            className={`relative w-20 h-20 flex-shrink-0 cursor-pointer rounded-2xl overflow-hidden transition-all duration-300 ${
+                isSelected 
+                    ? "w-20 h-20" 
+                    : "w-16 h-16"
+            }`}
             onClick={onClick}
         >
             <img
                 src={poster}
                 alt="Video Thumbnail"
-                className="w-full h-full object-cover rounded-md brightness-75"
+                className="w-full h-full object-cover brightness-75"
+                draggable={false}
             />
 
             {/* Video Oynatma İkonu */}
             <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-black bg-opacity-50 p-2 rounded-full">
+                <div className={`p-2 rounded-full transition-all duration-300 ${
+                    isSelected 
+                        ? "bg-[#2C1810] bg-opacity-90" 
+                        : "bg-black bg-opacity-50 group-hover:bg-opacity-70"
+                }`}>
                     <svg
                         className="w-6 h-6 text-white"
                         fill="currentColor"
@@ -24,7 +41,6 @@ const VideoThumbnail = ({ poster, onClick }: { poster: string; onClick: () => vo
                 </div>
             </div>
         </div>
-
     );
 };
 

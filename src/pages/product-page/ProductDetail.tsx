@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import {useParams, useNavigate} from "react-router-dom";
+import {useParams} from "react-router-dom";
 import {products} from "../../components/products";
 import VideoThumbnail from "../../components/VideoThumbnail";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
@@ -36,181 +36,218 @@ const ProductDetail = () => {
 
     const handleWhatsAppRedirect = () => {
         if (!product) return;
-
-        /*const message = encodeURIComponent(
-            `Merhaba, bu ürünü satın almak istiyorum:\n\n*${product.name}*\nFiyat: ${product.price}\nÜrün Linki: ${window.location.href}`
-        );*/
-
         window.open(`https://wa.me/${905355267480}`, "_blank");
     };
 
     return (
-        <section className="bg-gray-100 w-full min-h-screen px-3 py-16 flex flex-col lg:flex-row gap-12">
-            <div className="w-full lg:w-1/2 flex flex-col items-center">
-                {/* Big Images or Video */}
-                {isVideo ? (
-                    <video
-                        controls
-                        controlsList="nofullscreen nodownload noremoteplayback"
-                        className="w-full sm:w-40 md:w-96 lg:w-[600px] aspect-square object-cover rounded-lg shadow-md"
-                    >
-                        <source src={selectedMedia!} type="video/mp4"/>
-                        Tarayıcınız video formatını desteklemiyor.
-                    </video>
-                ) : (
-                    <img
-                        src={selectedMedia!}
-                        alt={product.name}
-                        className="w-full sm:w-40 md:w-96 lg:w-[600px] aspect-square object-cover rounded-lg shadow-md"
-                    />
-                )}
-
-                {/* Small Images and Video */}
-                <div className="flex space-x-4 mt-4 overflow-x-auto scrollbar-hide max-w-2xl">
-                    {/* Video Thumbnail */}
-                    {product.video && product.videoThumbnail && (
-                        <div className="w-20 h-20 sm:w-24 sm:h-24 lg:w-20 lg:h-20 flex-shrink-0">
-                            <VideoThumbnail
-                                poster={product.videoThumbnail}
-                                onClick={() => {
-                                    setSelectedMedia(product.video || null);
-                                    setIsVideo(true);
-                                }}
-                            />
-                        </div>
-                    )}
-
-                    {/* Product Images */}
-                    {product.images.map((image, index) => (
-                        <img
-                            key={index}
-                            src={image}
-                            alt={`Ürün görseli ${index + 1}`}
-                            className={`w-20 h-20 sm:w-24 sm:h-24 lg:w-20 lg:h-20 object-cover rounded-md cursor-pointer border-2 flex-shrink-0 mb-2 ${
-                                selectedMedia === image ? "border-black" : "border-gray-200"
-                            }`}
-                            onClick={() => {
-                                setSelectedMedia(image);
-                                setIsVideo(false);
-                            }}
-                            draggable={false}
-                        />
-                    ))}
-                </div>
-            </div>
-
-            {/* Product Information */}
-            <div className="w-full lg:w-2/5 flex flex-col justify-start">
-                <h1 className="text-3xl font-bold">{product.name}</h1>
-                <p className="text-gray-700 mt-2">{product.description}</p>
-                {/* Sekmeler */}
-                <div className="mt-6 flex w-full border-b">
-                    <button
-                        className={`py-3 px-4 sm:px-6 flex-1 text-base sm:text-lg font-semibold text-center transition-all duration-300 ease-in-out ${
-                            activeTab === "features" ? "border-b-2 border-black text-black" : "text-gray-500 hover:text-black"
-                        }`}
-                        onClick={() => setActiveTab("features")}
-                    >
-                        Ürün Özellikleri
-                    </button>
-                    <button
-                        className={`py-3 px-4 sm:px-6 flex-1 text-base sm:text-lg font-semibold text-center transition-all duration-300 ease-in-out ${
-                            activeTab === "reviews" ? "border-b-2 border-black text-black" : "text-gray-500 hover:text-black"
-                        }`}
-                        onClick={() => setActiveTab("reviews")}
-                    >
-                        Değerlendirmeler
-                    </button>
-                </div>
-
-                {/* Sekme İçeriği */}
-                <div className="mt-4">
-                    {activeTab === "features" ? (
-                        <div>
-                            {/*<h2 className="font-bold text-xl mb-2">Özellikler</h2>*/}
-                            <ul className="list-disc ml-5 lg:text-lg text-gray-700">
-                                {product.features.map((feature, index) => (
-                                    <li className="pb-2" key={index}>{feature}</li>
-                                ))}
-                            </ul>
-
-                            <h2 className="font-bold text-xl mt-4 mb-2">Malzeme</h2>
-                            <p className="text-gray-700">{product.metarial}</p>
-                        </div>
-                    ) : (
-                        <div>
-                            {/*<h2 className="font-bold text-xl mb-2">Değerlendirmeler</h2>*/}
-                            {product.reviews.length > 0 ? (
-                                product.reviews.map((review, index) => (
-                                    <div key={index} className="border-b pb-4 mb-4">
-                                        <p className="font-semibold">{review.user}</p>
-                                        <div className="flex items-center text-yellow-500">
-                                            {[...Array(review.rating)].map((_, i) => (
-                                                <FontAwesomeIcon key={i} icon={faStar} />
-                                            ))}
-                                        </div>
-                                        <p className="text-gray-700 mt-2">{review.comment}</p>
-                                    </div>
-                                ))
+        <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-50">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 pb-24 lg:pb-12">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 max-w-7xl mx-auto">
+                    
+                    {/* Ürün Görselleri */}
+                    <div className="flex flex-col space-y-6">
+                        {/* Ana Görsel */}
+                        <div className="relative group">
+                            {isVideo ? (
+                                <div className="w-full aspect-square rounded-3xl overflow-hidden bg-white shadow-2xl shadow-gray-200/50 border border-gray-100">
+                                    <video
+                                        controls
+                                        controlsList="nofullscreen nodownload noremoteplayback"
+                                        className="w-full h-full object-cover"
+                                    >
+                                        <source src={selectedMedia!} type="video/mp4"/>
+                                        Tarayıcınız video formatını desteklemiyor.
+                                    </video>
+                                </div>
                             ) : (
-                                <p className="text-gray-500">Henüz yorum yok.</p>
+                                <div className="w-full aspect-square rounded-3xl overflow-hidden bg-white shadow-2xl shadow-gray-200/50 border border-gray-100">
+                                    <img
+                                        src={selectedMedia!}
+                                        alt={product.name}
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
                             )}
                         </div>
-                    )}
-                </div>
 
-                <div className="flex flex-row items-center p-2 gap-2 mt-6 mb-20 lg:mb-3 border-l-2 border-gray-300 justify-between">
-                {/* Discounted Price */}
-                    <ProductPrice product={product}/>
-                    {/* Whatsapp Order Button */}
+                        {/* Küçük Görseller */}
+                        <div className="w-full h-20 flex space-x-4 overflow-x-auto overflow-y-hidden scrollbar-hide">
+                            {product.video && product.videoThumbnail && (
+                                <div className="w-20 h-20">
+                                    <VideoThumbnail
+                                        poster={product.videoThumbnail}
+                                        isSelected={selectedMedia === product.video && isVideo}
+                                        onClick={() => {
+                                            setSelectedMedia(product.video || null);
+                                            setIsVideo(true);
+                                        }}
+                                    />
+                                </div>
+                            )}
+
+                            {product.images.map((image, index) => (
+                                <button
+                                    key={index}
+                                    className={`w-20 h-20 flex-shrink-0 rounded-2xl overflow-hidden border-3 transition-all duration-300 ${
+                                        selectedMedia === image 
+                                        ? "w-20 h-20" 
+                                        : "w-16 h-16"
+                                    }`}
+                                    onClick={() => {
+                                        setSelectedMedia(image);
+                                        setIsVideo(false);
+                                    }}
+                                >
+                                    <img
+                                        src={image}
+                                        alt={`${product.name} - Görsel ${index + 1}`}
+                                        className="w-full h-full object-cover"
+                                        draggable={false}
+                                    />
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
+                    {/* Ürün Bilgileri */}
+                    <div className="space-y-8">
+                        {/* Başlık ve Açıklama */}
+                        <div className="space-y-4">
+                            <div className="flex items-center justify-between">
+                                <h1 className="text-3xl sm:text-4xl font-bold text-[#2C1810] leading-tight">{product.name}</h1>
+                                {!product.isStock && (
+                                    <span className="bg-red-50 text-red-600 px-4 py-2 rounded-full font-medium border border-red-200 text-sm">
+                                        Stokta Yok
+                                    </span>
+                                )}
+                            </div>
+                            <p className="text-lg text-[#5C4D44] leading-relaxed">{product.description}</p>
+                        </div>
+
+                        {/* Fiyat */}
+                        <div className="bg-gradient-to-r from-[#2C1810]/5 to-[#2C1810]/10 rounded-2xl p-6 border border-[#2C1810]/10">
+                            <ProductPrice product={product}/>
+                        </div>
+
+                        {/* Sekmeler */}
+                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                            <div className="flex border-b border-gray-100">
+                                <button
+                                    onClick={() => setActiveTab("features")}
+                                    className={`flex-1 py-4 px-6 text-base font-semibold transition-all duration-300 ${
+                                        activeTab === "features"
+                                            ? "text-[#2C1810] bg-[#2C1810]/5 border-b-3 border-[#2C1810]"
+                                            : "text-gray-500 hover:text-[#2C1810] hover:bg-gray-50"
+                                    }`}
+                                >
+                                    Ürün Özellikleri
+                                </button>
+                                <button
+                                    onClick={() => setActiveTab("reviews")}
+                                    className={`flex-1 py-4 px-6 text-base font-semibold transition-all duration-300 ${
+                                        activeTab === "reviews"
+                                            ? "text-[#2C1810] bg-[#2C1810]/5 border-b-3 border-[#2C1810]"
+                                            : "text-gray-500 hover:text-[#2C1810] hover:bg-gray-50"
+                                    }`}
+                                >
+                                    Değerlendirmeler
+                                </button>
+                            </div>
+
+                            <div className="p-6">
+                                {activeTab === "features" ? (
+                                    <div className="space-y-6">
+                                        <div className="space-y-4">
+                                            {product.features.map((feature, index) => (
+                                                <div key={index} className="flex items-start gap-3 p-3 rounded-xl bg-gray-50/50">
+                                                    <div className="w-2 h-2 rounded-full bg-[#2C1810] mt-3 flex-shrink-0"></div>
+                                                    <span className="text-[#5C4D44] text-base leading-relaxed">{feature}</span>
+                                                </div>
+                                            ))}
+                                        </div>
+
+                                        <div className="border-t border-gray-100 pt-6">
+                                            <h3 className="text-xl font-bold text-[#2C1810] mb-3">Malzeme</h3>
+                                            <p className="text-[#5C4D44] text-base leading-relaxed bg-[#2C1810]/5 p-4 rounded-xl">
+                                                {product.metarial}
+                                            </p>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className="space-y-6">
+                                        {product.reviews.length > 0 ? (
+                                            product.reviews.map((review, index) => (
+                                                <div key={index} className="p-4 rounded-xl bg-gray-50/50 border border-gray-100">
+                                                    <div className="flex items-center justify-between mb-3">
+                                                        <p className="font-semibold text-[#2C1810]">{review.user}</p>
+                                                        <div className="flex items-center text-[#2C1810]">
+                                                            {[...Array(review.rating)].map((_, i) => (
+                                                                <FontAwesomeIcon key={i} icon={faStar} className="w-4 h-4" />
+                                                            ))}
+                                                        </div>
+                                                    </div>
+                                                    <p className="text-[#5C4D44] leading-relaxed">{review.comment}</p>
+                                                </div>
+                                            ))
+                                        ) : (
+                                            <div className="text-center py-8">
+                                                <p className="text-gray-500 text-lg">Henüz yorum yok.</p>
+                                                <p className="text-gray-400 text-sm mt-1">İlk yorumu siz yapın!</p>
+                                            </div>
+                                        )}
+                                    </div>
+                                )}
+                            </div>
+                        </div>
+
+                        {/* Aksiyon Butonları */}
+                        <div className="space-y-4">
+                            {/* WhatsApp Butonu */}
+                            <button
+                                onClick={handleWhatsAppRedirect}
+                                className="w-full bg-gradient-to-r from-emerald-500 to-emerald-600 text-white py-4 px-6 rounded-2xl font-semibold text-lg transition-all duration-300 hover:from-emerald-600 hover:to-emerald-700 hover:shadow-lg hover:shadow-emerald-500/25 flex items-center justify-center gap-3"
+                            >
+                                <FontAwesomeIcon icon={faWhatsapp} size="lg" />
+                                WhatsApp ile İletişime Geç
+                            </button>
+
+                            {/* Hepsiburada Butonu */}
+                            <button
+                                className={`w-full py-4 px-6 rounded-2xl font-semibold text-lg transition-all duration-300 ${
+                                    product.isStock 
+                                    ? "bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] text-white hover:shadow-lg hover:shadow-[#2C1810]/25" 
+                                    : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                                }`}
+                                onClick={() => product.isStock && window.open(product.url)}
+                                disabled={!product.isStock}
+                            >
+                                {product.isStock ? "Hepsiburada ile Satın Al" : "Stokta Yok"}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* Mobil Sabit Alt Bar */}
+            <div className="fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-lg border-t border-gray-200/50 p-4 lg:hidden">
+                <div className="flex items-center gap-4">
+                    <div className="flex-1">
+                        <p className="text-2xl font-bold text-[#2C1810]">{formatPrice(product.price)}</p>
+                    </div>
                     <button
-                        className="border lg:border-2 border-green-500 bg-green-50 text-black w-full py-3 rounded-md text-sm transition justify-center hover:bg-green-100"
-                        onClick={handleWhatsAppRedirect}
+                        className={`flex-1 py-3 px-6 rounded-xl font-semibold transition-all duration-300 ${
+                            product.isStock 
+                            ? "bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] text-white" 
+                            : "bg-gray-100 text-gray-400 cursor-not-allowed"
+                        }`}
+                        onClick={() => product.isStock && window.open(product.url)}
+                        disabled={!product.isStock}
                     >
-                        <FontAwesomeIcon icon={faWhatsapp} size="lg" className="text-green-500 mr-2" />
-                        <span className="font-semibold">WhatsApp</span> ile indirimli al
+                        {product.isStock ? "Satın Al" : "Stokta Yok"}
                     </button>
                 </div>
-
-                <p className="text-2xl font-semibold mt-10 lg:block hidden">{formatPrice(product.price)}</p>
-
-                {/* Hepsiburada order button - Normal view */}
-                <button
-                    className={`mt-6 py-3 px-6 rounded-md text-lg flex items-center justify-center lg:block hidden transition 
-        ${product.isStock ? "bg-[#FF6000] text-white hover:bg-[#CC4D00]" : "bg-gray-300 text-gray-600 cursor-not-allowed"}`}
-                    onClick={() => product.isStock && window.open(product.url)}
-                    disabled={!product.isStock}
-                >
-                    {product.isStock ? (
-                        <>
-                            <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
-                        </>
-                    ) : (
-                        "Stokta Yok"
-                    )}
-                </button>
             </div>
-
-            {/* Mobil ve Tablet İçin Sabit Buton ve Fiyat */}
-            <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 p-4 pb-6 flex items-center justify-between lg:hidden">
-                <p className="text-2xl font-semibold mr-3">{formatPrice(product.price)}</p>
-                <button
-                    className={`w-full py-3 rounded-md text-lg flex items-center justify-center transition 
-            ${product.isStock ? "bg-[#FF6000] text-white hover:bg-[#CC4D00]" : "bg-gray-300 text-gray-600 cursor-not-allowed"}`}
-                    onClick={() => product.isStock && window.open(product.url)}
-                    disabled={!product.isStock}
-                >
-                    {product.isStock ? (
-                        <>
-                            <span className="font-semibold mr-1">Hepsiburada</span> ile sipariş ver
-                        </>
-                    ) : (
-                        "Stokta Yok"
-                    )}
-                </button>
-            </div>
-
-        </section>
+        </div>
     );
 };
 

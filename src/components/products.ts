@@ -19,9 +19,9 @@ export const products: Product[] = [
     {
         id: 1,
         name: "Bozkır",
-        price: 10000,
-        discountAmount: 1501,
-        description: "Orta Seviye Profesyonel Kaplama Dombra",
+        price: 9500,
+        discountAmount: 1001,
+        description: "Orta Seviye Profesyonel Dombra",
         url: "https://www.hepsiburada.com/yari-profesyonel-dombra-bozkir-pm-HBC00007V73GR?magaza=Yatagun%20K%C3%BC%C4%9F&",
         features: [
             "Ölçüsü: 48 cm, kompakt yapısıyla rahat taşınabilir ve kolay çalınabilir.",
@@ -47,7 +47,7 @@ export const products: Product[] = [
         video: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/bozk%C4%B1r-teaser-qge9na7GoBz9eHeJfaT8daVOec5MIY.mp4",
         videoThumbnail: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg",
         category: "dombra",
-        isFeatured: false,
+        isFeatured: true,
         isStock: true
     },
     {
@@ -86,7 +86,7 @@ export const products: Product[] = [
     {
         id: 3,
         name: "Tuna",
-        price: 6750,
+        price: 6500,
         discountAmount: 501,
         description: "Desenli Amatör Dombra",
         url: "https://www.hepsiburada.com/desenli-amator-dombra-tuna-pm-HBC00007V74IU?magaza=Yatagun%20K%C3%BC%C4%9F&",
@@ -143,13 +143,13 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra4/d4-6-mMcxhuSC91ioJLGF646ivadiR86FA1.jpg"
         ],
         category: "dombra",
-        isFeatured: false,
+        isFeatured: true,
         isStock: true
     },
     {
         id: 6,
         name: "Yılkı",
-        price: 6750,
+        price: 6500,
         discountAmount: 501,
         description: "At Desenli Amatör Dombra",
         url: "https://www.hepsiburada.com/at-desenli-amator-dombra-yilki-pm-HBC00007Y81ZB?magaza=Yatagun%20K%C3%BC%C4%9F",
@@ -335,7 +335,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 12,
