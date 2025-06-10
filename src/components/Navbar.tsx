@@ -25,7 +25,7 @@ export default function Navbar() {
 
                     {/* Logo */}
                     <Link to="/" className="group">
-                        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] bg-clip-text text-transparent hover:scale-105 transition-transform duration-300">
+                        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold transition-transform duration-300">
                             Yatagun Dombra
                         </h1>
                     </Link>

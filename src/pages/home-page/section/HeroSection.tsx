@@ -14,25 +14,34 @@ export default function HeroSection() {
                 <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#1A0F0A]/5 rounded-full blur-3xl"></div>
             </div>
 
-            <div className="relative z-10 max-w-6xl mx-auto text-center space-y-12">
+            <div className="relative z-10 max-w-6xl mx-auto text-center">
+                {/* Dombras Image */}
+                <div className="flex justify-center mb-4">
+                    <img 
+                        src= "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/dombras-lwV8MLUSp15VQTVPQu1qo6Opkp2bnX.png" 
+                        alt="Dombra Enstrümanları" 
+                        className="max-w-md w-full h-auto object-contain"
+                    />
+                </div>
+
                 {/* Main Hero Content */}
-                <div className="space-y-8">
+                <div className="space-y-8 py-6">
                     <div className="space-y-6">
-                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[#2C1810] leading-tight">
+                        <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-[#2C1810] leading-relaxed pb-2">
                             <span className="block">Bozkır ruhunu</span>
-                            <span className="block bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] bg-clip-text text-transparent">
+                            <span className="bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] bg-clip-text text-transparent">
                                 özgürce hissedin diye...
                             </span>
                         </h1>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] rounded-full mx-auto"></div>
                     </div>
                     
-                    <p className="text-lg sm:text-xl lg:text-2xl text-[#5C4D44] leading-relaxed max-w-4xl mx-auto">
+                    <p className="text-lg sm:text-xl lg:text-2xl text-[#5C4D44] leading-relaxed max-w-4xl mx-auto py-4">
                         Dombra ile dile gelen her nota, geçmişin izini sürer; atalarımızın
                         kalbinde taşıdığı güç, azim ve irade bu tınılarda hayat bulur.
                     </p>
 
-                    <div className="pt-4">
+                    <div className="py-4">
                         <button
                             className="bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] text-white px-10 py-4 rounded-2xl text-lg font-semibold transition-all duration-300 hover:shadow-lg hover:shadow-[#2C1810]/25 hover:transform hover:scale-105"
                             onClick={() => navigate("/dombra-satin-al")}
