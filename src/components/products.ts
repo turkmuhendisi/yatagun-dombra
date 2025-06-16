@@ -20,7 +20,7 @@ export const products: Product[] = [
         id: 1,
         name: "Bozkır",
         price: 9500,
-        discountAmount: 1000,
+        discountAmount: 500,
         description: "Orta Seviye Profesyonel Dombra",
         url: "https://www.hepsiburada.com/yari-profesyonel-dombra-bozkir-pm-HBC00007V73GR?magaza=Yatagun%20K%C3%BC%C4%9F&",
         features: [
