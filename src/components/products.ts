@@ -48,7 +48,7 @@ export const products: Product[] = [
         videoThumbnail: "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra1/d1-1-AJdIFPNKVkAHgrLqMMrDm5Td1eJumI.jpg",
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 2,
