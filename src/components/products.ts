@@ -98,7 +98,8 @@ export const products: Product[] = [
             "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
             "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
             "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
-            "Peşin fiyatına taksit imkânı."
+            "Peşin fiyatına taksit imkânı.",
+            "Önemli : Bu dombrada desen ve motif farklılıkları olabilir."
         ],
         reviews: [],
         metarial: "Dut ağacından üretilmiş gövde, sıcak ve doğal bir ton karakteri sunarak dengeli bir ses üretir.",
@@ -112,7 +113,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 4,
@@ -226,7 +227,8 @@ export const products: Product[] = [
             "Hafif ve Ergonomik Yapı – Uzun süreli kullanımlarda bile bilekleri yormaz, kolay çalım imkanı sunar. Yeni başlayanlar için de rahat bir öğrenme süreci sağlar.",
             "Hava Şartlarına Duyarlılık – Ahşap yapısı nedeniyle sıcaklık ve nem değişimlerinden etkilenebilir. Sıcak havalarda: Ahşap genleşebilir, teller gevşeyebilir ve akort düşebilir. Soğuk havalarda: Ahşap sıkışabilir, teller gerilebilir ve akort yükselebilir.",
             "Yanında gelen aksesuarlar: Taşıma kılıfı (modele göre değişiklik gösterebilir).Bakım önerisi: Ahşap yüzeyi uzun ömürlü kullanabilmek için doğrudan güneş ışığından ve nemli ortamlardan uzak tutunuz. Düzenli olarak kuru bir bezle temizleyerek parlaklığını koruyabilirsiniz.",
-            "Peşin fiyatına taksit imkânı."
+            "Peşin fiyatına taksit imkânı.",
+            "Önemli : Bu dombrada desen ve motif farklılıkları olabilir."
         ],
         reviews: [],
         metarial: "Dut Ağacı",
@@ -371,6 +373,36 @@ export const products: Product[] = [
     },
     {
         id: 13,
+        name: "Börü",
+        price: 6750,
+        discountAmount: 500,
+        description: "Kurt Desenli Amatör Dombra",
+        url: "https://www.hepsiburada.com/desenli-amator-dombra-tuna-pm-HBC00007V74IU?magaza=Yatagun%20K%C3%BC%C4%9F&",
+        features: [
+            "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
+            "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
+            "Hafif yapısı, çalımı kolaylaştırarak uzun süreli kullanımda konfor sağlar.",
+            "Oval ve çok parçalı arka kapak, sesin yayılımını artırarak daha güçlü bir rezonans sunar.",
+            "Temiz baslar ve dengeli tizler, net ve akıcı bir ton üretir.",
+            "Ahşap burgular, doğal bir akort stabilitesi sağlayarak uzun ömürlü kullanım sunar.",
+            "Bu dombra, amatör ve orta seviye dombra icracıları için ideal olup, hem estetik hem de müzikal performans açısından dengeli bir deneyim sunuyor.",
+            "Peşin fiyatına taksit imkânı."
+        ],
+        reviews: [],
+        metarial: "Dut ağacından üretilmiş gövde, sıcak ve doğal bir ton karakteri sunarak dengeli bir ses üretir.",
+        images: [
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra13/d13-1.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra13/d13-2.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra13/d13-3.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra13/d13-4.webp",
+            "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra13/d13-5.webp"
+        ],
+        category: "dombra",
+        isFeatured: true,
+        isStock: false
+    },
+    {
+        id: 14,
         name: "Bozkurt Vakti Siyah",
         price: 800,
         discountAmount: 150,
@@ -406,7 +438,7 @@ export const products: Product[] = [
         isStock: true
     },
     {
-        id: 14,
+        id: 15,
         name: "Bozkurt Vakti Kahverengi",
         price: 800,
         discountAmount: 150,
@@ -442,7 +474,7 @@ export const products: Product[] = [
         isStock: true
     },
     {
-        id: 15,
+        id: 16,
         name: "Şahlanış",
         price: 750,
         discountAmount: 150,
@@ -478,7 +510,7 @@ export const products: Product[] = [
         isStock: true
     },
     {
-        id: 16,
+        id: 17,
         name: "Kızıl Kartal",
         price: 800,
         discountAmount: 150,
