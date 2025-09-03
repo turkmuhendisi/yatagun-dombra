@@ -89,7 +89,7 @@ export const products: Product[] = [
         price: 6750,
         discountAmount: 500,
         description: "Desenli Amatör Dombra",
-        url: "https://www.hepsiburada.com/desenli-amator-dombra-tuna-pm-HBC00007V74IU?magaza=Yatagun%20K%C3%BC%C4%9F&",
+        url: "https://www.hepsiburada.com/turan-dombra-pm-HBC00007V74IU?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
             "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
@@ -113,7 +113,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: false
+        isStock: true
     },
     {
         id: 4,
@@ -217,7 +217,7 @@ export const products: Product[] = [
         price: 6750,
         discountAmount: 500,
         description: "Desenli Amatör Dombra",
-        url: "",
+        url: "https://www.hepsiburada.com/altay-dombra-pm-HBC00007V74M8?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
             "Doğal Dut Ağacı Gövde – Doğal dut ağacından üretilmiş gövdesi, sıcak, dengeli ve tok bir ses karakteri sunar. Ahşabın doğal yapısı, her dokunuşta eşsiz bir his verir.",
@@ -240,8 +240,8 @@ export const products: Product[] = [
             "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/products/dombras/dombra8/d8-5-DJsqZ6Qow83qZZBD1xWj0aguKnEZDS.webp"
         ],
         category: "dombra",
-        isFeatured: false,
-        isStock: false
+        isFeatured: true,
+        isStock: true
     },
     {
         id: 9,
@@ -377,7 +377,7 @@ export const products: Product[] = [
         price: 6750,
         discountAmount: 500,
         description: "Kurt Desenli Amatör Dombra",
-        url: "https://www.hepsiburada.com/desenli-amator-dombra-tuna-pm-HBC00007V74IU?magaza=Yatagun%20K%C3%BC%C4%9F&",
+        url: "https://www.hepsiburada.com/kurt-desenli-amator-dombra-dombira-boru-pm-HBC00009SB9DH?magaza=Yatagun%20K%C3%BC%C4%9F",
         features: [
             "19 perdeli yapısıyla geleneksel dombra icralarına uygun, geniş ses aralığı sunar.",
             "Özel oyma desenli üst kapak, geleneksel Türk ve Kazak motifleriyle süslenmiş estetik bir tasarım sunar.",
@@ -399,7 +399,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: false
+        isStock: true
     },
     {
         id: 14,
