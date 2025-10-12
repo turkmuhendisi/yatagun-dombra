@@ -113,7 +113,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 4,
@@ -241,7 +241,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 9,
@@ -399,7 +399,7 @@ export const products: Product[] = [
         ],
         category: "dombra",
         isFeatured: true,
-        isStock: true
+        isStock: false
     },
     {
         id: 14,
@@ -435,7 +435,7 @@ export const products: Product[] = [
         ],
         category: "dekorasyon",
         isFeatured: false,
-        isStock: true
+        isStock: false
     },
     {
         id: 15,
@@ -471,7 +471,7 @@ export const products: Product[] = [
         ],
         category: "dekorasyon",
         isFeatured: false,
-        isStock: true
+        isStock: false
     },
     {
         id: 16,
@@ -507,7 +507,7 @@ export const products: Product[] = [
         ],
         category: "dekorasyon",
         isFeatured: false,
-        isStock: true
+        isStock: false
     },
     {
         id: 17,
@@ -543,7 +543,7 @@ export const products: Product[] = [
         ],
         category: "dekorasyon",
         isFeatured: false,
-        isStock: true
+        isStock: false
     }
 ];
 
