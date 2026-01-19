@@ -46,24 +46,7 @@ const songs: Song[] = [
         platform: "youtube",
         previewUrl: bozkirdombra,
         platformUrl: "https://music.youtube.com/channel/UCVeDpNsgp1VsdV48VeWcj0g",
-    },
-    {
-        id: 4,
-        name: "Kızıl Yemin",
-        singer: "Yatagun Küğ",
-        platform: "spotify",
-        previewUrl: kizilYemin,
-        platformUrl:
-            "https://open.spotify.com/intl-tr/artist/50lUKUPmY7cYwHUqI91C0x",
-    },
-    {
-        id: 5,
-        name: "Köngül Sadası",
-        singer: "Yatagun Küğ",
-        platform: "apple",
-        previewUrl: kongulSadasi,
-        platformUrl: "https://music.apple.com/tr/artist/yatagun-küğ/1772460693",
-    },
+    }
 ];
 
 const MusicPlayer: FC = () => {
