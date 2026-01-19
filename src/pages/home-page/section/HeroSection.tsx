@@ -14,6 +14,20 @@ export default function HeroSection() {
                 <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#1A0F0A]/5 rounded-full blur-3xl"></div>
             </div>
 
+            {/* Announcement Banner */}
+            <div className="relative z-20 w-full max-w-4xl mx-auto mb-8 px-4">
+                <div className="bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] text-white rounded-2xl p-6 shadow-xl border-2 border-white/20">
+                    <div className="flex items-center justify-center space-x-3">
+                        <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <p className="text-lg sm:text-xl font-semibold text-center">
+                            Nakliye ile alakalı sorunlardan dolayı Dombra satışları yeni yıldan itibaren olacaktır.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
             <div className="relative z-10 max-w-6xl mx-auto text-center">
                 {/* Dombras Image */}
                 <div className="flex justify-center mb-4">
