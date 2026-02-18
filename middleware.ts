@@ -7,6 +7,8 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <title>Yatagun Dombra | Bakım Modu</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,157 +21,149 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       align-items: center;
       justify-content: center;
       font-family: 'Inter', sans-serif;
-      background: linear-gradient(135deg, #f8f6f4 0%, #fff 40%, #f8f6f4 100%);
-      color: #2C1810;
       padding: 24px;
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
-    }
-    body::before, body::after {
-      content: '';
-      position: absolute;
-      border-radius: 50%;
-      filter: blur(80px);
-      opacity: 0.08;
-      pointer-events: none;
+      background: url('/altaihorse.png') center center / cover no-repeat fixed;
     }
     body::before {
-      width: 500px; height: 500px;
-      top: -100px; left: -100px;
-      background: #2C1810;
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(30,20,15,0.4);
+      pointer-events: none;
+      z-index: 0;
     }
-    body::after {
-      width: 400px; height: 400px;
-      bottom: -80px; right: -80px;
-      background: #1A0F0A;
-    }
-    .card {
+    .glass-card {
       position: relative;
       z-index: 1;
-      max-width: 560px;
+      max-width: 480px;
       width: 100%;
-      text-align: center;
-      background: rgba(255,255,255,0.85);
-      backdrop-filter: blur(16px);
-      border-radius: 24px;
-      padding: 48px 36px;
-      box-shadow: 0 20px 60px rgba(44,24,16,0.08);
-      border: 1px solid rgba(255,255,255,0.5);
+      background: rgba(255,255,255,0.15);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-radius: 20px;
+      padding: 36px 32px;
+      border: 1px solid rgba(255,255,255,0.35);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
     }
-    .icon-wrapper {
-      width: 72px; height: 72px;
-      margin: 0 auto 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #2C1810, #1A0F0A);
-    }
-    .icon-wrapper svg { width: 32px; height: 32px; }
-    h1 {
-      font-size: 28px;
+    .glass-card h1 {
+      font-size: 22px;
       font-weight: 700;
-      margin-bottom: 16px;
-      background: linear-gradient(to right, #2C1810, #1A0F0A);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-    .divider {
-      width: 48px; height: 3px;
-      margin: 0 auto 24px;
-      border-radius: 4px;
-      background: linear-gradient(to right, #2C1810, #1A0F0A);
-    }
-    p {
-      font-size: 17px;
-      line-height: 1.7;
-      color: #5C4D44;
-      margin-bottom: 32px;
-    }
-    .social {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 24px;
-      border-radius: 16px;
-      background: rgba(255,255,255,0.8);
-      border: 1px solid rgba(44,24,16,0.1);
-      text-decoration: none;
-      color: #2C1810;
-      font-weight: 600;
-      font-size: 15px;
-      transition: all 0.3s;
-      box-shadow: 0 4px 16px rgba(44,24,16,0.06);
-    }
-    .social:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(44,24,16,0.12);
-    }
-    .social .ig-icon {
-      width: 36px; height: 36px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 4px;
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 8px;
     }
-    .social .ig-icon svg { width: 18px; height: 18px; }
-    .player-wrap {
-      background: rgba(255,255,255,0.6);
-      backdrop-filter: blur(8px);
-      border-radius: 16px;
-      padding: 20px;
-      margin: 24px 0;
-      text-align: left;
-      border: 1px solid rgba(44,24,16,0.08);
+    .glass-card h1::after {
+      content: '';
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #f5d042;
     }
-    .player-wrap h3 {
-      font-size: 14px;
-      color: #5C4D44;
-      margin-bottom: 12px;
+    .glass-divider {
+      height: 1px;
+      background: rgba(255,255,255,0.5);
+      margin: 20px 0;
+    }
+    .glass-card .message {
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.95);
+      margin-bottom: 24px;
+    }
+    .player-inner {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 14px;
+      padding: 18px 16px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .player-inner h3 {
+      font-size: 11px;
       font-weight: 600;
+      color: rgba(255,255,255,0.9);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
     }
     .track {
       display: flex;
       align-items: center;
       gap: 12px;
       padding: 10px 0;
-      border-bottom: 1px solid rgba(44,24,16,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.1);
     }
     .track:last-child { border-bottom: none; }
     .track-btn {
-      width: 36px; height: 36px;
+      width: 34px; height: 34px;
       flex-shrink: 0;
       border: none;
       border-radius: 50%;
-      background: linear-gradient(135deg, #2C1810, #1A0F0A);
-      color: white;
+      background: rgba(255,255,255,0.35);
+      color: #fff;
       cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      transition: opacity 0.2s;
+      transition: all 0.2s;
     }
-    .track-btn:hover { opacity: 0.9; }
-    .track-btn.playing { background: #5C4D44; }
+    .track-btn:hover { background: rgba(255,255,255,0.5); }
+    .track-btn.playing { background: rgba(245,208,66,0.9); color: #1a140e; }
     .track-btn svg { width: 14px; height: 14px; }
     .track-info { flex: 1; }
-    .track-name { font-weight: 600; color: #2C1810; }
-    .track-singer { font-size: 13px; color: #5C4D44; }
+    .track-name { font-weight: 600; color: #fff; font-size: 14px; }
+    .track-singer { font-size: 12px; color: rgba(255,255,255,0.75); }
+    .social-row {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    .social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.25);
+      text-decoration: none;
+      color: #fff;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.3s;
+    }
+    .social:hover {
+      background: rgba(255,255,255,0.28);
+      transform: translateY(-1px);
+    }
+    .social .ig-icon {
+      width: 28px; height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .social .ig-icon svg { width: 14px; height: 14px; }
     @media (max-width: 480px) {
-      .card { padding: 36px 24px; }
-      h1 { font-size: 22px; }
-      p { font-size: 15px; }
+      .glass-card { padding: 28px 24px; }
+      .glass-card h1 { font-size: 18px; }
+      .message { font-size: 14px; }
     }
   </style>
 </head>
 <body>
-  <div class="card">
+  <div class="glass-card">
     <h1>Yatagun Dombra</h1>
-    <div class="divider"></div>
-    <p>Ezgiler sustu sanma; yalnızca güç topluyoruz, çünkü bozkırın sesi susmaz ve rüzgâr dombırayı çaldığında aynı kadim tınılarda yeniden buluşacağız.</p>
-    <div class="player-wrap">
+    <div class="glass-divider"></div>
+    <p class="message">Ezgiler sustu sanma; yalnızca güç topluyoruz, çünkü bozkırın sesi susmaz ve rüzgâr dombırayı çaldığında aynı kadim tınılarda yeniden buluşacağız.</p>
+    <div class="player-inner">
       <h3>Bozkırın sesini dinleyin</h3>
       <div class="tracks">
         <div class="track" data-src="/musics/bulutlar%C4%B1n-aras%C4%B1nda.mp3" data-name="Bulutların Arasında">
@@ -195,6 +189,7 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       </div>
     </div>
     <audio id="m-audio" style="display:none"></audio>
+    <div class="social-row">
     <a href="https://www.instagram.com/yatagundombra/" target="_blank" rel="noopener noreferrer" class="social">
       <span class="ig-icon">
         <svg fill="white" viewBox="0 0 24 24">
@@ -203,6 +198,7 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       </span>
       yatagundombra
     </a>
+    </div>
   </div>
   <script>
     (function(){
@@ -232,15 +228,14 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
 </html>`;
 
 export const config = {
-  matcher: ['/((?!musics/).*)'],
+  matcher: ['/((?!musics/|favicon\\.png|favicon\\.ico|altaihorse\\.png).*)'],
 };
 
 export default function middleware() {
   return new Response(MAINTENANCE_HTML, {
-    status: 503,
+    status: 200,
     headers: {
       'Content-Type': 'text/html; charset=utf-8',
-      'Retry-After': '86400',
     },
   });
 }
