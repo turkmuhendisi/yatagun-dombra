@@ -115,6 +115,48 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       justify-content: center;
     }
     .social .ig-icon svg { width: 18px; height: 18px; }
+    .player-wrap {
+      background: rgba(255,255,255,0.6);
+      backdrop-filter: blur(8px);
+      border-radius: 16px;
+      padding: 20px;
+      margin: 24px 0;
+      text-align: left;
+      border: 1px solid rgba(44,24,16,0.08);
+    }
+    .player-wrap h3 {
+      font-size: 14px;
+      color: #5C4D44;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+    .track {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(44,24,16,0.06);
+    }
+    .track:last-child { border-bottom: none; }
+    .track-btn {
+      width: 36px; height: 36px;
+      flex-shrink: 0;
+      border: none;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2C1810, #1A0F0A);
+      color: white;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: opacity 0.2s;
+    }
+    .track-btn:hover { opacity: 0.9; }
+    .track-btn.playing { background: #5C4D44; }
+    .track-btn svg { width: 14px; height: 14px; }
+    .track-info { flex: 1; }
+    .track-name { font-weight: 600; color: #2C1810; }
+    .track-singer { font-size: 13px; color: #5C4D44; }
     @media (max-width: 480px) {
       .card { padding: 36px 24px; }
       h1 { font-size: 22px; }
@@ -124,11 +166,36 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
 </head>
 <body>
   <div class="card">
-
     <h1>Yatagun Dombra</h1>
     <div class="divider"></div>
     <p>Ezgiler sustu sanma; yalnızca güç topluyoruz, çünkü bozkırın sesi susmaz ve rüzgâr dombırayı çaldığında aynı kadim tınılarda yeniden buluşacağız.</p>
-    <a href="https://www.instagram.com/yatagun1/" target="_blank" rel="noopener noreferrer" class="social">
+    <div class="player-wrap">
+      <h3>Bozkırın sesini dinleyin</h3>
+      <div class="tracks">
+        <div class="track" data-src="/musics/bulutlar%C4%B1n-aras%C4%B1nda.mp3" data-name="Bulutların Arasında">
+          <button class="track-btn" type="button" aria-label="Çal"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          <div class="track-info"><div class="track-name">Bulutların Arasında</div><div class="track-singer">Yatagun Küğ</div></div>
+        </div>
+        <div class="track" data-src="/musics/bozk%C4%B1r-ruhu.mp3" data-name="Bozkır Ruhu">
+          <button class="track-btn" type="button" aria-label="Çal"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          <div class="track-info"><div class="track-name">Bozkır Ruhu</div><div class="track-singer">Yatagun Küğ</div></div>
+        </div>
+        <div class="track" data-src="/musics/bozk%C4%B1r-ruhu-dombra.mp3" data-name="Bozkır Ruhu (Dombra)">
+          <button class="track-btn" type="button" aria-label="Çal"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          <div class="track-info"><div class="track-name">Bozkır Ruhu (Dombra)</div><div class="track-singer">Yatagun Küğ</div></div>
+        </div>
+        <div class="track" data-src="/musics/kizil-yemin.mp3" data-name="Kızıl Yemin">
+          <button class="track-btn" type="button" aria-label="Çal"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          <div class="track-info"><div class="track-name">Kızıl Yemin</div><div class="track-singer">Yatagun Küğ</div></div>
+        </div>
+        <div class="track" data-src="/musics/kongul-sadasi.mp3" data-name="Köngül Sadası">
+          <button class="track-btn" type="button" aria-label="Çal"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></button>
+          <div class="track-info"><div class="track-name">Köngül Sadası</div><div class="track-singer">Yatagun Küğ</div></div>
+        </div>
+      </div>
+    </div>
+    <audio id="m-audio" style="display:none"></audio>
+    <a href="https://www.instagram.com/yatagundombra/" target="_blank" rel="noopener noreferrer" class="social">
       <span class="ig-icon">
         <svg fill="white" viewBox="0 0 24 24">
           <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
@@ -137,8 +204,36 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       yatagundombra
     </a>
   </div>
+  <script>
+    (function(){
+      var audio = document.getElementById('m-audio');
+      var tracks = document.querySelectorAll('.track');
+      var currentTrack = null;
+      function resetBtns(){
+        tracks.forEach(function(t){ t.querySelector('.track-btn').classList.remove('playing'); t.querySelector('.track-btn').innerHTML = '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>'; });
+      }
+      function setPauseBtn(t){ t.querySelector('.track-btn').classList.add('playing'); t.querySelector('.track-btn').innerHTML = '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>'; }
+      function setPlayBtn(t){ t.querySelector('.track-btn').classList.remove('playing'); t.querySelector('.track-btn').innerHTML = '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>'; }
+      audio.addEventListener('ended', function(){ resetBtns(); });
+      tracks.forEach(function(tr){
+        tr.querySelector('.track-btn').addEventListener('click', function(){
+          var src = tr.getAttribute('data-src');
+          if(currentTrack === tr && !audio.paused){ audio.pause(); setPlayBtn(tr); return; }
+          resetBtns();
+          audio.src = src;
+          audio.play();
+          currentTrack = tr;
+          setPauseBtn(tr);
+        });
+      });
+    })();
+  </script>
 </body>
 </html>`;
+
+export const config = {
+  matcher: ['/((?!musics/).*)'],
+};
 
 export default function middleware() {
   return new Response(MAINTENANCE_HTML, {
