@@ -127,10 +127,7 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
 
     <h1>Yatagun Dombra</h1>
     <div class="divider"></div>
-    <p>
-      Sitemiz şu an bakım modundadır.<br><br>
-      En kısa sürede tekrar sizlerle olacağız.
-    </p>
+    <p>Ezgiler sustu sanma; yalnızca güç topluyoruz, çünkü bozkırın sesi susmaz ve rüzgâr dombırayı çaldığında aynı kadim tınılarda yeniden buluşacağız.</p>
     <a href="https://www.instagram.com/yatagun1/" target="_blank" rel="noopener noreferrer" class="social">
       <span class="ig-icon">
         <svg fill="white" viewBox="0 0 24 24">
