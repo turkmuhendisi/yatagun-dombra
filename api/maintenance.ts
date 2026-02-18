@@ -1,0 +1,172 @@
+export const config = {
+  runtime: 'edge',
+};
+
+export default function handler() {
+  const html = `<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yatagun Dombra | Bakım Modu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #f8f6f4 0%, #fff 40%, #f8f6f4 100%);
+      color: #2C1810;
+      padding: 24px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    body::before, body::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+    body::before {
+      width: 500px; height: 500px;
+      top: -100px; left: -100px;
+      background: #2C1810;
+    }
+    body::after {
+      width: 400px; height: 400px;
+      bottom: -80px; right: -80px;
+      background: #1A0F0A;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 48px 36px;
+      box-shadow: 0 20px 60px rgba(44,24,16,0.08);
+      border: 1px solid rgba(255,255,255,0.5);
+    }
+
+    .icon-wrapper {
+      width: 72px; height: 72px;
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #2C1810, #1A0F0A);
+    }
+    .icon-wrapper svg { width: 32px; height: 32px; }
+
+    h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      background: linear-gradient(to right, #2C1810, #1A0F0A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .divider {
+      width: 48px; height: 3px;
+      margin: 0 auto 24px;
+      border-radius: 4px;
+      background: linear-gradient(to right, #2C1810, #1A0F0A);
+    }
+
+    p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: #5C4D44;
+      margin-bottom: 32px;
+    }
+
+    .social {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 24px;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.8);
+      border: 1px solid rgba(44,24,16,0.1);
+      text-decoration: none;
+      color: #2C1810;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s;
+      box-shadow: 0 4px 16px rgba(44,24,16,0.06);
+    }
+    .social:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(44,24,16,0.12);
+    }
+    .social .ig-icon {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .social .ig-icon svg { width: 18px; height: 18px; }
+
+    @media (max-width: 480px) {
+      .card { padding: 36px 24px; }
+      h1 { font-size: 22px; }
+      p { font-size: 15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="icon-wrapper">
+      <svg fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round"
+          d="M11.42 15.17l-5.88 3.09a1 1 0 01-1.45-1.05l1.12-6.53-4.74-4.63a1 1 0 01.55-1.7l6.56-.95 2.93-5.94a1 1 0 011.8 0l2.93 5.94 6.56.95a1 1 0 01.55 1.7l-4.74 4.63 1.12 6.53a1 1 0 01-1.45 1.05l-5.88-3.09z" />
+      </svg>
+    </div>
+
+    <h1>Yatagun Dombra</h1>
+    <div class="divider"></div>
+
+    <p>
+      Sitemiz şu an bakım modundadır.<br>
+      Nakliye ile ilgili yaşanan sorunlardan dolayı dombra satışlarımız geçici olarak durdurulmuştur.<br><br>
+      En kısa sürede tekrar sizlerle olacağız.
+    </p>
+
+    <a href="https://www.instagram.com/yatagundombra/" target="_blank" rel="noopener noreferrer" class="social">
+      <span class="ig-icon">
+        <svg fill="white" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </span>
+      yatagundombra
+    </a>
+  </div>
+</body>
+</html>`;
+
+  return new Response(html, {
+    status: 503,
+    headers: {
+      'Content-Type': 'text/html; charset=utf-8',
+      'Retry-After': '86400',
+    },
+  });
+}

@@ -1,7 +1,7 @@
 import MusicPlayer from "../../../components/MusicPlayer";
-import {useNavigate} from "react-router-dom";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faInstagram} from "@fortawesome/free-brands-svg-icons";
+import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function HeroSection() {
     const navigate = useNavigate();
@@ -22,7 +22,7 @@ export default function HeroSection() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                         <p className="text-lg sm:text-xl font-semibold text-center">
-                        Nakliye ile alakalı sorunlardan dolayı dombra satışlarımız bir süreliğine ertelenmiştir.
+                            Nakliye ile alakalı sorunlardan dolayı dombra satışlarımız bir süreliğine ertelenmiştir.
                         </p>
                     </div>
                 </div>
@@ -31,9 +31,9 @@ export default function HeroSection() {
             <div className="relative z-10 max-w-6xl mx-auto text-center">
                 {/* Dombras Image */}
                 <div className="flex justify-center mb-4">
-                    <img 
-                        src= "https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/dombras-lwV8MLUSp15VQTVPQu1qo6Opkp2bnX.png" 
-                        alt="Dombra Enstrümanları" 
+                    <img
+                        src="https://hrow1mwvyrqtjvqe.public.blob.vercel-storage.com/assets/dombras-lwV8MLUSp15VQTVPQu1qo6Opkp2bnX.png"
+                        alt="Dombra Enstrümanları"
                         className="max-w-md w-full h-auto object-contain"
                     />
                 </div>
@@ -49,7 +49,7 @@ export default function HeroSection() {
                         </h1>
                         <div className="w-24 h-1 bg-gradient-to-r from-[#2C1810] to-[#1A0F0A] rounded-full mx-auto"></div>
                     </div>
-                    
+
                     <p className="text-lg sm:text-xl lg:text-2xl text-[#5C4D44] leading-relaxed max-w-4xl mx-auto py-4">
                         Dombra ile dile gelen her nota, geçmişin izini sürer; atalarımızın
                         kalbinde taşıdığı güç, azim ve irade bu tınılarda hayat bulur.
@@ -70,7 +70,7 @@ export default function HeroSection() {
                     <h3 className="text-xl font-semibold text-[#2C1810] mb-4 text-center">
                         Bozkırın Sesini Dinleyin
                     </h3>
-                    <MusicPlayer/>
+                    <MusicPlayer />
                 </div>
 
                 {/* Instagram Link */}
