@@ -15,6 +15,14 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
+    .video-bg {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
     body {
       min-height: 100vh;
       display: flex;
@@ -24,7 +32,6 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       padding: 24px;
       overflow-x: hidden;
       position: relative;
-      background: url('/altaihorse.png') center center / cover no-repeat fixed;
     }
     body::before {
       content: '';
@@ -39,15 +46,31 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       z-index: 1;
       max-width: 480px;
       width: 100%;
-      background: rgba(255,255,255,0.15);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.08) 50%, rgba(255,255,255,0.15) 100%);
+      backdrop-filter: blur(40px) saturate(180%);
+      -webkit-backdrop-filter: blur(40px) saturate(180%);
+      border-radius: 32px;
       padding: 36px 32px;
       border: 1px solid rgba(255,255,255,0.35);
-      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      box-shadow: 
+        inset 0 1px 1px rgba(255,255,255,0.4),
+        inset 0 -1px 1px rgba(0,0,0,0.05),
+        0 20px 40px rgba(0,0,0,0.15),
+        0 0 0 1px rgba(255,255,255,0.1);
+      overflow: hidden;
+    }
+    .glass-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 50%;
+      background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, transparent 100%);
+      border-radius: 32px 32px 0 0;
+      pointer-events: none;
     }
     .glass-card h1 {
+      position: relative;
+      z-index: 1;
       font-size: 22px;
       font-weight: 700;
       color: #fff;
@@ -66,23 +89,30 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       background: #f5d042;
     }
     .glass-divider {
+      position: relative;
+      z-index: 1;
       height: 1px;
       background: rgba(255,255,255,0.5);
       margin: 20px 0;
     }
     .glass-card .message {
+      position: relative;
+      z-index: 1;
       font-size: 15px;
       line-height: 1.65;
       color: rgba(255,255,255,0.95);
       margin-bottom: 24px;
     }
     .player-inner {
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: 14px;
+      position: relative;
+      z-index: 1;
+      background: linear-gradient(135deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.06) 100%);
+      backdrop-filter: blur(24px) saturate(150%);
+      -webkit-backdrop-filter: blur(24px) saturate(150%);
+      border-radius: 20px;
       padding: 18px 16px;
-      border: 1px solid rgba(255,255,255,0.2);
+      border: 1px solid rgba(255,255,255,0.28);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.25);
     }
     .player-inner h3 {
       font-size: 11px;
@@ -120,6 +150,8 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
     .track-name { font-weight: 600; color: #fff; font-size: 14px; }
     .track-singer { font-size: 12px; color: rgba(255,255,255,0.75); }
     .social-row {
+      position: relative;
+      z-index: 1;
       margin-top: 24px;
       display: flex;
       justify-content: center;
@@ -129,9 +161,12 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
       align-items: center;
       gap: 10px;
       padding: 10px 20px;
-      border-radius: 14px;
-      background: rgba(255,255,255,0.18);
-      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 20px;
+      background: linear-gradient(135deg, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.1) 100%);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255,255,255,0.35);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.3);
       text-decoration: none;
       color: #fff;
       font-weight: 600;
@@ -159,6 +194,9 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
   </style>
 </head>
 <body>
+  <video class="video-bg" autoplay muted loop playsinline poster="/video-poster.jpg" preload="metadata">
+    <source src="/optimize_banner.webm" type="video/webm">
+  </video>
   <div class="glass-card">
     <h1>Yatagun Dombra</h1>
     <div class="glass-divider"></div>
@@ -228,7 +266,7 @@ const MAINTENANCE_HTML = `<!DOCTYPE html>
 </html>`;
 
 export const config = {
-  matcher: ['/((?!musics/|favicon\\.png|favicon\\.ico|altaihorse\\.png).*)'],
+  matcher: ['/((?!musics/|favicon\\.png|favicon\\.ico|optimize_banner\\.webm|video-poster\\.jpg).*)'],
 };
 
 export default function middleware() {
