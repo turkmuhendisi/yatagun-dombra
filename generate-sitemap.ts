@@ -3,11 +3,7 @@ import { createWriteStream } from 'node:fs';
 import path from 'node:path';
 
 const pages = [
-    { url: '/', changefreq: 'daily', priority: 1.0 },
-    { url: '/dombra-satin-al', changefreq: 'daily', priority: 0.9 },
-    { url: '/urun', changefreq: 'daily', priority: 0.8 },
-    { url: '/hakkimizda', changefreq: 'monthly', priority: 0.6 },
-    { url: '/sss', changefreq: 'monthly', priority: 0.5 }
+    { url: '/', changefreq: 'weekly', priority: 1.0 }
 ];
 
 async function generateSitemap() {
