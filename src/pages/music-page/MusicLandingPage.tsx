@@ -10,7 +10,8 @@ import {
     MdStopCircle,
 } from "react-icons/md";
 import { SiApplemusic, SiYoutubemusic } from "react-icons/si";
-import backgroundImage from "../../assets/ytgnwp1.png";
+import backgroundImage from "../../assets/music-bg.jpeg";
+import yatagunLogo from "../../assets/yatagun-logo.png";
 import bozkirRuhuDombra from "../../assets/musics/bozkır-ruhu-dombra.mp3";
 import bozkirRuhu from "../../assets/musics/bozkır-ruhu.mp3";
 import bulutlarinArasinda from "../../assets/musics/bulutların-arasında.mp3";
@@ -30,9 +31,6 @@ type PlatformLink = {
     icon: IconType;
     iconClassName: string;
 };
-
-const artistStatement =
-    "Ezgiler sustu sanma; yalnızca güç topluyoruz, çünkü bozkırın sesi susmaz ve rüzgâr dombırayı çaldığında aynı kadim tınılarda yeniden buluşacağız.";
 
 const tracks: MusicTrack[] = [
     {
@@ -94,6 +92,8 @@ const instagramLink: PlatformLink = {
     icon: FaInstagram,
     iconClassName: "",
 };
+
+const toDisplayUppercase = (value: string) => value.toLocaleUpperCase("tr-TR");
 
 const formatTime = (seconds: number) => {
     const totalSeconds = Number.isFinite(seconds) ? Math.floor(seconds) : 0;
@@ -159,9 +159,9 @@ function OverflowMarqueeText({
 
     const marqueeStyle = shouldMarquee
         ? ({
-              "--marquee-distance": `-${distance}px`,
-              "--marquee-duration": `${Math.max(10, distance / 28)}s`,
-          } as CSSProperties)
+            "--marquee-distance": `-${distance}px`,
+            "--marquee-duration": `${Math.max(10, distance / 28)}s`,
+        } as CSSProperties)
         : undefined;
 
     return (
@@ -274,25 +274,33 @@ export default function MusicLandingPage() {
                 <img
                     src={backgroundImage}
                     alt="Yatagun Küğ için hazırlanan kapak görseli"
-                    className="h-full w-full object-cover object-[60%_center] md:object-center"
-                    width={1920}
-                    height={1080}
-                    fetchPriority="high"
+                    className="h-full w-full object-cover object-[72%_center] sm:object-[68%_center] lg:object-center"
+                    width={1536}
+                    height={864}
                     decoding="async"
                 />
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.14),transparent_30%)]" />
-                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(5,10,13,0.24)_0%,rgba(5,10,13,0.08)_38%,rgba(5,10,13,0.16)_60%,rgba(5,10,13,0.46)_100%)]" />
+                <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(4,10,21,0.06)_0%,rgba(4,10,21,0.02)_36%,rgba(4,10,21,0.14)_100%)]" />
             </div>
 
-            <div className="relative z-10 flex min-h-[100svh] flex-col px-5 pb-6 pt-14 sm:px-8 sm:pb-8 sm:pt-16 lg:px-[58px] lg:pb-[67px] lg:pt-[64px]">
-                <section className="mx-auto flex w-full max-w-[1100px] flex-1 flex-col items-center pt-4 text-center sm:pt-6 lg:max-w-none lg:pt-[26px]">
-                    <p className="copy-shadow max-w-[316px] text-[15px] font-medium leading-tight text-white/70 sm:max-w-[440px] sm:text-lg lg:max-w-[919px] lg:text-[2rem]">
-                        {artistStatement}
-                    </p>
+            <div className="relative z-10 flex min-h-[100svh] flex-col px-5 pb-6 pt-8 sm:px-8 sm:pb-8 sm:pt-10 lg:px-[32px] lg:pb-[30px] lg:pt-[18px]">
+                <section className="flex justify-center">
+                    <div className="relative h-[52px] w-[208px] overflow-hidden sm:h-[60px] sm:w-[244px] lg:h-[76px] lg:w-[338px]">
+                        <img
+                            src={yatagunLogo}
+                            alt="Yatagun logosu"
+                            className="absolute left-1/2 top-1/2 h-auto w-full object-contain [clip-path:inset(16%_0_14%_4%)]"
+                            style={{ transform: "translate(-50%, calc(-61% + 20px)) scale(1.22)" }}
+                            width={1536}
+                            height={1024}
+                            decoding="async"
+                        />
+                    </div>
                 </section>
 
-                <section className="relative z-20 mt-auto flex flex-col gap-4 lg:gap-[23px]">
-                    <div className="flex items-center justify-center gap-3 lg:justify-start lg:gap-[22px]">
+                <div className="flex-1" />
+
+                <section className="relative z-20 flex flex-col gap-4 lg:gap-[12px]">
+                    <div className="flex items-center justify-start gap-3 lg:gap-[12px]">
                         <div className="glass-panel flex h-[41px] items-center gap-4 rounded-[999px] px-3.5 sm:h-[48px] sm:gap-5 sm:px-4 lg:h-[65px] lg:gap-[30px] lg:px-[18px]">
                             {platformLinks.map(({ label, url, icon: Icon, iconClassName }) => (
                                 <a
@@ -324,7 +332,7 @@ export default function MusicLandingPage() {
                         </a>
                     </div>
 
-                    <div className="glass-panel flex min-h-[100px] w-full items-center rounded-[32px] px-4 py-4 sm:px-5 sm:py-5 lg:min-h-[140px] lg:rounded-[60px] lg:px-8 lg:py-7">
+                    <div className="glass-panel flex min-h-[100px] w-full items-center rounded-[32px] px-4 py-4 sm:px-5 sm:py-5 lg:min-h-[110px] lg:rounded-[999px] lg:px-[20px] lg:py-[18px]">
                         <button
                             type="button"
                             onClick={handlePlayPause}
@@ -338,26 +346,26 @@ export default function MusicLandingPage() {
                             )}
                         </button>
 
-                        <div className="ml-3 min-w-0 flex-1 text-left sm:ml-4 lg:ml-5">
+                        <div className="ml-3 min-w-0 flex-1 text-left sm:ml-4 lg:ml-6">
                             <OverflowMarqueeText
-                                text={currentTrack.title}
-                                className="inline-block text-[1rem] font-bold uppercase tracking-[0.01em] text-white sm:text-[1.15rem] lg:text-[2rem]"
+                                text={toDisplayUppercase(currentTrack.title)}
+                                className="inline-block text-[16px] font-bold leading-none text-white sm:text-[20px] lg:text-[32px]"
                             />
-                            <p className="mt-0.5 truncate text-[0.78rem] font-normal uppercase tracking-[0.04em] text-white/80 sm:text-[0.9rem] lg:text-[1.25rem]">
-                                {currentTrack.artist}
+                            <p className="mt-[2px] truncate text-[12px] font-normal leading-none text-white sm:text-[14px] lg:text-[20px]">
+                                {toDisplayUppercase(currentTrack.artist)}
                             </p>
-                            <p className="mt-1 text-[0.72rem] font-normal text-white/85 lg:hidden">
+                            <p className="mt-[6px] text-[10px] font-normal leading-none text-white lg:hidden">
                                 {formatTime(elapsedSeconds)}
                             </p>
                         </div>
 
                         <div className="hidden items-center lg:flex">
-                            <span className="pr-6 text-xl font-semibold text-white">
+                            <span className="pr-1 text-[20px] font-bold leading-none text-white">
                                 {formatTime(elapsedSeconds)}
                             </span>
                         </div>
 
-                        <div className="ml-3 flex shrink-0 items-center gap-1.5 sm:gap-2 lg:ml-6 lg:gap-5">
+                        <div className="ml-3 flex shrink-0 items-center gap-1.5 sm:gap-2 lg:ml-6 lg:gap-3">
                             <button
                                 type="button"
                                 onClick={() => changeTrack(-1)}

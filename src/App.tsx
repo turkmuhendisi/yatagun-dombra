@@ -3,11 +3,13 @@ import {SpeedInsights} from "@vercel/speed-insights/react";
 import MusicLandingPage from "./pages/music-page/MusicLandingPage";
 
 function App() {
+    const isProduction = import.meta.env.PROD;
+
     return (
         <>
             <MusicLandingPage />
-            <Analytics /> {/* Vercel Analytics in here */}
-            <SpeedInsights /> {/* Vercel Speed Insights in here */}
+            {isProduction ? <Analytics /> : null}
+            {isProduction ? <SpeedInsights /> : null}
         </>
     );
 }
