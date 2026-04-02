@@ -32,6 +32,9 @@ type PlatformLink = {
     iconClassName: string;
 };
 
+const artistStatement =
+    "Ezgiler sustu sanma; yalnızca güç topluyoruz, çünkü bozkırın sesi susmaz ve rüzgâr dombırayı çaldığında aynı kadim tınılarda yeniden buluşacağız.";
+
 const tracks: MusicTrack[] = [
     {
         id: 1,
@@ -297,7 +300,13 @@ export default function MusicLandingPage() {
                     </div>
                 </section>
 
-                <div className="flex-1" />
+                <section className="mx-auto flex w-full max-w-[919px] flex-1 items-center justify-center px-3 text-center">
+                    <p className="max-w-[316px] text-[15px] font-medium leading-[1.15] sm:max-w-[440px] sm:text-[18px] lg:max-w-[919px] lg:text-[32px]">
+                        <span className="liquid-glass-text">
+                            {artistStatement}
+                        </span>
+                    </p>
+                </section>
 
                 <section className="relative z-20 flex flex-col gap-4 lg:gap-[12px]">
                     <div className="flex items-center justify-start gap-3 lg:gap-[12px]">
@@ -349,9 +358,9 @@ export default function MusicLandingPage() {
                         <div className="ml-3 min-w-0 flex-1 text-left sm:ml-4 lg:ml-6">
                             <OverflowMarqueeText
                                 text={toDisplayUppercase(currentTrack.title)}
-                                className="inline-block text-[16px] font-bold leading-none text-white sm:text-[20px] lg:text-[32px]"
+                                className="inline-block text-[16px] font-bold leading-none text-white sm:text-[20px] lg:text-[28px]"
                             />
-                            <p className="mt-[2px] truncate text-[12px] font-normal leading-none text-white sm:text-[14px] lg:text-[20px]">
+                            <p className="mt-[4px] truncate text-[12px] font-normal leading-none text-white sm:text-[14px] lg:text-[17px]">
                                 {toDisplayUppercase(currentTrack.artist)}
                             </p>
                             <p className="mt-[6px] text-[10px] font-normal leading-none text-white lg:hidden">
