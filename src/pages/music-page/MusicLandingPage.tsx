@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import type { CSSProperties } from "react";
 import type { IconType } from "react-icons";
 import { FaInstagram, FaSpotify } from "react-icons/fa";
 import {
@@ -103,6 +104,81 @@ const formatTime = (seconds: number) => {
 
     return `${minutes}:${remainingSeconds}`;
 };
+
+function OverflowMarqueeText({
+    text,
+    className,
+}: {
+    text: string;
+    className: string;
+}) {
+    const containerRef = useRef<HTMLDivElement | null>(null);
+    const textRef = useRef<HTMLSpanElement | null>(null);
+    const [shouldMarquee, setShouldMarquee] = useState(false);
+    const [distance, setDistance] = useState(0);
+
+    useEffect(() => {
+        const updateOverflow = () => {
+            const container = containerRef.current;
+            const textElement = textRef.current;
+
+            if (!container || !textElement) {
+                return;
+            }
+
+            const overflowAmount = textElement.scrollWidth - container.clientWidth;
+            const isOverflowing = overflowAmount > 1;
+
+            setShouldMarquee(isOverflowing);
+            setDistance(isOverflowing ? textElement.scrollWidth + 32 : 0);
+        };
+
+        updateOverflow();
+        void document.fonts?.ready.then(updateOverflow);
+
+        const resizeObserver =
+            typeof ResizeObserver !== "undefined"
+                ? new ResizeObserver(updateOverflow)
+                : null;
+
+        if (containerRef.current) {
+            resizeObserver?.observe(containerRef.current);
+        }
+
+        if (textRef.current) {
+            resizeObserver?.observe(textRef.current);
+        }
+
+        window.addEventListener("resize", updateOverflow);
+
+        return () => {
+            resizeObserver?.disconnect();
+            window.removeEventListener("resize", updateOverflow);
+        };
+    }, [text]);
+
+    const marqueeStyle = shouldMarquee
+        ? ({
+              "--marquee-distance": `-${distance}px`,
+              "--marquee-duration": `${Math.max(10, distance / 28)}s`,
+          } as CSSProperties)
+        : undefined;
+
+    return (
+        <div ref={containerRef} className="overflow-hidden whitespace-nowrap">
+            <div className={shouldMarquee ? "marquee-track" : "block w-full"} style={marqueeStyle}>
+                <span ref={textRef} className={className}>
+                    {text}
+                </span>
+                {shouldMarquee ? (
+                    <span aria-hidden="true" className={`${className} pl-8`}>
+                        {text}
+                    </span>
+                ) : null}
+            </div>
+        </div>
+    );
+}
 
 export default function MusicLandingPage() {
     const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
@@ -263,9 +339,10 @@ export default function MusicLandingPage() {
                         </button>
 
                         <div className="ml-3 min-w-0 flex-1 text-left sm:ml-4 lg:ml-5">
-                            <p className="truncate text-[1rem] font-bold uppercase tracking-[0.01em] text-white sm:text-[1.15rem] lg:text-[2rem]">
-                                {currentTrack.title}
-                            </p>
+                            <OverflowMarqueeText
+                                text={currentTrack.title}
+                                className="inline-block text-[1rem] font-bold uppercase tracking-[0.01em] text-white sm:text-[1.15rem] lg:text-[2rem]"
+                            />
                             <p className="mt-0.5 truncate text-[0.78rem] font-normal uppercase tracking-[0.04em] text-white/80 sm:text-[0.9rem] lg:text-[1.25rem]">
                                 {currentTrack.artist}
                             </p>

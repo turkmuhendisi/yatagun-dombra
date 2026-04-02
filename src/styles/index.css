@@ -14,53 +14,117 @@ body {
 }
 
 .glass-panel {
-    border: 0.5px solid rgba(255, 255, 255, 0.08);
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.009);
+    isolation: isolate;
+    overflow: hidden;
+    position: relative;
+    -webkit-backdrop-filter: blur(3px);
+    backdrop-filter: blur(3px);
     box-shadow:
-        inset 0 -2px 4px rgba(0, 0, 0, 0.2),
-        inset 0 2px 4px rgba(255, 255, 255, 0.4);
+        inset 0 2px 4px rgba(255, 255, 255, 0.4),
+        inset 0 -2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.glass-panel::before,
+.glass-panel::after {
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+}
+
+.glass-panel::after {
+    border: 0.5px solid transparent;
+    background: linear-gradient(180deg,
+            rgba(255, 255, 255, 0.85) 0%,
+            rgba(255, 255, 255, 0.28) 38%,
+            rgba(255, 255, 255, 0.12) 100%) border-box;
+    -webkit-mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask:
+        linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+}
+
+.glass-panel>* {
+    position: relative;
+    z-index: 1;
 }
 
 .copy-shadow {
     text-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.marquee-track {
+    align-items: center;
+    animation: music-marquee var(--marquee-duration, 12s) linear infinite;
+    display: inline-flex;
+    min-width: 100%;
+    white-space: nowrap;
+    will-change: transform;
+}
+
+@keyframes music-marquee {
+
+    0%,
+    12% {
+        transform: translateX(0);
+    }
+
+    88%,
+    100% {
+        transform: translateX(var(--marquee-distance, -100%));
+    }
+}
+
 
 .custom-scrollbar::-webkit-scrollbar {
-    display: none; /* Chrome, Safari */
+    display: none;
+    /* Chrome, Safari */
 }
 
 .custom-scrollbar {
-    scrollbar-width: thin; /* Firefox */
-    -ms-overflow-style: none; /* IE */
+    scrollbar-width: thin;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* IE */
 }
 
 @media (max-width: 768px) {
     .custom-scrollbar::-webkit-scrollbar {
-        display: block; /* Scrollbar style */
+        display: block;
+        /* Scrollbar style */
         height: 5px;
     }
 
     .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #888; /* Scrollbar color */
+        background: #888;
+        /* Scrollbar color */
         border-radius: 10px;
     }
 
     .custom-scrollbar::-webkit-scrollbar-track {
-        background: #f1f1f1; /* Scrollbar background */
+        background: #f1f1f1;
+        /* Scrollbar background */
     }
 
     .custom-scrollbar {
-        scrollbar-width: thin; /* Thin scrollbar for Firefox */
+        scrollbar-width: thin;
+        /* Thin scrollbar for Firefox */
     }
 }
 
 .aspect-ratio {
     position: relative;
     width: 100%;
-    padding-top: 100%; /* En-boy oranı (1:1) */
+    padding-top: 100%;
+    /* En-boy oranı (1:1) */
 }
+
 .aspect-ratio img {
     position: absolute;
     top: 0;
